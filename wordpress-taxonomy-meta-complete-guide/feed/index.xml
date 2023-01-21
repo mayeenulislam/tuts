@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার &#8211; সম্পূর্ণ গাইড তে মন্তব্যসমূহ	</title>
+	<atom:link href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/</link>
+	<description>Technology Tutorials by Mayeenul Islam</description>
+	<lastBuildDate>Sat, 21 Jan 2023 10:57:59 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-774</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Wed, 09 Sep 2015 10:42:38 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=656#comment-774</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-773&quot;&gt;Bainternet&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+Yes, I&#039;ve seen that.
+And the problem occured when the URL portion was changed.]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-773">Bainternet</a>-এর প্রত্যুত্তরে।</p>
+<p>Yes, I&#8217;ve seen that.<br />
+And the problem occured when the URL portion was changed.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Bainternet		</title>
+		<link>https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-773</link>
+
+		<dc:creator><![CDATA[Bainternet]]></dc:creator>
+		<pubDate>Wed, 09 Sep 2015 10:22:51 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=656#comment-773</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-772&quot;&gt;Mayeenul Islam&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+No problems, and fyi the TAX meta class stores both id and url as an array.]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-772">Mayeenul Islam</a>-এর প্রত্যুত্তরে।</p>
+<p>No problems, and fyi the TAX meta class stores both id and url as an array.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-772</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Wed, 09 Sep 2015 09:48:01 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=656#comment-772</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-771&quot;&gt;Bainternet&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+@Bainternet thank you very much for commenting here, and notified that, it&#039;s not a bug of Tax Meta Class, but it&#039;s the process I&#039;s dealing the things with.
+
+But let me clear some facts:
+&lt;ol&gt;
+	&lt;li&gt;I actually tried to show the basics behind Taxonomy Meta. (That google translator is still in alpha mode, and wrongly translates my intention)&lt;/li&gt;
+	&lt;li&gt;Instead of storing file path, I stored attachment ID&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;BTW thanks for the comment again. I&#039;ll update my post accordingly so that it won&#039;t say it a bug. :)&lt;/p&gt;]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-771">Bainternet</a>-এর প্রত্যুত্তরে।</p>
+<p>@Bainternet thank you very much for commenting here, and notified that, it&#8217;s not a bug of Tax Meta Class, but it&#8217;s the process I&#8217;s dealing the things with.</p>
+<p>But let me clear some facts:</p>
+<ol>
+<li>I actually tried to show the basics behind Taxonomy Meta. (That google translator is still in alpha mode, and wrongly translates my intention)</li>
+<li>Instead of storing file path, I stored attachment ID</li>
+</ol>
+<p>BTW thanks for the comment again. I&#8217;ll update my post accordingly so that it won&#8217;t say it a bug. 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Bainternet		</title>
+		<link>https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-771</link>
+
+		<dc:creator><![CDATA[Bainternet]]></dc:creator>
+		<pubDate>Wed, 09 Sep 2015 06:29:31 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=656#comment-771</guid>
+
+					<description><![CDATA[In your post you say that Tax Meta Class has a bug, which is not really a bug. Its the way WordPress stores arrays in the database (as serialized data) using the Options API or the Meta Data API.
+
+In fact the way you save the data in this post is using that same API so your readers are mislead.
+
+There is no bug (well not with the saving functions anyway).]]></description>
+			<content:encoded><![CDATA[<p>In your post you say that Tax Meta Class has a bug, which is not really a bug. Its the way WordPress stores arrays in the database (as serialized data) using the Options API or the Meta Data API.</p>
+<p>In fact the way you save the data in this post is using that same API so your readers are mislead.</p>
+<p>There is no bug (well not with the saving functions anyway).</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ oneTarekJahidul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-770</link>
+
+		<dc:creator><![CDATA[oneTarekJahidul Islam]]></dc:creator>
+		<pubDate>Sun, 06 Sep 2015 12:58:22 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=656#comment-770</guid>
+
+					<description><![CDATA[অনেক আগে থেকে আমি এই  ট্যাক্সোনমি মেটা ব্যবহার করি ভিন্নভাবে , আমি ফিল্ডগুলো সিরিয়ালাইয্‌ড করে ট্যাক্সোনমির টার্ম এর Description ফিল্ড এ সেভ করে রাখি , এতে একটা সমস্যাও হয় , কিছু কিছু থিম ট্যাক্সোনমির টার্ম লিংক এর ওপর মাউস রাখলে description ফিল্ড এর লেখা লিংক টাইটেল আকারে দেখায়]]></description>
+			<content:encoded><![CDATA[<p>অনেক আগে থেকে আমি এই  ট্যাক্সোনমি মেটা ব্যবহার করি ভিন্নভাবে , আমি ফিল্ডগুলো সিরিয়ালাইয্‌ড করে ট্যাক্সোনমির টার্ম এর Description ফিল্ড এ সেভ করে রাখি , এতে একটা সমস্যাও হয় , কিছু কিছু থিম ট্যাক্সোনমির টার্ম লিংক এর ওপর মাউস রাখলে description ফিল্ড এর লেখা লিংক টাইটেল আকারে দেখায়</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

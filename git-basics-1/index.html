@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="bn-BD">
+<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://mayeenulislam.github.io/tuts/xmlrpc.php">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.14 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১ - tuts nano</title>
+	<meta name="description" content="গিট (Git) ব্যবহার করে কিভাবে ভার্সন নিয়ন্ত্রণ করতে হয়, তা খুব সহজ ভাষায় বিস্তারিত লেখা হলো... যেকেউ এটা পড়ে খুব সহজে ভার্সন নিয়ন্ত্রণ করতে পারবেন...">
+	<link rel="canonical" href="https://mayeenulislam.github.io/tuts/git-basics-1/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১ - tuts nano">
+	<meta property="og:description" content="গিট (Git) ব্যবহার করে কিভাবে ভার্সন নিয়ন্ত্রণ করতে হয়, তা খুব সহজ ভাষায় বিস্তারিত লেখা হলো... যেকেউ এটা পড়ে খুব সহজে ভার্সন নিয়ন্ত্রণ করতে পারবেন...">
+	<meta property="og:url" content="https://mayeenulislam.github.io/tuts/git-basics-1/">
+	<meta property="og:site_name" content="Tuts by Mayeenul Islam">
+	<meta property="article:publisher" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:author" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:published_time" content="2014-11-06T14:03:14+00:00">
+	<meta property="article:modified_time" content="2023-01-21T15:36:01+00:00">
+	<meta property="og:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns.jpg">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="300">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="মঈনুল ইসলাম">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@mayeenulislam">
+	<meta name="twitter:site" content="@mayeenulislam">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="মঈনুল ইসলাম">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="11 মিনিট">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://mayeenulislam.github.io/tuts/git-basics-1/#article","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/git-basics-1/"},"author":{"name":"মঈনুল ইসলাম","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"headline":"গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১","datePublished":"2014-11-06T14:03:14+00:00","dateModified":"2023-01-21T15:36:01+00:00","mainEntityOfPage":{"@id":"https://mayeenulislam.github.io/tuts/git-basics-1/"},"wordCount":7532,"commentCount":18,"publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"image":{"@id":"https://mayeenulislam.github.io/tuts/git-basics-1/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns.jpg","keywords":["গিট","গিট ব্যবহারের কৌশল","গিট শেখা","গিটহাব","ভার্ষন কন্ট্রোল"],"articleSection":["গিট টিউটোরিয়াল","জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল","ন্যানো বেসিX","প্রাথমিক স্তরের টিউটোরিয়াল"],"inLanguage":"bn-BD","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://mayeenulislam.github.io/tuts/git-basics-1/#respond"]}]},{"@type":"WebPage","@id":"https://mayeenulislam.github.io/tuts/git-basics-1/","url":"https://mayeenulislam.github.io/tuts/git-basics-1/","name":"গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১ - tuts nano","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/#website"},"primaryImageOfPage":{"@id":"https://mayeenulislam.github.io/tuts/git-basics-1/#primaryimage"},"image":{"@id":"https://mayeenulislam.github.io/tuts/git-basics-1/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns.jpg","datePublished":"2014-11-06T14:03:14+00:00","dateModified":"2023-01-21T15:36:01+00:00","description":"গিট (Git) ব্যবহার করে কিভাবে ভার্সন নিয়ন্ত্রণ করতে হয়, তা খুব সহজ ভাষায় বিস্তারিত লেখা হলো... যেকেউ এটা পড়ে খুব সহজে ভার্সন নিয়ন্ত্রণ করতে পারবেন...","breadcrumb":{"@id":"https://mayeenulislam.github.io/tuts/git-basics-1/#breadcrumb"},"inLanguage":"bn-BD","potentialAction":[{"@type":"ReadAction","target":["https://mayeenulislam.github.io/tuts/git-basics-1/"]}]},{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/git-basics-1/#primaryimage","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns.jpg","width":800,"height":300,"caption":"গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান - ন্যানোডিযাইন্‌স"},{"@type":"BreadcrumbList","@id":"https://mayeenulislam.github.io/tuts/git-basics-1/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mayeenulislam.github.io/tuts/"},{"@type":"ListItem","position":2,"name":"গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১"}]},{"@type":"WebSite","@id":"https://mayeenulislam.github.io/tuts/#website","url":"https://mayeenulislam.github.io/tuts/","name":"Tuts by Mayeenul Islam","description":"Technology Tutorials by Mayeenul Islam","publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mayeenulislam.github.io/tuts/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"bn-BD"},{"@type":["Person","Organization"],"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee","name":"মঈনুল ইসলাম","image":{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","width":2560,"height":1920,"caption":"মঈনুল ইসলাম"},"logo":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/"},"description":"নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ nishachor.com-এ লেখালেখি করেন।","sameAs":["https://nishachor.com","http://www.facebook.com/mayeenulislam","https://twitter.com/mayeenulislam"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ফীড" href="https://mayeenulislam.github.io/tuts/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; মন্তব্য ফীড" href="https://mayeenulislam.github.io/tuts/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১ মন্তব্যের ফিড" href="https://mayeenulislam.github.io/tuts/git-basics-1/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/wp-emoji.js?ver=6.1.1","twemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/twemoji.js?ver=6.1.1"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0x1FAF1, 0x1F3FB, 0x200D, 0x1FAF2, 0x1F3FF],
+					[0x1FAF1, 0x1F3FB, 0x200B, 0x1FAF2, 0x1F3FF]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/dist/block-library/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/classic-themes.css?ver=1" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="flat-fonts-css" href="//fonts.googleapis.com/css?family=Yesteryear%7CRoboto:400,700%7CRoboto+Slab%7CRoboto+Condensed" media="all">
+<link rel="stylesheet" id="flat-theme-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/css/flat.min.css?ver=1.7.11" media="all">
+<link rel="stylesheet" id="flat-style-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="flat-bengali-css" href="https://mayeenulislam.github.io/tuts/wp-content/plugins/flat-bengali/flat-bengali.css?ver=1.0.1" media="all">
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery.js?ver=3.6.1" id="jquery-core-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery-migrate.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/js/flat.min.js?ver=1.7.11" id="flat-js-js"></script>
+<!--[if lt IE 9]>
+<script src='https://tuts.local/wp-content/themes/flat/assets/js/html5shiv.min.js?ver=3.7.2' id='html5shiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://mayeenulislam.github.io/tuts/wp-json/">
+<link rel="alternate" type="application/json" href="https://mayeenulislam.github.io/tuts/wp-json/wp/v2/posts/491">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mayeenulislam.github.io/tuts/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mayeenulislam.github.io/tuts/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://mayeenulislam.github.io/tuts/?p=491">
+<link rel="alternate" type="application/json+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fgit-basics-1%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fgit-basics-1%2F#038;format=xml">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3526212672565487",
+          enable_page_level_ads: true
+     });</script><link type="image/x-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/tuts-nano.png" rel="shortcut icon">
+<style type="text/css"></style>
+<style type="text/css">#masthead .site-title {font-family:Yesteryear}body {font-family:Roboto }h1,h2,h3,h4,h5,h6 {font-family:Roboto Slab}#masthead .site-description, .hentry .entry-meta {font-family:Roboto Condensed}</style>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-color: #d1d1d1; }</style>
+	<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-180x180.png">
+<meta name="msapplication-TileImage" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-270x270.png">
+		<style type="text/css" id="wp-custom-css">.wp-block-group.has-background {
+    padding: 1.25em 2.375em;
+}
+
+pre.wp-block-preformatted {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+#masthead .site-title.display-title {
+	padding-left: 15px;
+	padding-right: 15px;
+}</style>
+			</head>
+
+<body class="post-template-default single single-post postid-491 single-format-standard custom-background" itemscope itemtype="http://schema.org/WebPage">
+<div id="page">
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div id="secondary" class="col-lg-3">
+								<header id="masthead" class="site-header" role="banner">
+										<div class="hgroup">
+						<h1 class="site-title display-title"><a href="https://mayeenulislam.github.io/tuts/" title="Tuts by Mayeenul Islam" rel="home"><span itemprop="name">Tuts by Mayeenul Islam</span></a></h1>
+<h2 itemprop="description" class="site-description">Technology Tutorials by Mayeenul Islam</h2>					</div>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><i class="fa fa-gear"></i></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+						<ul id="menu-top-menu" class="nav-menu">
+<li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-282"><a href="https://mayeenulislam.github.io/tuts/">নীড়পাতা</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://mayeenulislam.github.io/tuts/contributing-bangla-wikipedia/">বাংলা উইকিপিডিয়ায় লিখুন</a></li>
+</ul>					</nav>
+									</header>
+				
+				<div class="sidebar-offcanvas">
+					<div id="main-sidebar" class="widget-area" role="complementary">
+											<aside id="search-2" class="widget widget_search">
+	<form method="get" id="searchform" action="https://tuts.local/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+					</aside>
+					<aside id="nav_menu-2" class="widget widget_nav_menu">
+						<h3 class="widget-title">ধরণভিত্তিক টিউটোরিয়াল</h3>
+<div class="menu-category-menu-container"><ul id="menu-category-menu" class="menu">
+<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-550"><a href="https://mayeenulislam.github.io/tuts/category/nano-basix/">ন্যানো বেসিX</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-551"><a href="https://mayeenulislam.github.io/tuts/category/photoshop-tuts/">ফটোশপ টিউটোরিয়াল</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-532">
+<a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/">ওয়েব ডিযাইন টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-533" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-533"><a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/css-tuts/">সিএসএস টিউটোরিয়াল</a></li>
+</ul>
+</li>
+<li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-534">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/">ওয়েব ডেভলপমেন্ট টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-539" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-539"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/php-tuts/">পিএইচপি টিউটোরিয়াল</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-535">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/">ওয়ার্ডপ্রেস টিউটোরিয়াল</a>
+	<ul class="sub-menu">
+		<li id="menu-item-537" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-537"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/theme-tuts/">থিম টিউটোরিয়াল</a></li>
+		<li id="menu-item-538" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-538"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/plugin-tuts/">প্লাগইন টিউটোরিয়াল</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-540" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-540"><a href="https://mayeenulislam.github.io/tuts/category/git-tuts/">গিট টিউটোরিয়াল</a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-530"><a href="https://mayeenulislam.github.io/tuts/category/other-tuts/">অন্যান্য টিউটোরিয়াল</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-541">
+<a href="https://mayeenulislam.github.io/tuts/category/tuts-level/">জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-543" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-543"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/primary-level-tuts/">প্রাথমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-544"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/mid-level-tuts/">মাধ্যমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-542" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-542"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/top-level-tuts/">উচ্চস্তরের টিউটোরিয়াল</a></li>
+</ul>
+</li>
+</ul></div>					</aside>
+					<aside id="prisna-google-website-translator-2" class="widget widget_prisna-google-website-translator">
+						<h3 class="widget-title">Translate the Site</h3>
+
+<style type="text/css"><!--
+
+.prisna-gwt-align-left {
+	text-align: left !important;
+}
+.prisna-gwt-align-right {
+	text-align: right !important;
+}
+
+
+
+body {
+	top: 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+--></style>
+
+
+
+<div id="google_translate_element" class="prisna-gwt-align-left"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+function initializeGoogleTranslateElement() {
+	new google.translate.TranslateElement({
+		pageLanguage: "bn"
+	}, "google_translate_element");
+}
+/*]]>*/
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=initializeGoogleTranslateElement"></script>					</aside>
+											</div>
+				</div>
+			</div>
+
+						<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+							<div id="content" class="site-content" role="main" itemscope itemtype="http://schema.org/Article">
+			<article id="post-491" class="post-491 post type-post status-publish format-standard has-post-thumbnail hentry category-git-tuts category-tuts-level category-nano-basix category-primary-level-tuts tag-git tag-using-git tag-learning-git tag-github tag-version-control">
+	<header class="entry-header">
+		<h1 class="entry-title" itemprop="name">গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১</h1>
+							<div class="entry-meta">
+<span class="entry-date"><a href="https://mayeenulislam.github.io/tuts/git-basics-1/" rel="bookmark"><time class="entry-date published" datetime="2014-11-06T20:03:14+06:00" itemprop="datepublished">নভেম্বর 6, 2014</time></a></span> by <span class="author vcard"><a class="url fn n" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author" itemprop="url">মঈনুল ইসলাম</a></span><span class="sep">&middot;</span><span class="comments-link"><a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comments" itemprop="discussionUrl">18 Comments</a></span>
+</div>
+			</header>
+				<div class="entry-thumbnail"><img width="800" height="300" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান - ন্যানোডিযাইন্‌স" decoding="async" itemprop="thumbnailUrl" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns.jpg 800w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns-300x113.jpg 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/11/git-banner-nanodesigns-768x288.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></div>
+	
+	
+	<div class="entry-content" itemprop="articleBody">
+				<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/git-logo.png"><img decoding="async" width="151" height="273" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/git-logo.png" alt="গিট-এর লগো" class="wp-image-493"></a></figure>
+</div>
+
+
+<p><strong>গিট (Git)</strong> হলো হাল আমলের সবচেয়ে প্রসিদ্ধ এবং জনপ্রিয় ভার্সন নিয়ন্ত্রণ সফ্‌টওয়্যার। &#8230;ভার্সন কন্ট্রোল বা ভার্সন নিয়ন্ত্রণ কী &#8211; আমরা সেটা দেখবো। আমরা যেহেতু একেবারে প্রাথমিক আলোচনা করছি, তাই অনেক বিষয়ই জানা থাকলেও একটু না একটু আলোচনা করতেই হবে, ধারণা পরিষ্কার হবে, আমরা বিষয়টা বুঝবোও সহজে। মনে রাখতে হবে, এপৃথিবীর সবকিছুর মূলে রয়েছে কিছু কনসেপ্ট বা ধারণা। ধারণাটা বুঝে ফেললে বাকি সব পানিভাত। Git নামটা বুঝার আগে আমি GitHub নামটা শুনেছিলাম, এবং এই দুটোর মধ্যে কোনো পার্থক্য করতে পারতাম না প্রথম প্রথম। আপনাদের মনেও যদি এই প্রশ্নটা থাকে, তাও আমরা পরিষ্কার করবো ইনশাল্লাহ। তবে শর্ত হলো দুটো &#8211;</p>
+
+
+
+<ol>
+<li>যদি জানতে হয়, শিখতে হয়, পুরো লেখাটা দুই পর্বেরই শেষ পর্যন্ত পড়তে হবে।</li>
+
+
+
+<li>আমার প্রতি বিশ্বাস রাখুন, খুব সহজে, সংক্ষেপে গিট বুঝাতে চলেছি, এবং আমার মতো মোটা মাথায় যদি ঢুকতে পারে, আপনাদের জন্য তো চিন্তারই কারণ নেই।</li>
+</ol>
+
+
+
+<h3>সংক্ষেপে বলো &#8211; সহজে বলো</h3>
+
+
+
+<p><em>গিট সম্পর্কে জানতে হলে কি আপনার এইসব ফিরিস্তি পড়তে হবে বসে বসে?</em> &#8230;মোট্টেই না।</p>
+
+
+
+<p> অনেকেই গিট শেখার ভিডিও আপলোড করেছেন, অনেক ওয়েবসাইট আছে বিনামূল্যে গিট শিখাবে হাতে ধরে ধরে, অনেক বই আছে গিট-এর উপর। যদি লম্বা কথা পড়ে পড়ে শেখার কোনো ইচ্ছা না থাকে, তাহলে সেগুলো তো দেখা যায়ই-</p>
+
+
+
+<ul>
+<li><a title="Progit by Scott Chacon - PDF" href="https://progit2.s3.amazonaws.com/en/2014-11-04-ef9e4/progit-en.93.pdf" target="_blank" rel="nofollow noopener">গিট-এর উপর Scott Chacon-এর সম্পূর্ণ বই &#8211; <em>Pro Git</em> &#8211; বিনামূল্যে ডাউনলোড করুন</a></li>
+
+
+
+<li><a title="Git Online Tutorial" href="http://try.github.io/" target="_blank" rel="nofollow noopener">অনলাইনে বসে হাতে-কলমে গিট শিখুন &#8211; Try Git থেকে</a></li>
+
+
+
+<li><a title="গেটিং গিট রাইট - অ্যাটলাশিয়ান" href="https://www.atlassian.com/git/" target="_blank" rel="nofollow noopener">অ্যাটলাশিয়ান-এর গিট টিউটোরিয়াল</a></li>
+
+
+
+<li>
+<a href="https://youtube.com/playlist?list=PLoR56CteKZnC0lBlHdnVnq0J3yDhgbi9w" target="_blank" rel="nofollow noopener">গিট পরিচিতি</a> &#8211; হাসিন হায়দার &#8211; shell ব্যবহার করে গিট ব্যবহারের উপর বাংলায় ভিডিও টিউটোরিয়াল</li>
+</ul>
+
+
+
+<h3>ভার্সন নিয়ন্ত্রণ কী</h3>
+
+
+
+<p>গিট বুঝতে গেলে একটু বুঝে নেয়া দরকার, ভার্সন নিয়ন্ত্রণ বিষয়টা কী। সহজে বলতে গেলে নিচের টেক্সট ফাইলটি (<code>Readme.txt</code>) দেখা যাক:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody>
+<tr>
+<td><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/readme-icon.png"><img decoding="async" class="aligncenter wp-image-494" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/readme-icon.png" alt="Readme.txt ফাইলের আইকন" width="45" height="65"></a></td>
+<th>20140919~15:03:40</th>
+<td>This is a readme file</td>
+</tr>
+<tr>
+<td><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/readme-icon.png"><img decoding="async" class="aligncenter wp-image-494" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/readme-icon.png" alt="Readme.txt ফাইলের আইকন" width="45" height="65"></a></td>
+<th>20140919~15:04:27</th>
+<td>A readme file that is changed from its original state</td>
+</tr>
+<tr>
+<td><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/readme-icon.png"><img decoding="async" class="aligncenter wp-image-494" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/readme-icon.png" alt="Readme.txt ফাইলের আইকন" width="45" height="65"></a></td>
+<th>20140919~15:04:55</th>
+<td>A readme file that is changed from its original state. And something appended after the first paragraph.</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<p>এই টেক্সট ফাইলটিকে আমরা একটা ছোট্ট উদাহরণ হিসেবে নিয়েছি। এখানে আপনারা ভালো করে লক্ষ করলে দেখবেন তিনটা আলাদা আলাদা সময়ের উল্লেখ আছে, যদিও তারিখটা একই আছে। তিনটা আলাদা সময়ে ফাইলটাতে তিনটা আলাদা পরিবর্তন হয়েছে। প্রথম সময়ে (15:03:40) যে লেখাটা ছিল, পরের সময়েই (15:04:27) সেই লেখাটা প্রায় পুরোপুরি বদলে ফেলা হয়েছে (মানে বাদ দিয়ে, যোগ করা হয়েছে)। আবার তার পরের সময়ে (15:04:55) দ্বিতীয় লেখাটা না ছুঁয়ে তার সাথে নতুন কিছু যোগ করা হয়েছে। মনে রাখতে হবে, এই তিনটা পরিবর্তনই কিন্তু একই ফাইলে হয়েছে, শুধু পার্থক্য হলো, এগুলো বিভিন্ন সময়ে হয়েছে। এখন আমরা এই তিনটা সময়কে যদি এই ফাইলটার তিনটা আলাদা আলাদা অবস্থা ধরে নিই, তাহলে তা-ই কিন্তু ভার্সন (version)।</p>
+
+
+
+<p>আমাদের ফাইলটি এখন খুললে আমরা কোন অবস্থায় পাবো, মানে কোন ভার্সনে পাবো? অবশ্যই সর্বশেষ ভার্সনে, মানে 15:04:55 সময়ে আপডেট করা ভার্সনটি। কিন্তু ধরা যাক, কোনো কারণে আমাদের প্রথম বাক্যটার (A readme file that is&#8230;) জায়গায় দরকার একেবারে প্রথমে যে বাক্যটা লিখেছিলাম, সেই বাক্যটা (মানে: This is a readme file বাক্যটা)। এখন তাহলে কোথায় পাবো সেটা? &#8230;কোত্থাও পাওয়া যাবে না, কারণ ফাইলটার পুরোন সেই লেখাটা এখন আর ফাইলে নেই &#8211; ঐ লেখাটা মুছেইতো সর্বশেষ অবস্থা পেলাম। &#8230;এজন্যই দরকার পড়ে ভার্সন কন্ট্রোল বা ভার্সন নিয়ন্ত্রণের, যেখানে আমাদের পুরোন কাজগুলো কখন কেমন ছিল, তার একটা রূপ আমরা পরেও দরকার পড়লে পাই। আবার এমনও হতে পারে, ফাইলের সব লেখা মুছে কেউ সব উল্টাপাল্টা করে ফেললো, তখন ফাইলের বিভিন্ন ভার্সন থাকলে আমরা পুরোন ভার্সনটাতে ফাইলটাকে ফিরিয়ে নিয়ে গিয়ে বিপদ থেকে উদ্ধার পাবো সহজে। এই কালানুগ কিংবা অবস্থানুগ পরিবর্তনের চিত্রটাই হলো ভার্সন, আর উপরে বর্ণিত কারণগুলোর জন্যই মূলত আমাদের ভার্সন নিয়ন্ত্রণের দরকার পড়ে।</p>
+
+
+
+<p>আমরা যারা কোড লিখি, ভার্সন নিয়ন্ত্রণ করাটা তাদের খুব কাজে লাগে। হয়তো তিন মাস আগের করা কোনো কাজ, যা পরে ফেলে দিয়েছিলাম, তা-ই আজকে অন্য এক জায়গায় কাজে লাগছে &#8211; তখন পুরোন ভার্সন থেকে আমরা সেটা পেয়ে যেতে পারি। আর, এখন এই গ্লোবালাইজেশনের যুগে আমাদেরকে কখনও কখনও নিজের গন্ডির বাইরেও অন্য কোনো কোডারের সাথে মিলেমিশে কাজ করতে হয়। তখন নিজেদের কাজগুলো এক জায়গায় রেখে দুজনের কাজকে বুঝে-শুনে একত্র করে করে এগিয়ে যাওয়ার একটা দারুণ উপায় হলো ভার্সন নিয়ন্ত্রণ &#8211; বিশেষ করে ডিস্ট্রিবিউটেড ভার্সন নিয়ন্ত্রণ &#8211; যা গিট-এর মাধ্যমে আরো বেগবান হয়েছে। আবার একই অফিসে একাধিক ডেভলপার একই প্রজেক্টে মিলেমিশে কাজ করলেও গিটের তুলনা নেই, তখন একই কাজের পূণরাবৃত্তি রোধ করে যার যার অবস্থান থেকে কাজকে এগিয়ে নিয়ে যাওয়া যায় খুব সহজেই।</p>
+
+
+
+<h3>ভার্সন নিয়ন্ত্রণের পুরোন পদ্ধতি ফেলে এখন যখন গিট</h3>
+
+
+
+<span id="more-491"></span>
+
+
+<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/git-vs-contemporary-vcs.png"><img decoding="async" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/git-vs-contemporary-vcs-300x259.png" alt="অন্যান্য ভার্সন নিয়ন্ত্রণ পদ্ধতির সাথে গিট-এর তুলনা [স্কট চ্যাকন-এর ভিডিও ব্রিফ থেকে স্ক্রিনশট নেয়া]" class="wp-image-499"></a><figcaption class="wp-element-caption">অন্যান্য ভার্সন নিয়ন্ত্রণ পদ্ধতির সাথে গিট-এর তুলনা [স্কট চ্যাকন-এর ভিডিও ব্রিফ থেকে স্ক্রিনশট নেয়া]</figcaption></figure>
+</div>
+
+
+<p><em>এই বিষয়টাও কি জানা লাগবে?</em> সত্যি বলতে কি এই বিষয়টাতে একটা মজার ব্যাপার আছে। উপরে ভার্সন নিয়ন্ত্রণ সম্পর্কে আমরা যে ধারণা পেয়েছি, সেই ধারণা অনুযায়ী আপনাকে যদি আপনার ফাইলের ভার্সন নিয়ন্ত্রণ করতে বলা হয়, কী করবেন আপনি? খুব সহজেই করা যায় &#8211; প্রথম লাইনটা লিখে ফাইলটার একটা কপি আলাদা একটা ফোল্ডারে রেখে দিব। তারপর ফাইলটাতে দ্বিতীয় লাইনটা লিখবো, তারপর আরেকটা নতুন ফোল্ডারে ফাইলটা রেখে দিব। এভাবে তিনবার করলে আমাদের একই ফাইলের তিনটা আলাদা আলাদা অবস্থার তিনটা ভার্সন থাকছে &#8211; সব সমস্যা সমাধান! হ্যা, প্রথম দিকে আপনার মতো করেই বিষয়টাকে দেখা হতো &#8211; আর আগেকার ভার্সন নিয়ন্ত্রণ হতোও এই ধারণার উপর, যেমন: SVN। গিট আসার আগে এসভিএন খুব জনপ্রিয় ছিল, যেখানে প্রতিটা আলাদা আলাদা অবস্থার জন্য একেকটা আলাদা আলাদা ফাইল কিংবা লগ রেখে দেয়া হতো ব্যাকআপ হিসেবে। &#8230;এবং সমস্যাটা সেখানেই।</p>
+
+
+
+<p>আপনি যে ফাইলে কাজ করেছেন, সেই ফাইলটা ছাড়াও এখন আরো তিনটা ফাইল আপনার হয়ে গেছে। যদি একেকটা ফাইলের আকার 1kb করে হয়, তাহলে আপনার ডিস্কে এখন 4kb (মূল ফাইল + তিনটা ভার্সন) জায়গা জোড়া হয়ে গেছে। বিষয়টা বড় ফাইলের ক্ষেত্রে হলে কী হবে আশা করি আর বুঝিয়ে বলা লাগবে না। আর এখানেই গিট-এর কৃতিত্ব। <strong>গিট এই পদ্ধতিতে ভার্সন নিয়ন্ত্রণ করে না।</strong></p>
+
+
+
+<p>গিট এসে বললো কি, <em>আচ্ছা, ভালো করে দেখুন তো, আমাদের ফাইল কি এখানে চারটা? &#8230;না। বরং একটা ফাইলেরই চারটা আলাদা অবস্থা। এক কাজ করি, প্রথম অবস্থার একটা ছবি তুলে রাখি, তারপর আরেকটা, তারপর আরো একটা ছবি (snapshot) তুলে রাখলেই তো হয় &#8211; সব অবস্থার একেকটা ছবি পাওয়া যায়&#8230;।</em> আর গিট করলোও তাই। ফাইলের পর ফাইল জমা না করে গিট করলো কি প্রত্যেকটা অবস্থার একেকটা ছবি তুলে রাখার মতো করে রেকর্ড জমা করে রাখলো, ফলে দেখা গেল, সেই রেকর্ডগুলো দেখলেই আমরা ফাইলের পরিবর্তনটা বুঝতে পারি, গাদা গাদা ফাইল জমা করে রাখার দরকার পড়ে না। একারণেই গিট একটি মডার্ন ভার্সন নিয়ন্ত্রণ পদ্ধতি আর সবাই তাকে গ্রহণও করেছে সাদরে।</p>
+
+
+
+<h3>একটু পরিচিতি&#8230;</h3>
+
+
+
+<p>একটু বলে নেয়া দরকার, গিট দিয়ে ভার্সন নিয়ন্ত্রণের পুরো বিষয়টাতে আপনার ইন্টারনেট সংযোগ থাকার কিন্তু কোনো দরকার নেই। পুরো বিষয়টাই হয় লোকালি, মানে আপনার পিসিতেই, তাই গিট অনেক দ্রুততর। কিন্তু আপনার যদি নিজের গন্ডির বাইরে কারো সাথে কোড শেয়ার করতে হয়, তখন তো স্বাভাবিকভাবেই ক্লাউডে একটু জায়গা আর যোগাযোগের বিষয়টি থাকবে &#8211; মানে তখন দরকার হবে ইন্টারনেট বা নেটওয়ার্ক ব্যবস্থা। আমাদের জন্য সেরকমই একটা বিনামূল্যের ক্লাউড হলো github.com, যা আসলে সোর্স কোড তুলে রাখার একটা জায়গা, যেখানে গিট দিয়ে ভার্সন নিয়ন্ত্রণ ছাড়াও অন্যান্য কোডারদের সাথে যোগাযোগ, উইকি, কোড সংক্রান্ত ফোরাম ইত্যাদি সুবিধা রয়েছে। তাহলে বোঝা গেল, git হলো ভার্সন নিয়ন্ত্রণের একটা প্রোগ্রাম বা সফ্‌টওয়্যার, আর গিটহাব হলো একটা ওয়েবসাইট, যেখানে গিট ব্যবহার করে ভার্সন নিয়ন্ত্রণ ছাড়াও সামাজিক কোডিং ধারণার মতো একটা ব্যাপার কাজ করে। গিটহাবের লগো বা প্রতীক হলো একটা অক্টোপাস।</p>
+
+
+
+<p>গিট নিয়ে কাজ করতে দেখলেই আমরা দেখি অনেক অনেক কোড লেখালেখি, আসলে এটাই হলো গিট নিয়ে কাজ করার সহজতর পন্থা (<em>আমি কি &#8216;সহজতর পন্থা&#8217; বলিনি?</em>)। কিন্তু এছাড়াও গিট ব্যবহারের অনেক GUI বা Graphical User Interface বা দেখে-দেখে-ক্লিক-করে-করে-কাজ-করার প্রোগ্রাম রয়েছে, কিন্তু সেগুলো এখনও হয়তো অতটা সম্পূর্ণ না এবং অনেক ক্ষেত্রে সেগুলোতে সীমাবদ্ধতা আছে, তাই কোডাররা কোড লিখে কাজ করাকেই বেশি পছন্দ করেন। এবং GUI পদ্ধতিতে কাজ করলে একটা সমস্যা হলো একজন এই ইন্টারফেস পছন্দ করেন তো আরেকজন অন্য ইন্টারফেস পছন্দ করেন, তখন আপনার জন্য নিজের অবস্থান তৈরি করাটা কষ্টকর হয়ে উঠতে পারে। কিন্তু যে যেই ইন্টারফেসেই স্বচ্ছন্দবোধ করুন না কেন, যদি তাঁর গিট কোড জানা থাকে, তাহলে যেকোনো পরিবেশ-পরিস্থিতিতেই স্বাভাবিকভাবে, স্বচ্ছন্দে কোড করতে পারবেন তিনি। তাই আমরা আসলে ঐসব ইন্টারফেসভিত্তিক গিট না শিখে খুব সহজে কোড লিখে গিট শিখে নিব।</p>
+
+
+
+<h3>গিট ব্যাশ &#8211; কোড লিখে ভার্সন নিয়ন্ত্রণ</h3>
+
+
+
+<p>ইংরেজিতে Git Bash লেখা বলে অনেকে একে &#8216;গিট বাশ&#8217; বলেন, কিন্তু আসলে উচ্চারণটা &#8216;গিট ব্যাশ&#8217; হবে। গিট ব্যাশ হলো কমান্ড লাইনে, মানে কোড লিখে গিট ব্যবহার করার পদ্ধতি। এটা গিট ইন্সটল করার সময়ই ইন্সটল করে নেয়া যায়, অথবা উইন্ডোজের সাথে থাকা ডস মোডের কমান্ড প্রম্পট (ম্যাক-এর ক্ষেত্রে টার্মিনাল) ব্যবহার করেও কোড করা যায়। আমরা যেহেতু কোড মোডে কাজ করবো, তাই আমরা গিট ব্যাশ ইন্সটল করে নিবো গিট ইন্সটল করার সময়ই।</p>
+
+
+
+<h3>গিট ইন্সটল করা</h3>
+
+
+
+<p>মাইক্রোসফ্‌ট অফিস ব্যবহার করতে হলে যেমন তা ইন্সটল করে নিতে হয়, গিট ব্যবহার করার জন্যও তা ইন্সটল করে নিতে হয় &#8211; তবে গিট সফ্‌টওয়্যারটা যথেষ্ট হালকা। এজন্য আমাদেরকে নিচের URL থেকে গিট-এর সাম্প্রতিক সংস্করণটি ডাউনলোড করে নিতে হবে:</p>
+
+
+
+<p><a href="https://git-scm.com/downloads" data-type="URL" data-id="https://git-scm.com/downloads" target="_blank" rel="noreferrer noopener"><strong>git-scm.com/downloads</strong></a></p>
+
+
+
+<p><strong>ধর্তব্য ধাপ ১:</strong> ডাউনলোড করা ইন্সটলারটি চালু করলে Next চেপে চেপে এগোলে নিচের মতো একটি পর্দা আসবে। এখানে আপনাকে, গিট কোথায় ইনস্টল হবে, তা দেখিয়ে দিতে হবে। C:\ ড্রাইভে ইন্সটল করতেই হবে &#8211; এরকম কোনো বাধ্যবাধকতা নেই।</p>
+
+
+
+<figure class="wp-block-image"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-01.png"><img decoding="async" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-01-300x233.png" alt="উইন্ডোজে গিট ইনস্টল : ধাপ ১" class="wp-image-495"></a></figure>
+
+
+
+<p></p>
+
+
+
+<p><strong>ধর্তব্য ধাপ ২:</strong> Next চাপলে আরেকটি পর্দা আসবে, যেখানে আপনাকে গিট-এর কম্পোনেন্ট মানে দরকারি অংশগুলো বাছাই করে নিতে হবে। এখানে আপনি Windows Explorer Integration অংশে Git Bash here এবং Git GUI here পছন্দ করে নিন &#8211; আমরা ব্যাশ নিয়ে কাজ করলেও GUI-টা পাশাপাশি থাকবে, এবং ঠিকমতো ইন্সটল হলে মাউসের রাইট বাটনের সাথে এই দুটো অপশন যোগ হয়ে যাবে। Next চাপুন।</p>
+
+
+
+<figure class="wp-block-image"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-02.png"><img decoding="async" width="300" height="233" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-02-300x233.png" alt="উইন্ডোজে গিট ইনস্টল : ধাপ ২" class="wp-image-498" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-02-300x233.png 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-02.png 505w" sizes="(max-width: 300px) 100vw, 300px"></a></figure>
+
+
+
+<p></p>
+
+
+
+<p><strong>ধর্তব্য ধাপ ৩:</strong> PATH বাছাই পাতায় Use Git from Git Bash only বাছাই করে Next চাপুন।</p>
+
+
+
+<figure class="wp-block-image"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-03.png"><img decoding="async" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-03-300x233.png" alt="উইন্ডোজে গিট ইনস্টল : ধাপ ৩" class="wp-image-496"></a></figure>
+
+
+
+<p></p>
+
+
+
+<p><strong>ধর্তব্য ধাপ ৪:</strong> Line ending conversions-এ Checkout Windows-style, commit Unix-style line endings বাছাই করে Next চাপুন।</p>
+
+
+
+<figure class="wp-block-image"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-04.png"><img decoding="async" width="300" height="233" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-04-300x233.png" alt="উইন্ডোজে গিট ইনস্টল : ধাপ ৪" class="wp-image-497" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-04-300x233.png 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/10/install-git-on-windows-04.png 505w" sizes="(max-width: 300px) 100vw, 300px"></a></figure>
+
+
+
+<p></p>
+
+
+
+<p>ব্যস, গিট ইন্সটল হয়ে গেল।</p>
+
+
+
+<p>এবারে গিটকে নিজের, সম্পূর্ণ আপন করে নেয়ার পালা। Start » Git » Git Bash-এ ক্লিক করুন। ব্যস, উইন্ডোজের ডস মোডের মতো একটা কমান্ড কনসোল খুলবে, এখানেই আমরা কাজ শুরু করবো। গিটকে আপন করে নেবার জন্য দুটো কাজ করতে হবে:</p>
+
+
+
+<ul>
+<li>গিটকে নিজের নামটা বলে দেয়া</li>
+
+
+
+<li>গিটকে নিজের ইমেইল ঠিকানাটা দিয়ে দেয়া</li>
+</ul>
+
+
+
+<p>ধরা যাক আমার নাম <code>Someone</code> আর ইমেইল ঠিকানা হলো <code>someone@example.com</code>, তাহলে যা লিখতে হবে-</p>
+
+
+
+<pre class="wp-block-preformatted">git config --global user.name "Someone"
+git config --global user.email "someone@example.com"
+</pre>
+
+
+
+<p>ব্যস গিট এবার আপনার, শ্রেফ আপনার জন্য প্রস্তুত। &#x1f642; এই কাজটা বারবার করতে হবে না, ব্যস এই একবারই।</p>
+
+
+
+<p>গিট ব্যবহারের প্রাথমিক জ্ঞানের আজকের আলোচনা এই পর্যন্তই। এখানে আমরা গিট সম্পর্কে প্রায় সম্পূর্ণ অন্তর্নিহীত ধারণা পেয়ে গেলাম। আগামী পর্বে আমরা গিট ব্যবহার করে ভার্সন নিয়ন্ত্রণ করা শিখে নিব মাত্র ৬টা কমান্ড দিয়ে, ইনশাল্লাহ।</p>
+
+
+
+<p>আগামী পর্বে সমাপ্য&#8230;</p>
+
+
+
+<p class="has-text-align-right"><strong><a href="https://mayeenulislam.github.io/tuts/git-basics-2/">পরের পর্ব »</a></strong></p>
+
+
+
+<p>&#8211; <strong>মঈনুল ইসলাম</strong><br>&#x1f517; <a rel="noreferrer noopener" href="https://mayeenulislam.github.io/" target="_blank">mayeenulislam.github.io</a></p>
+							</div>
+		<div class="tags-links">
+<a href="https://mayeenulislam.github.io/tuts/tag/git/" rel="tag">গিট</a> <a href="https://mayeenulislam.github.io/tuts/tag/using-git/" rel="tag">গিট ব্যবহারের কৌশল</a> <a href="https://mayeenulislam.github.io/tuts/tag/learning-git/" rel="tag">গিট শেখা</a> <a href="https://mayeenulislam.github.io/tuts/tag/github/" rel="tag">গিটহাব</a> <a href="https://mayeenulislam.github.io/tuts/tag/version-control/" rel="tag">ভার্ষন কন্ট্রোল</a>
+</div></article>
+			<div class="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<div class="author-avatar" itemprop="image">
+		<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" class="avatar avatar-80 photo" height="80" width="80">	</div>
+	<div class="author-description">
+		<h4>About <span itemprop="name">মঈনুল ইসলাম</span>
+</h4>
+		<p>
+						<span itemprop="description">নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ <a href="https://nishachor.com/" title="নিশাচর - অমনিশায় লুকানো যত রহস্য আমার চাই">nishachor.com</a>-এ লেখালেখি করেন।</span>
+			<a itemprop="url" class="author-link" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author">
+				View all posts by মঈনুল ইসলাম <span class="meta-nav">&rarr;</span>			</a>
+		</p>
+	</div>
+</div>
+	
+	<nav class="navigation post-navigation" aria-label="প্রকাশনাসমূহ">
+		<h2 class="screen-reader-text">পোস্ট ন্যাভিগেশন</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://mayeenulislam.github.io/tuts/bengali-lorem-ipsum/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">বাংলায় নমুনা লেখা – বাংলা Lorem ipsum</span></a></div>
+<div class="nav-next"><a href="https://mayeenulislam.github.io/tuts/git-basics-2/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ২</span></a></div>
+</div>
+	</nav>
+
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			<span itemprop="interactionCount">18</span> comments		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-522" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-522" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/5675293e2b152a9b14caacf04375cd9f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/5675293e2b152a9b14caacf04375cd9f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">hamimferdous</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-522"><time datetime="2014-11-07T00:37:30+06:00">নভেম্বর 7, 2014; 12:37 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>দারুন! টিউটোরিয়াল নয় যেন থ্রীলার পড়ছিলাম, শেষ হতেই মনে হল হায় হায় এত তাড়াতাড়ি শেষ হয়ে গেল! আমি কি বলতে পারি গিট অর্ধেক শিখে গেলাম?</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-522" data-commentid="522" data-postid="491" data-belowelement="div-comment-522" data-respondelement="respond" data-replyto="hamimferdous-এর প্রত্যুত্তর" aria-label="hamimferdous-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-528" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-528" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-528"><time datetime="2014-11-07T10:25:16+06:00">নভেম্বর 7, 2014; 10:25 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>কী জানি বাপু, থ্রীলার না লিখলেও <a href="http://nishachor.com/" title="নিশাচর - অমানিশায় লুকানো যত রহস্য আমার চাই" target="_blank" rel="nofollow">nishachor.com</a>-এ অ্যাডভেঞ্চার লিখি বলেই হয়তো ওরকম কিছু গেঁথে গেছে। ধন্যবাদ আপনাকে। 🙂</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-528" data-commentid="528" data-postid="491" data-belowelement="div-comment-528" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		<li id="comment-523" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-523" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/5675293e2b152a9b14caacf04375cd9f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/5675293e2b152a9b14caacf04375cd9f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">hamimferdous</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-523"><time datetime="2014-11-07T01:08:18+06:00">নভেম্বর 7, 2014; 1:08 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>একটু দেখে বলবেন আমি ঠিকঠাক মত পেরেছি কিনা? <a href="http://prntscr.com/53ofhd" rel="nofollow ugc">http://prntscr.com/53ofhd</a></p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-523" data-commentid="523" data-postid="491" data-belowelement="div-comment-523" data-respondelement="respond" data-replyto="hamimferdous-এর প্রত্যুত্তর" aria-label="hamimferdous-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-527" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-527" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-527"><time datetime="2014-11-07T10:23:59+06:00">নভেম্বর 7, 2014; 10:23 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>আমার তো মনে হচ্ছে, শুধু পারেনইনি, অপূর্ব পেরেছেন! এগিয়েও গেছেন। 🙂<br>
+শুভ কামনা।</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-527" data-commentid="527" data-postid="491" data-belowelement="div-comment-527" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		<li id="comment-529" class="comment even thread-even depth-1">
+			<article id="div-comment-529" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/4c45a326fb81fc6f5fd9fa2cf34f7e97?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/4c45a326fb81fc6f5fd9fa2cf34f7e97?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://gravatar.com/pprothim0" rel="external nofollow ugc" class="url">pprothim0</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-529"><time datetime="2014-11-07T12:49:53+06:00">নভেম্বর 7, 2014; 12:49 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>ভাই এটা কি লিখলেন? অনেক অনেক সহজে কি ভাবে লিখলেন। মজা করলাম। অনেক সুন্দর লেখা থ্যাংকস।</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-529" data-commentid="529" data-postid="491" data-belowelement="div-comment-529" data-respondelement="respond" data-replyto="pprothim0-এর প্রত্যুত্তর" aria-label="pprothim0-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-566" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-566" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/2c30627c1f3a3471b3eb7a556cf07ebc?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/2c30627c1f3a3471b3eb7a556cf07ebc?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Rinto Sarkar</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-566"><time datetime="2014-11-12T01:59:09+06:00">নভেম্বর 12, 2014; 1:59 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>পরের পর্বের অপেক্ষায় রইলাম&#8212;&#8212;&#8212;&#8212;-অভিভূত সহজ লেখায় অনেক কিছুই ফকফকা হইছে&#8230;&#8230;&#8230;&#8230;&#8230;.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-566" data-commentid="566" data-postid="491" data-belowelement="div-comment-566" data-respondelement="respond" data-replyto="Rinto Sarkar-এর প্রত্যুত্তর" aria-label="Rinto Sarkar-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-755" class="comment even thread-even depth-1">
+			<article id="div-comment-755" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/e6dc65605be51a2a001ef7587ff0f0b5?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/e6dc65605be51a2a001ef7587ff0f0b5?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Avijit</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-755"><time datetime="2014-12-21T16:03:31+06:00">ডিসেম্বর 21, 2014; 4:03 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Darun.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-755" data-commentid="755" data-postid="491" data-belowelement="div-comment-755" data-respondelement="respond" data-replyto="Avijit-এর প্রত্যুত্তর" aria-label="Avijit-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-758" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-758" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/2597abfd8dcdf3ce25d3e94b8bdaba28?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/2597abfd8dcdf3ce25d3e94b8bdaba28?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://gravatar.com/ashique12009" rel="external nofollow ugc" class="url">khandoker ashique mahamud</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-758"><time datetime="2015-01-08T12:03:27+06:00">জানুয়ারী 8, 2015; 12:03 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>how to clone my own domain to my pc by git? please tell me. i dont want to upload my project to github, i want to upload it my own domain&#8230;.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-758" data-commentid="758" data-postid="491" data-belowelement="div-comment-758" data-respondelement="respond" data-replyto="khandoker ashique mahamud-এর প্রত্যুত্তর" aria-label="khandoker ashique mahamud-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-759" class="comment byuser comment-author-admin bypostauthor even depth-2">
+			<article id="div-comment-759" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-759"><time datetime="2015-01-08T12:31:13+06:00">জানুয়ারী 8, 2015; 12:31 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>আপনাকে যদি ঠিকমতো বুঝি, তাহলে, যতটুকু বুঝি, আপনার নিজের সার্ভারে গিট ইন্সটল করে নিতে হবে। কিভাবে সেটা করা যায় তা আমার জ্ঞানের বাইরে এই মুহূর্তে। তবে <a href="http://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server" title="Setting Up the Server" target="_blank" rel="nofollow">এই লিংক</a> হয়তো আপনাকে সহায়তা করতে পারে&#8230;</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-759" data-commentid="759" data-postid="491" data-belowelement="div-comment-759" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-803" class="comment odd alt depth-2">
+			<article id="div-comment-803" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/515020d2c5e34244e8ec783c93e934df?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/515020d2c5e34244e8ec783c93e934df?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Shohanur Rahaman</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-803"><time datetime="2016-04-22T09:23:22+06:00">এপ্রিল 22, 2016; 9:23 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>at first copy the repository link. open git bash &#8211; git clone your_repository_http after then add files,edit them.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-803" data-commentid="803" data-postid="491" data-belowelement="div-comment-803" data-respondelement="respond" data-replyto="Shohanur Rahaman-এর প্রত্যুত্তর" aria-label="Shohanur Rahaman-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		<li id="comment-775" class="comment even thread-even depth-1">
+			<article id="div-comment-775" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/983041284e9b988f3cdabace6dce1f5f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/983041284e9b988f3cdabace6dce1f5f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Alberuni Azad</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-775"><time datetime="2015-09-16T16:26:04+06:00">সেপ্টেম্বর 16, 2015; 4:26 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>দারুন লিখেছেন! অনেক ধন্যবাদ আপনাকে 🙂</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-775" data-commentid="775" data-postid="491" data-belowelement="div-comment-775" data-respondelement="respond" data-replyto="Alberuni Azad-এর প্রত্যুত্তর" aria-label="Alberuni Azad-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-776" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-776" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/d3e73b6dee335681a3215b96c6d27569?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/d3e73b6dee335681a3215b96c6d27569?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">ShakilMax</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-776"><time datetime="2015-09-25T00:42:03+06:00">সেপ্টেম্বর 25, 2015; 12:42 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>অনেক সুন্দর Carry on bro&#8230;.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-776" data-commentid="776" data-postid="491" data-belowelement="div-comment-776" data-respondelement="respond" data-replyto="ShakilMax-এর প্রত্যুত্তর" aria-label="ShakilMax-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-791" class="comment even thread-even depth-1">
+			<article id="div-comment-791" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/f07759653c6d9c6cbbfe66be681e5ce0?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/f07759653c6d9c6cbbfe66be681e5ce0?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">hachib</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-791"><time datetime="2015-10-16T17:18:15+06:00">অক্টোবর 16, 2015; 5:18 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>দারুন লিখেছেন! অনেক ধন্যবাদ আপনাকে</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-791" data-commentid="791" data-postid="491" data-belowelement="div-comment-791" data-respondelement="respond" data-replyto="hachib-এর প্রত্যুত্তর" aria-label="hachib-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-796" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-796" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/28733273eda487af5bc13dce8b288ce5?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/28733273eda487af5bc13dce8b288ce5?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">King Rayhan</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-796"><time datetime="2016-02-23T02:58:43+06:00">ফেব্রুয়ারী 23, 2016; 2:58 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>অনেক ভালো লাগলো।<br>
+মনেই হচ্ছিলো না কোন টিউটরিয়াল পড়ছি। মনে হচ্ছিলো যেন তিন গোয়েন্দার বই পরছিলাম 🙂</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-796" data-commentid="796" data-postid="491" data-belowelement="div-comment-796" data-respondelement="respond" data-replyto="King Rayhan-এর প্রত্যুত্তর" aria-label="King Rayhan-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-807" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-807" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/6bec2a33766a82226a49e3b7a60705bc?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/6bec2a33766a82226a49e3b7a60705bc?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Mahfuzul Alam</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-807"><time datetime="2016-12-29T13:26:15+06:00">ডিসেম্বর 29, 2016; 1:26 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>দারুন মাইনুল, খুব সুন্দর, গল্পের মাধ্যমে এতো সহজে কোনো টপিক বুঝানো যায় তা না পড়লে বুঝতে পারতাম না | এগিয়ে যান আপনি, আপনার সর্বাঙ্গীন সফলতা কামনা করছি&#8230;.. মাহফুজুল আলম, টেকনোভিস্তা লিমিটেড.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-807" data-commentid="807" data-postid="491" data-belowelement="div-comment-807" data-respondelement="respond" data-replyto="Mahfuzul Alam-এর প্রত্যুত্তর" aria-label="Mahfuzul Alam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-808" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-808" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-808"><time datetime="2016-12-29T13:29:37+06:00">ডিসেম্বর 29, 2016; 1:29 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>আপনি পড়েছেন, এটা আমার সৌভাগ্য।<br>
+আপনাকে অনেক ধন্যবাদ। 🙂</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-808" data-commentid="808" data-postid="491" data-belowelement="div-comment-808" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		<li id="comment-815" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-815" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/f795277d323e764b72d2067d4dba3307?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/f795277d323e764b72d2067d4dba3307?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Rana</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-815"><time datetime="2017-08-06T17:12:57+06:00">আগস্ট 6, 2017; 5:12 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>অনেক সুন্দর এবং গোছালো একটা লেখা। বাংলায় এমন সুন্দর আর্টিকেল খুব কমই পাওয়া যায়।</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-815" data-commentid="815" data-postid="491" data-belowelement="div-comment-815" data-respondelement="respond" data-replyto="Rana-এর প্রত্যুত্তর" aria-label="Rana-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-818" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-818" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/2521b4e456a86009eee43a3864c6cade?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/2521b4e456a86009eee43a3864c6cade?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">rana</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-basics-1/#comment-818"><time datetime="2017-10-16T21:57:19+06:00">অক্টোবর 16, 2017; 9:57 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>অনেক উপকারে আসলো । আল্লাহ আপনাকে উত্তম প্রতিদান দিন ।</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-818" data-commentid="818" data-postid="491" data-belowelement="div-comment-818" data-respondelement="respond" data-replyto="rana-এর প্রত্যুত্তর" aria-label="rana-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		</ol>
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">মন্তব্য করুন <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://mayeenulislam.github.io/tuts/git-basics-1/#respond" style="display:none;">জবাব বাতিল</a></small>
+</h3>
+<form action="https://tuts.local/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">আপনার ই-মেইল এ্যাড্রেস প্রকাশিত হবে না।</span> <span class="required-field-message"><span class="required">*</span> চিহ্নিত বিষয়গুলো আবশ্যক।</span></p>
+<p class="comment-form-comment"><label for="comment">মন্তব্য <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">নাম <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">ইমেইল <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">ওয়েবসাইট</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">পরবর্তিতে ব্যবহারের জন্য আপনার নাম, ইমেইল ঠিকানা এবং ওয়েব ঠিকানা এই ব্রাউজারে সংরক্ষণ করুন।</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="মন্তব্য প্রকাশ করুন"> <input type="hidden" name="comment_post_ID" value="491" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+	
+</div>
+
+			</div>
+											<footer class="site-info" itemscope itemtype="http://schema.org/WPFooter">
+										<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>.
+					Theme: Flat 1.7.11 by <a rel="nofollow" href="https://themeisle.com/themes/flat/" title="Flat WordPress Theme">Themeisle</a>.				</footer>
+														</div>
+					</div>
+	</div>
+</div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39984706-1', 'auto');
+      ga('send', 'pageview');</script>
+<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/comment-reply.js?ver=6.1.1" id="comment-reply-js"></script>
+</body>
+</html>

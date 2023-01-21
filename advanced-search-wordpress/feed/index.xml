@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	ওয়ার্ডপ্রেসে অ্যাডভান্সড সার্চ তৈরির উপায় তে মন্তব্যসমূহ	</title>
+	<atom:link href="https://mayeenulislam.github.io/tuts/advanced-search-wordpress/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mayeenulislam.github.io/tuts/advanced-search-wordpress/</link>
+	<description>Technology Tutorials by Mayeenul Islam</description>
+	<lastBuildDate>Sat, 21 Jan 2023 14:36:26 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-789</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2015 17:44:01 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=507#comment-789</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-786&quot;&gt;humayun&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+এই পদ্ধতিটা ব্যবহার করতে নিরুৎসাহিত করা হচ্ছে।
+নতুন এবং সঠিক পদ্ধতি নিয়ে খুব শিঘ্রই লিখার ইচ্ছা আছে, ইনশাল্লাহ তখন সমাধান হয়ে যাবে।
+
+তবু অফ-দ্যা-রেকর্ডে একটা কথা বলে রাখি: Undefined index খুব প্রচলিত একটা সমস্যা। ধরা যাক একটা ভ্যারিয়েবলে ডায়নামিক ভ্যালু রাখছি। কিন্তু কোনো কারণে তাতে ভ্যালু এলো না। কিন্তু আপনি পরবর্তিতে ঐ ভ্যারিয়েবলটা কোথাও ব্যবহারও করেছেন। তখন, ঐ যে, যেখানে ব্যবহার করেছেন, সেখানে কিন্তু ফাঁকা ভ্যালু গেল, কিংবা Undefined index গেল, মানে, এই ভ্যারিয়েবলে আসলে কী যে এসেছে, সে জানে না। এই সমস্যা খুব সহজে সমাধান করা যায়।
+&lt;pre&gt;
+&lt;?php
+$variable = &#039;&#039;; //প্রথমে একে সেট করে নিলাম ফাঁকা হিসেবে
+$variable = 3; //ধরা যাক, এটাই আমাদের ডায়নামিক ভ্যালু
+&lt;/pre&gt;
+এখন যদি কোনো কারণে দ্বিতীয় লাইনে ভ্যালু নাও আসে, সে &lt;code&gt;$variable&lt;/code&gt;-কে ফাঁকা ধরে নিয়ে এগোতে পারে, তাই Undefined index দেখাবে না।]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-786">humayun</a>-এর প্রত্যুত্তরে।</p>
+<p>এই পদ্ধতিটা ব্যবহার করতে নিরুৎসাহিত করা হচ্ছে।<br />
+নতুন এবং সঠিক পদ্ধতি নিয়ে খুব শিঘ্রই লিখার ইচ্ছা আছে, ইনশাল্লাহ তখন সমাধান হয়ে যাবে।</p>
+<p>তবু অফ-দ্যা-রেকর্ডে একটা কথা বলে রাখি: Undefined index খুব প্রচলিত একটা সমস্যা। ধরা যাক একটা ভ্যারিয়েবলে ডায়নামিক ভ্যালু রাখছি। কিন্তু কোনো কারণে তাতে ভ্যালু এলো না। কিন্তু আপনি পরবর্তিতে ঐ ভ্যারিয়েবলটা কোথাও ব্যবহারও করেছেন। তখন, ঐ যে, যেখানে ব্যবহার করেছেন, সেখানে কিন্তু ফাঁকা ভ্যালু গেল, কিংবা Undefined index গেল, মানে, এই ভ্যারিয়েবলে আসলে কী যে এসেছে, সে জানে না। এই সমস্যা খুব সহজে সমাধান করা যায়।</p>
+<pre>
+<?php
+$variable = ''; //প্রথমে একে সেট করে নিলাম ফাঁকা হিসেবে
+$variable = 3; //ধরা যাক, এটাই আমাদের ডায়নামিক ভ্যালু
+</pre>
+<p>এখন যদি কোনো কারণে দ্বিতীয় লাইনে ভ্যালু নাও আসে, সে <code>$variable</code>-কে ফাঁকা ধরে নিয়ে এগোতে পারে, তাই Undefined index দেখাবে না।</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ humayun		</title>
+		<link>https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-786</link>
+
+		<dc:creator><![CDATA[humayun]]></dc:creator>
+		<pubDate>Tue, 13 Oct 2015 07:36:00 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=507#comment-786</guid>
+
+					<description><![CDATA[Problem -
+Undefined index: name in C:\wamp\www\media\wp-content\themes\media-contact\inc\advanced-search-result.php on line 3
+Call Stack]]></description>
+			<content:encoded><![CDATA[<p>Problem &#8211;<br />
+Undefined index: name in C:\wamp\www\media\wp-content\themes\media-contact\inc\advanced-search-result.php on line 3<br />
+Call Stack</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-765</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Sat, 14 Mar 2015 05:20:20 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=507#comment-765</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-763&quot;&gt;Say&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+nonce-এর ব্যবহার করা হয় ডাটাবেজে যাতে SQL Injection প্রতিহত করা যায়, এটা ব্যবহার করতে হয় যখন ডাটাবেজে কোনো কিছু ইনসার্ট/আপডেটের কাজ করা হয়। সার্চে এই ব্যাপারটি ঘটে না, সার্চে শুধুমাত্র তথ্য খোঁজা হয় (Query), এক্ষেত্রে নান্সের ব্যবহার অবান্তর এবং অযথাই ঝামেলা করার নামান্তর।
+আপনার প্রশ্নের জন্য ধন্যবাদ।]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-763">Say</a>-এর প্রত্যুত্তরে।</p>
+<p>nonce-এর ব্যবহার করা হয় ডাটাবেজে যাতে SQL Injection প্রতিহত করা যায়, এটা ব্যবহার করতে হয় যখন ডাটাবেজে কোনো কিছু ইনসার্ট/আপডেটের কাজ করা হয়। সার্চে এই ব্যাপারটি ঘটে না, সার্চে শুধুমাত্র তথ্য খোঁজা হয় (Query), এক্ষেত্রে নান্সের ব্যবহার অবান্তর এবং অযথাই ঝামেলা করার নামান্তর।<br />
+আপনার প্রশ্নের জন্য ধন্যবাদ।</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Say		</title>
+		<link>https://mayeenulislam.github.io/tuts/advanced-search-wordpress/#comment-763</link>
+
+		<dc:creator><![CDATA[Say]]></dc:creator>
+		<pubDate>Sat, 07 Mar 2015 18:24:42 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=507#comment-763</guid>
+
+					<description><![CDATA[Where to put nonce_field() in search form and how to verify nonce?]]></description>
+			<content:encoded><![CDATA[<p>Where to put nonce_field() in search form and how to verify nonce?</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

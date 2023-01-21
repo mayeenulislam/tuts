@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="bn-BD">
+<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://mayeenulislam.github.io/tuts/xmlrpc.php">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.14 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>ওয়ার্ডপ্রেস থীম অপশন্‌স এডিটর অ্যাকাউন্ট উপযোগী করার উপায় - tuts nano</title>
+	<meta name="description" content="ওয়ার্ডপ্রেস থিম ডেভেলপমেন্ট-এ থিম অপশন্‌স পাতা এডিটর অ্যাকাউন্ট থেকে ব্যবহারোপযোগী করার উপায় বর্ণিত হলো। সাথে থাকলো বহু আলোচিত এরর Cheatin’ uh?&#039;র সমাধান...">
+	<link rel="canonical" href="https://mayeenulislam.github.io/tuts/editors-access-theme-options/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="ওয়ার্ডপ্রেস থীম অপশন্‌স এডিটর অ্যাকাউন্ট উপযোগী করার উপায় - tuts nano">
+	<meta property="og:description" content="ওয়ার্ডপ্রেস থিম ডেভেলপমেন্ট-এ থিম অপশন্‌স পাতা এডিটর অ্যাকাউন্ট থেকে ব্যবহারোপযোগী করার উপায় বর্ণিত হলো। সাথে থাকলো বহু আলোচিত এরর Cheatin’ uh?&#039;র সমাধান...">
+	<meta property="og:url" content="https://mayeenulislam.github.io/tuts/editors-access-theme-options/">
+	<meta property="og:site_name" content="Tuts by Mayeenul Islam">
+	<meta property="article:publisher" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:author" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:published_time" content="2014-01-29T17:07:44+00:00">
+	<meta property="article:modified_time" content="2023-01-21T13:03:23+00:00">
+	<meta property="og:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="300">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="মঈনুল ইসলাম">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="ওয়ার্ডপ্রেস থীম অপশন্‌স এডিটর অ্যাকাউন্ট উপযোগী করার উপায় - tuts nano">
+	<meta name="twitter:description" content="ওয়ার্ডপ্রেস থিম ডেভেলপমেন্ট-এ থিম অপশন্‌স পাতা এডিটর অ্যাকাউন্ট থেকে ব্যবহারোপযোগী করার উপায় বর্ণিত হলো। সাথে থাকলো বহু আলোচিত এরর Cheatin’ uh?&#039;র সমাধান...">
+	<meta name="twitter:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg">
+	<meta name="twitter:creator" content="@mayeenulislam">
+	<meta name="twitter:site" content="@mayeenulislam">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="মঈনুল ইসলাম">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="5 মিনিট">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/#article","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/"},"author":{"name":"মঈনুল ইসলাম","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"headline":"ওয়ার্ডপ্রেস থীম অপশন্‌স “এডিটর” অ্যাকাউন্ট উপযোগী করার উপায়","datePublished":"2014-01-29T17:07:44+00:00","dateModified":"2023-01-21T13:03:23+00:00","mainEntityOfPage":{"@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/"},"wordCount":3381,"commentCount":0,"publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"image":{"@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg","articleSection":["উচ্চস্তরের টিউটোরিয়াল","ওয়ার্ডপ্রেস টিউটোরিয়াল","ওয়েব ডেভলপমেন্ট টিউটোরিয়াল","জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল","মাধ্যমিক স্তরের টিউটোরিয়াল"],"inLanguage":"bn-BD","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://mayeenulislam.github.io/tuts/editors-access-theme-options/#respond"]}]},{"@type":"WebPage","@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/","url":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/","name":"ওয়ার্ডপ্রেস থীম অপশন্‌স এডিটর অ্যাকাউন্ট উপযোগী করার উপায় - tuts nano","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/#website"},"primaryImageOfPage":{"@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/#primaryimage"},"image":{"@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg","datePublished":"2014-01-29T17:07:44+00:00","dateModified":"2023-01-21T13:03:23+00:00","description":"ওয়ার্ডপ্রেস থিম ডেভেলপমেন্ট-এ থিম অপশন্‌স পাতা এডিটর অ্যাকাউন্ট থেকে ব্যবহারোপযোগী করার উপায় বর্ণিত হলো। সাথে থাকলো বহু আলোচিত এরর Cheatin’ uh?'র সমাধান...","breadcrumb":{"@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/#breadcrumb"},"inLanguage":"bn-BD","potentialAction":[{"@type":"ReadAction","target":["https://mayeenulislam.github.io/tuts/editors-access-theme-options/"]}]},{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/#primaryimage","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg","width":800,"height":300,"caption":"ওয়ার্ডপ্রেস থিম অপশন্‌স পাতায় এডিটরকে পূর্ণ প্রবেশাধিকার দিন।"},{"@type":"BreadcrumbList","@id":"https://mayeenulislam.github.io/tuts/editors-access-theme-options/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mayeenulislam.github.io/tuts/"},{"@type":"ListItem","position":2,"name":"ওয়ার্ডপ্রেস থীম অপশন্‌স “এডিটর” অ্যাকাউন্ট উপযোগী করার উপায়"}]},{"@type":"WebSite","@id":"https://mayeenulislam.github.io/tuts/#website","url":"https://mayeenulislam.github.io/tuts/","name":"Tuts by Mayeenul Islam","description":"Technology Tutorials by Mayeenul Islam","publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mayeenulislam.github.io/tuts/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"bn-BD"},{"@type":["Person","Organization"],"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee","name":"মঈনুল ইসলাম","image":{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","width":2560,"height":1920,"caption":"মঈনুল ইসলাম"},"logo":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/"},"description":"নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ nishachor.com-এ লেখালেখি করেন।","sameAs":["https://nishachor.com","http://www.facebook.com/mayeenulislam","https://twitter.com/mayeenulislam"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ফীড" href="https://mayeenulislam.github.io/tuts/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; মন্তব্য ফীড" href="https://mayeenulislam.github.io/tuts/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ওয়ার্ডপ্রেস থীম অপশন্‌স &#8220;এডিটর&#8221; অ্যাকাউন্ট উপযোগী করার উপায় মন্তব্যের ফিড" href="https://mayeenulislam.github.io/tuts/editors-access-theme-options/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/wp-emoji.js?ver=6.1.1","twemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/twemoji.js?ver=6.1.1"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0x1FAF1, 0x1F3FB, 0x200D, 0x1FAF2, 0x1F3FF],
+					[0x1FAF1, 0x1F3FB, 0x200B, 0x1FAF2, 0x1F3FF]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/dist/block-library/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/classic-themes.css?ver=1" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="flat-fonts-css" href="//fonts.googleapis.com/css?family=Yesteryear%7CRoboto:400,700%7CRoboto+Slab%7CRoboto+Condensed" media="all">
+<link rel="stylesheet" id="flat-theme-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/css/flat.min.css?ver=1.7.11" media="all">
+<link rel="stylesheet" id="flat-style-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="flat-bengali-css" href="https://mayeenulislam.github.io/tuts/wp-content/plugins/flat-bengali/flat-bengali.css?ver=1.0.1" media="all">
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery.js?ver=3.6.1" id="jquery-core-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery-migrate.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/js/flat.min.js?ver=1.7.11" id="flat-js-js"></script>
+<!--[if lt IE 9]>
+<script src='https://tuts.local/wp-content/themes/flat/assets/js/html5shiv.min.js?ver=3.7.2' id='html5shiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://mayeenulislam.github.io/tuts/wp-json/">
+<link rel="alternate" type="application/json" href="https://mayeenulislam.github.io/tuts/wp-json/wp/v2/posts/408">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mayeenulislam.github.io/tuts/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mayeenulislam.github.io/tuts/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://mayeenulislam.github.io/tuts/?p=408">
+<link rel="alternate" type="application/json+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Feditors-access-theme-options%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Feditors-access-theme-options%2F#038;format=xml">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3526212672565487",
+          enable_page_level_ads: true
+     });</script><link type="image/x-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/tuts-nano.png" rel="shortcut icon">
+<style type="text/css"></style>
+<style type="text/css">#masthead .site-title {font-family:Yesteryear}body {font-family:Roboto }h1,h2,h3,h4,h5,h6 {font-family:Roboto Slab}#masthead .site-description, .hentry .entry-meta {font-family:Roboto Condensed}</style>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-color: #d1d1d1; }</style>
+	<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-180x180.png">
+<meta name="msapplication-TileImage" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-270x270.png">
+		<style type="text/css" id="wp-custom-css">.wp-block-group.has-background {
+    padding: 1.25em 2.375em;
+}
+
+pre.wp-block-preformatted {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+#masthead .site-title.display-title {
+	padding-left: 15px;
+	padding-right: 15px;
+}</style>
+			</head>
+
+<body class="post-template-default single single-post postid-408 single-format-standard custom-background" itemscope itemtype="http://schema.org/WebPage">
+<div id="page">
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div id="secondary" class="col-lg-3">
+								<header id="masthead" class="site-header" role="banner">
+										<div class="hgroup">
+						<h1 class="site-title display-title"><a href="https://mayeenulislam.github.io/tuts/" title="Tuts by Mayeenul Islam" rel="home"><span itemprop="name">Tuts by Mayeenul Islam</span></a></h1>
+<h2 itemprop="description" class="site-description">Technology Tutorials by Mayeenul Islam</h2>					</div>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><i class="fa fa-gear"></i></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+						<ul id="menu-top-menu" class="nav-menu">
+<li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-282"><a href="https://mayeenulislam.github.io/tuts/">নীড়পাতা</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://mayeenulislam.github.io/tuts/contributing-bangla-wikipedia/">বাংলা উইকিপিডিয়ায় লিখুন</a></li>
+</ul>					</nav>
+									</header>
+				
+				<div class="sidebar-offcanvas">
+					<div id="main-sidebar" class="widget-area" role="complementary">
+											<aside id="search-2" class="widget widget_search">
+	<form method="get" id="searchform" action="https://tuts.local/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+					</aside>
+					<aside id="nav_menu-2" class="widget widget_nav_menu">
+						<h3 class="widget-title">ধরণভিত্তিক টিউটোরিয়াল</h3>
+<div class="menu-category-menu-container"><ul id="menu-category-menu" class="menu">
+<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-550"><a href="https://mayeenulislam.github.io/tuts/category/nano-basix/">ন্যানো বেসিX</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-551"><a href="https://mayeenulislam.github.io/tuts/category/photoshop-tuts/">ফটোশপ টিউটোরিয়াল</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-532">
+<a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/">ওয়েব ডিযাইন টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-533" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-533"><a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/css-tuts/">সিএসএস টিউটোরিয়াল</a></li>
+</ul>
+</li>
+<li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-534">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/">ওয়েব ডেভলপমেন্ট টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-539" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-539"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/php-tuts/">পিএইচপি টিউটোরিয়াল</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-535">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/">ওয়ার্ডপ্রেস টিউটোরিয়াল</a>
+	<ul class="sub-menu">
+		<li id="menu-item-537" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-537"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/theme-tuts/">থিম টিউটোরিয়াল</a></li>
+		<li id="menu-item-538" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-538"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/plugin-tuts/">প্লাগইন টিউটোরিয়াল</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-540" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-540"><a href="https://mayeenulislam.github.io/tuts/category/git-tuts/">গিট টিউটোরিয়াল</a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-530"><a href="https://mayeenulislam.github.io/tuts/category/other-tuts/">অন্যান্য টিউটোরিয়াল</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-541">
+<a href="https://mayeenulislam.github.io/tuts/category/tuts-level/">জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-543" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-543"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/primary-level-tuts/">প্রাথমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-544"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/mid-level-tuts/">মাধ্যমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-542" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-542"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/top-level-tuts/">উচ্চস্তরের টিউটোরিয়াল</a></li>
+</ul>
+</li>
+</ul></div>					</aside>
+					<aside id="prisna-google-website-translator-2" class="widget widget_prisna-google-website-translator">
+						<h3 class="widget-title">Translate the Site</h3>
+
+<style type="text/css"><!--
+
+.prisna-gwt-align-left {
+	text-align: left !important;
+}
+.prisna-gwt-align-right {
+	text-align: right !important;
+}
+
+
+
+body {
+	top: 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+--></style>
+
+
+
+<div id="google_translate_element" class="prisna-gwt-align-left"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+function initializeGoogleTranslateElement() {
+	new google.translate.TranslateElement({
+		pageLanguage: "bn"
+	}, "google_translate_element");
+}
+/*]]>*/
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=initializeGoogleTranslateElement"></script>					</aside>
+											</div>
+				</div>
+			</div>
+
+						<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+							<div id="content" class="site-content" role="main" itemscope itemtype="http://schema.org/Article">
+			<article id="post-408" class="post-408 post type-post status-publish format-standard has-post-thumbnail hentry category-top-level-tuts category-wordpress-tuts category-web-development-tuts category-tuts-level category-mid-level-tuts">
+	<header class="entry-header">
+		<h1 class="entry-title" itemprop="name">ওয়ার্ডপ্রেস থীম অপশন্‌স &#8220;এডিটর&#8221; অ্যাকাউন্ট উপযোগী করার উপায়</h1>
+							<div class="entry-meta">
+<span class="entry-date"><a href="https://mayeenulislam.github.io/tuts/editors-access-theme-options/" rel="bookmark"><time class="entry-date published" datetime="2014-01-29T23:07:44+06:00" itemprop="datepublished">জানুয়ারী 29, 2014</time></a></span> by <span class="author vcard"><a class="url fn n" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author" itemprop="url">মঈনুল ইসলাম</a></span><span class="sep">&middot;</span><span class="comments-link"><a href="https://mayeenulislam.github.io/tuts/editors-access-theme-options/#respond" itemprop="discussionUrl">0 Comments</a></span>
+</div>
+			</header>
+				<div class="entry-thumbnail"><img width="800" height="300" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="ওয়ার্ডপ্রেস থিম অপশন্‌স পাতায় এডিটরকে পূর্ণ প্রবেশাধিকার দিন।" decoding="async" itemprop="thumbnailUrl" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns.jpg 800w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns-300x113.jpg 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2014/01/wordpress-theme-options-to-editor-nanodesigns-768x288.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></div>
+	
+	
+	<div class="entry-content" itemprop="articleBody">
+				
+<p><strong>জ্ঞানস্তর:</strong> মাধ্যমিক/উচ্চস্তর<br><strong>সময়:</strong> ৫ মিনিট</p>
+
+
+
+<p>ওয়ার্ডপ্রেস থিম ডেভেলপমেন্ট, মানে নিজের মতো করে থিম বানিয়ে নেবার সময় নিজস্ব একটা অ্যাডমিন প্যানেল পাতা বানিয়ে নেয়াটা দারুণ একটা উদ্যোগ, এবং এর মাধ্যমে ওয়েবসাইটের অনেক ফিচার অ্যাডমিন প্যানেল থেকে নিয়ন্ত্রণ করার সুযোগ এর অ্যাডমিন-ব্যবহারকারীদের দেয়া যায়। তো সেরকমই একটা ওয়েবসাইট ক্লায়েন্টকে বানিয়ে দেবার সময় দরকার পড়লো একটা অ্যাডমিন পাতা বানিয়ে দেবার।</p>
+
+
+
+<p>ওয়ার্ডপ্রেসে অ্যাডমিন প্যানেলে আলাদা পাতা বানিয়ে সেটিংস ডাটাবেযে সংরক্ষণের চিন্তা করলেই আপনাকে ওয়ার্ডপ্রেসের <a title="Settings API - WordPress Codex" href="http://codex.wordpress.org/Settings_API‎" target="_blank" rel="noopener">Settings API^</a>&#8216;র কথা চিন্তা করতে হবে। কারণ এই পদ্ধতিতে আপনি অনেক ঝামেলার বিষয়কে এড়িয়ে, হ্যাকিংয়ের সম্ভাবনা কমিয়ে আপনার সাইটের অ্যাডমিন প্যানেলে একটি সুরক্ষিত অ্যাডমিন সেকশন তৈরি করে নিতে পারবেন। কিন্তু সেটিংস এপিআই একটু সময় নিয়ে করতে হয়। যাহোক, সেটিংস এপিআই নিয়ে অন্য একদিন কথা বলা যাবে। এছাড়াও বিভিন্ন অপশন্‌স ফ্রেমওয়ার্ক আছে, যেগুলো অনুসরণ করে অনেক কম সময়ে অনেক ভালো অ্যাডমিন সেকশন তৈরি করে ফেলা যায়। কিন্তু এই পদ্ধতিগুলোর একটা সমস্যা আছে, সেটা হলো গতি। অ্যাডমিন ফ্রেমওয়ার্কগুলো সাইটকে অনেক ধীর করে দেয়। খুব ছোটখাটো কাজের জন্য তাই ফ্রেমওয়ার্কের বিকল্প হলো আমার গুরু <a title="Sample Theme Options by Ian Stewart - ThemeShaper.com" href="http://themeshaper.com/2010/06/03/sample-theme-options/" target="_blank" rel="noopener"><em>Ian Stewart</em>-এর Sample Theme Options^</a>। মাত্র একটি ফাইল ব্যবহার করে দারুণ একটি থিম অপশন্‌স পেজ তৈরি করা যায় অনায়াসেই।</p>
+
+
+
+<p>এরকমই একটি থিম অপশন্‌স পেজ তৈরি করে ফেলার পর যখন সাইটটা ক্লায়েন্টকে ডেলিভারি দেবার সময় ঘনিয়ে এলো, তখন বিভিন্নভাবে পরীক্ষা-নিরীক্ষা করতে গিয়ে দেখা গেলো, ক্লায়েন্টের জন্য তৈরি করা editor ইউযার রোল হিসেবে লগইন করে ঐ থিম অপশন্‌স পেজ থেকে কোনো কিছু সংরক্ষণ করা যায় না। একটা এরর দেখায়:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Cheatin’ uh?</p>
+</blockquote>
+
+
+
+<p>এররটা একটু বিতর্কিত, কারণ অনেকেই এধরণের ভুলকে &#8216;চিটারি&#8217; বলে অপমান করা মনে করেন। যাহোক, সেটা আমাদের বিষয় না। &#8230;অনেক ঘাঁটাঘাঁটি করলাম। কিন্তু আশানুরূপ কোনো সমাধান পেলাম না। ঘাঁটতে ঘাঁটতে ওয়ার্ডপ্রেসের <a title="WordPress Core Trac Ticket" href="https://core.trac.wordpress.org/ticket/14365" target="_blank" rel="noopener">trac-এ একটি টিকেট^</a> পেয়ে গেলাম, সেখানে একটা আপাত-সমাধান পেলাম।</p>
+
+
+
+<p> সমাধানটা হলো ঐ পাতা ব্যবহারকারীর সক্ষমতা (capabilities) হিসেবে যদি <code>edit_theme_options</code>&#8216;র বদলে <code>manage_options</code> করে দেয়া যায়, তাহলেই সব সমাধান হয়ে যায়। অর্থাৎ <code>theme-options.php</code> ফাইলের <code>add_theme_page()</code> ফাংশনটিকে যদি নিচের মতো করে লেখা যায়:</p>
+
+
+
+<span id="more-408"></span>
+
+
+
+<pre class="wp-block-preformatted">add_theme_page(
+    __( 'Theme Options', 'sampletheme' ),
+    __( 'Theme Options', 'sampletheme' ),
+    'manage_options',
+    'theme_options',
+    'theme_options_do_page'
+);
+</pre>
+
+
+
+<p>কিন্তু এর একটা চরম সীমাবদ্ধতা কিংবা অপকারিতা আছে, যা ঐ ট্র্যাকেই উল্লেখ করা আছে:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>&#8230;giving these users &#8216;manage_options&#8217; capability is not a good idea as that allows them to do other things that they shouldn&#8217;t be able to do (e.g. access wp-admin/options.php directly).</p>
+</blockquote>
+
+
+
+<p>অর্থাৎ, ব্যবহারকারীকে <code>manage options</code> সক্ষমতা দিয়ে দেয়ার ব্যাপারটা মোটেই কোনো ভালো আইডিয়া নয়, কারণ এর দ্বারা তাদেরকে এমন সব কাজ করার সুযোগ করে দেয়া যায়, যা তাদের জন্য প্রযোজ্য হওয়া উচিত নয় (যেমন: অ্যাডমিন প্যানেলের সেটিংস পাতায় ঢুকতে পারা)।</p>
+
+
+
+<p>অর্থাৎ সমস্যাটা হলো, <code>manage_options</code> সক্ষমতাটা শুধুমাত্র অ্যাডমিনের জন্য প্রযোজ্য, কিন্তু এডিটর সেই প্রিভিলিজ পেয়ে গেলে সাইটকে নষ্ট করে দিতে পারেন। তাই বিষয়টা আমাকে ভাবিত করে তুললো। এবং এটাও বুঝলাম, <code>manage_options</code> কোনোভাবেই এই সমস্যার সমাধান হতে পারে না।</p>
+
+
+
+<p>অনুসন্ধান চলতে থাকলো। তখনই wordpress.org/support ফোরামে Chip Bennett-এর একটা সমাধান দেখলাম (<a title="WordPress Settings API &quot;Cheatin' Uh?&quot; Error - WordPress.org Support Forum" href="http://wordpress.org/support/topic/wordpress-settings-api-cheatin-uh-error#post-2219995" target="_blank" rel="noopener">এই থ্রেডে^</a>), তিনি বলছেন, ওয়ার্ডপ্রেসের Twenty Eleven থীমে এরকম একটি ফাংশনের ব্যবহার করা হয়েছিল, যা দিয়ে এই সমস্যাটার সমাধান করা হয়েছে। পরবর্তিতে Ed Nailor-এর <a title="Allowing Non-Admin Users to Update Theme Options - Ed Nailor" href="https://web.archive.org/web/20161012060929/http://ednailor.com/2012/04/16/allowing-non-admin-users-to-update-theme-options/" target="_blank" rel="noopener">এই পোস্টটি^</a> (<a href="https://www.dropbox.com/s/kx8rdj3sgbff282/Allowing%20Non-Admin%20Users%20to%20Update%20Theme%20Options%20-%20Ed%20Nailor%20-%202012-04-16.png?dl=0" target="_blank" rel="noopener">আর্কাইভ লিংক^</a>) আমার নজরে আসে, এবং আমি একটা সমাধান পাবার ব্যাপারে আশাবাদী হই। এড ন্যাইলর এই বিষয়টাতে একটু বিস্তারিত বর্ণনা করেছেন, তাই কাজে নামতে কষ্ট হলো না আমার।</p>
+
+
+
+<p>আমি Twenty Eleven-এর থীম ট্র্যাক থেকে <a title="Twenty Eleven Theme Options" href="http://core.svn.wordpress.org/tags/3.2.1/wp-content/themes/twentyeleven/inc/theme-options.php" target="_blank" rel="noopener">মূল কোডটা^</a> দেখে নিলাম। ফাংশনটা এরকম:</p>
+
+
+
+<pre class="wp-block-preformatted">function twentyeleven_option_page_capability( $capability ) {
+	return 'edit_theme_options';
+}
+add_filter( 'option_page_capability_twentyeleven_options', 'twentyeleven_option_page_capability' );
+</pre>
+
+
+
+<p>কিন্ত আমাকে আসলে বুঝতে হবে কিভাবে এই কোডটি কাজ করছে। যেহেতু ফাংশনটি <code>options_page_capability_twentyeleven_options</code>-এ ফিল্টার করা হয়েছে, তাই তা দিয়ে খুঁজলাম, কিন্তু কিছু পেলাম না। পরবর্তিতে ফাংশনটির উপরের কমেন্ট দেখে বিষয়টা বুঝতে পারলাম। লক্ষ করলে দেখবেন <code>register_setting()</code> ফাংশনের প্রথম প্যারামিটারটা হলো <code>twentyeleven_options</code>। অপশন পাতার এখানেই ফিল্টারটা কাজে লাগানো হয়েছে।</p>
+
+
+
+<p>ফিরে এলাম ইয়ানের থিম অপশন্‌সে। এখানে <code>register_setting()</code>-এর প্রথম প্যারামিটার হলো <code>sample_options</code>। এবারে এড ন্যাইলরের পরামর্শটা মাথায় নিয়ে কাজে নেমে গেলাম। আমার থীমের <code>functions.php</code>-তে TwentyEleven-এর কোডটা নিয়ে নিজের প্রয়োজনমতো বদলে নিলাম:</p>
+
+
+
+<pre class="wp-block-preformatted">function options_page_capability( $capability ) {
+    return 'edit_theme_options';
+}
+add_filter( 'option_page_capability_sample_options', 'options_page_capability' );
+</pre>
+
+
+
+<p>এখানে ফাংশনের নামটা গুরুত্বপূর্ণ না, গুরুত্বপূর্ণ হলো ফিল্টারের হুকটা: <code>option_page_capability_sample_options</code>, যাতে <code>option_page_capability_</code> পর্যন্ত একই রেখে শুধু আমার থীম অপশনের সেটিংসটা বসিয়ে দিতে হয়েছে। সিনট্যাক্সটা হলো: <code>option_page_capability_{$option_group}</code>, তাই <code>register_setting</code>-এ অপশন গ্রুপ যা দিয়েছিলেন, হুকের শেষাংশে সেটাই বসিয়ে নিতে হবে, ব্যস, <em>কেল্লা ফতে</em>।</p>
+
+
+
+<p>তারপরও যদি এডিটর, পাতাটি ঠিকমতো দেখতে কিংবা ব্যবহার করতে না পারেন, তাহলে এড ন্যাইলার নিচের কোডটি <code>functions.php</code>-তে বসিয়ে নেয়ার পরামর্শ দিয়েছেন:</p>
+
+
+
+<pre class="wp-block-preformatted">$editor_role = get_role( 'editor' );
+$editor_role-&gt;add_cap( 'edit_theme_options' );
+</pre>
+
+
+
+<p>এই কোডটি ব্যবহার না করেও আপনি User Role Editor প্লাগইন দিয়েও কাজটি করে নিতে পারেন। আপনার যদি White Label CMS প্লাগইনটাও ইন্সটল করা থাকে, তাহলে <a title="Activating a Theme Options page to Editor - not working" href="http://wordpress.stackexchange.com/q/131507/22728" target="_blank" rel="noopener">WPSE&#8217;র আমার খোলা এই বন্ধ থ্রেডটা^</a>ও দেখে নিতে পারেন।</p>
+
+
+
+<p>আশা করি এখন থেকে ডেভলপাররা খুব সহজেই ইয়ানের অপশন কোড কাজে লাগিয়ে থীম অপশন্‌স পাতা তৈরি করতে পারবেন, এবং Editor অ্যাকাউন্টকেও তা ব্যবহারের পূর্ণ অধিকার দিতে পারবেন। 🙂</p>
+
+
+
+<p><strong>-মঈনুল ইসলাম</strong><br>&#x1f517; <a rel="noreferrer noopener" href="https://mayeenulislam.github.io/" data-type="URL" data-id="https://mayeenulislam.github.io" target="_blank">mayeenulislam.github.io</a></p>
+							</div>
+		</article>
+			<div class="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<div class="author-avatar" itemprop="image">
+		<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" class="avatar avatar-80 photo" height="80" width="80">	</div>
+	<div class="author-description">
+		<h4>About <span itemprop="name">মঈনুল ইসলাম</span>
+</h4>
+		<p>
+						<span itemprop="description">নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ <a href="https://nishachor.com/" title="নিশাচর - অমনিশায় লুকানো যত রহস্য আমার চাই">nishachor.com</a>-এ লেখালেখি করেন।</span>
+			<a itemprop="url" class="author-link" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author">
+				View all posts by মঈনুল ইসলাম <span class="meta-nav">&rarr;</span>			</a>
+		</p>
+	</div>
+</div>
+	
+	<nav class="navigation post-navigation" aria-label="প্রকাশনাসমূহ">
+		<h2 class="screen-reader-text">পোস্ট ন্যাভিগেশন</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://mayeenulislam.github.io/tuts/change-wordpress-password-without-sql-manager/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">ওয়ার্ডপ্রেস পাসওয়ার্ড বদলান এসকিউএল ম্যানেজার না থাকলেও</span></a></div>
+<div class="nav-next"><a href="https://mayeenulislam.github.io/tuts/columns-php-loop/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">পিএইচপি লুপ দিয়ে কলাম তৈরি &#8211; ২ কলাম, ৩ কলাম এবং যত ইচ্ছা</span></a></div>
+</div>
+	</nav>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">মন্তব্য করুন <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://mayeenulislam.github.io/tuts/editors-access-theme-options/#respond" style="display:none;">জবাব বাতিল</a></small>
+</h3>
+<form action="https://tuts.local/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">আপনার ই-মেইল এ্যাড্রেস প্রকাশিত হবে না।</span> <span class="required-field-message"><span class="required">*</span> চিহ্নিত বিষয়গুলো আবশ্যক।</span></p>
+<p class="comment-form-comment"><label for="comment">মন্তব্য <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">নাম <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">ইমেইল <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">ওয়েবসাইট</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">পরবর্তিতে ব্যবহারের জন্য আপনার নাম, ইমেইল ঠিকানা এবং ওয়েব ঠিকানা এই ব্রাউজারে সংরক্ষণ করুন।</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="মন্তব্য প্রকাশ করুন"> <input type="hidden" name="comment_post_ID" value="408" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+	
+</div>
+
+			</div>
+											<footer class="site-info" itemscope itemtype="http://schema.org/WPFooter">
+										<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>.
+					Theme: Flat 1.7.11 by <a rel="nofollow" href="https://themeisle.com/themes/flat/" title="Flat WordPress Theme">Themeisle</a>.				</footer>
+														</div>
+					</div>
+	</div>
+</div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39984706-1', 'auto');
+      ga('send', 'pageview');</script>
+<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/comment-reply.js?ver=6.1.1" id="comment-reply-js"></script>
+</body>
+</html>

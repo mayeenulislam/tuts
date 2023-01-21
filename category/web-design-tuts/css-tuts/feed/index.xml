@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>সিএসএস টিউটোরিয়াল</title>
+	<atom:link href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/css-tuts/feed/" rel="self" type="application/rss+xml" />
+	<link>http://সিএসএস-টিউটোরিয়াল/</link>
+	<description>Technology Tutorials by Mayeenul Islam</description>
+	<lastBuildDate>Sat, 21 Jan 2023 13:02:09 +0000</lastBuildDate>
+	<language>bn-BD</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-32x32.png</url>
+	<title>সিএসএস টিউটোরিয়াল</title>
+	<link>http://সিএসএস-টিউটোরিয়াল/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>HTML abbr ট্যাগ, CSS দিয়ে করুন দৃষ্টিনন্দন</title>
+		<link>https://mayeenulislam.github.io/tuts/css-tooltip/</link>
+		
+		<dc:creator><![CDATA[মঈনুল ইসলাম]]></dc:creator>
+		<pubDate>Fri, 20 Jan 2023 06:20:17 +0000</pubDate>
+				<category><![CDATA[ওয়েব ডিযাইন টিউটোরিয়াল]]></category>
+		<category><![CDATA[জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল]]></category>
+		<category><![CDATA[মাধ্যমিক স্তরের টিউটোরিয়াল]]></category>
+		<category><![CDATA[সিএসএস টিউটোরিয়াল]]></category>
+		<guid isPermaLink="false">http://nanodesigns.wordpress.com/?p=210</guid>
+
+					<description><![CDATA[<p> [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/css-tooltip/">HTML abbr ট্যাগ, CSS দিয়ে করুন দৃষ্টিনন্দন</a> appeared first on <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/">Tuts by Mayeenul Islam</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<div class="wp-block-image">
+<figure class="aligncenter"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2012/06/tool-tip-nanodesigns.jpg"><img decoding="async" width="574" height="158" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2012/06/tool-tip-nanodesigns.jpg" alt="CSS-tooltip-how-it-works" class="wp-image-213" title="tool-tip-nanodesigns" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2012/06/tool-tip-nanodesigns.jpg 574w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2012/06/tool-tip-nanodesigns-300x83.jpg 300w" sizes="(max-width: 574px) 100vw, 574px" /></a></figure></div>
+
+
+<p><strong><span lang="BN-BD" style="font-size: 10pt; font-family: 'Siyam Rupali';">জ্ঞানস্তর:</span></strong><span lang="BN-BD" style="font-size: 10pt; font-family: 'Siyam Rupali';"> মাধ্যমিক</span></p>
+
+
+
+<p>কোনো একটা লম্বা নামকে সংক্ষিপ্ত করে লেখার দরকার হলো, এজন্য প্রত্যেকটা শব্দের প্রথম অক্ষরগুলো, মানে আদ্যক্ষর নিয়ে, আপনি সেই নামটা তৈরি করলেন, ইংরেজিতে যাকে বলে acronym। যেমন: Bangladesh Agricultural and Rural Development-কে সংক্ষেপে ডাকা হয় BARD বলে; এখানে BARD হলো পুরো নামটার সংক্ষিপ্ত রূপ। ধরা যাক, একটা লেখা লিখছেন, যেখানে বারবার আপনি BARD-ই বলে যাচ্ছেন। কিন্তু একজন পাঠক BARD-এর মানে তো নাও জানতে পারেন। তাই এসব ক্ষেত্রে HTML-এর সহজ একটা কৌশল কাজে লাগানো হয়: <code>&lt;abbr&gt;</code> ট্যাগটি। এর আগে ব্যবহার করা হতো <code>&lt;acronym&gt;</code> ট্যাগটি, যা এখন deprecated বা বাতিল করা হয়েছে।</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+View the code on <a href="https://gist.github.com/mayeenulislam/1f6072b6991f5120da7c17f3763454ca">Gist</a>.
+</div><figcaption class="wp-element-caption">টুলটিপ দেখানোর জন্য HTML</figcaption></figure>
+
+
+
+<p>এই কোডটা ব্যবহার করলে যখনই আপনি GDP কিংবা BARD লেখাটার উপরে মাউস আনবেন, একটু অপেক্ষা করলেই সেখানে একটা বাক্সে দেখাবে BARD-এর মানে, যা আপনি <code>&lt;abbr&gt;</code>-এর title-এ দিয়েছেন। কিন্তু পূর্বনির্ধারিত এই স্টাইলটি অনেকের পছন্দ নাও হতে পারে। সেজন্য নিচের এই CSSটুকু বসিয়ে নিয়ে আপনি আরো দৃষ্টিনন্দন করে নিতে পারেন HTML-এর নিজস্ব টুলটিপকেই। টুলটিপের জন্য অন্য কিছু আবিষ্কার না করে <code>&lt;abbr&gt;</code> ট্যাগ ব্যবহার করাটা Web Accessibility-ও নিশ্চিত করে।</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+View the code on <a href="https://gist.github.com/mayeenulislam/1f6072b6991f5120da7c17f3763454ca">Gist</a>.
+</div><figcaption class="wp-element-caption">টুলটিপ দেখানোর জন্য CSS</figcaption></figure>
+
+
+
+<p>কেমন লাগলো, আর কাজে লাগলো কিনা অবশ্যই জানাতে ভুলবেন না। আর, আরো আরো সিএসএস প্রোপার্টি যোগ করে নতুন নতুন কিছু পরীক্ষা-নিরীক্ষা চালান, একটু opacity প্রয়োগ করে দেখুন… নতুন কিছু বের করতে পারলেও আমাদের সাথে শেয়ার করুন।</p>
+
+
+
+<p><strong>&#8211; মঈনুল ইসলাম</strong><br><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f517.png" alt="🔗" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://mayeenulislam.github.io/" target="_blank" rel="noreferrer noopener">mayeenulislam.github.io</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p><span lang="BN-BD" style="font-size: 10pt; line-height: 115%; font-family: 'Siyam Rupali';"><strong>মূলসূত্র:</strong></span> <span lang="BN-BD" style="font-size: 10pt; line-height: 115%; font-family: 'Siyam Rupali';">পোস্টটা লিখতে এর মূল তথ্য গ্রহণ করা হয়েছে </span><span style="font-size: 11pt; line-height: 115%; font-family: 'Calibri', 'sans-serif';"><span lang="BN-BD" style="font-size: 10pt; line-height: 115%; font-family: 'Siyam Rupali';">একটি তৃতীয় পক্ষীয় টিউটোরিয়াল</span></span><span lang="BN-BD" style="font-size: 10pt; line-height: 115%; font-family: 'Siyam Rupali';"> থেকে, যে লিংকটি বর্তমানে লভ্য নয়। তবে সেখানকার কোডগুলো ঝামেলা করে বলে তা সংশোধন ও পরিমার্জন করতে সহায়তা নেয়া হয়েছে সফ্‌টওয়্যার ইঞ্জিনিয়ার অমিত চৌধুরীর। কৃতজ্ঞতা তাই এঁদের প্রতি। মূল লেখাটি অনেক বছর আগে লেখা ছিলো, সেখানকার deprecated কোড সরিয়ে সাম্প্রতিক কোড যোগ করা হয়েছে।</span></p>
+<p>The post <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/css-tooltip/">HTML abbr ট্যাগ, CSS দিয়ে করুন দৃষ্টিনন্দন</a> appeared first on <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/">Tuts by Mayeenul Islam</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>CSS3 ব্যবহার করে কলাম তৈরি</title>
+		<link>https://mayeenulislam.github.io/tuts/column-design-css3/</link>
+					<comments>https://mayeenulislam.github.io/tuts/column-design-css3/#comments</comments>
+		
+		<dc:creator><![CDATA[মঈনুল ইসলাম]]></dc:creator>
+		<pubDate>Wed, 07 Oct 2015 19:25:41 +0000</pubDate>
+				<category><![CDATA[ওয়েব ডিযাইন টিউটোরিয়াল]]></category>
+		<category><![CDATA[জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল]]></category>
+		<category><![CDATA[প্রাথমিক স্তরের টিউটোরিয়াল]]></category>
+		<category><![CDATA[সিএসএস টিউটোরিয়াল]]></category>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=724</guid>
+
+					<description><![CDATA[<p> [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/column-design-css3/">CSS3 ব্যবহার করে কলাম তৈরি</a> appeared first on <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/">Tuts by Mayeenul Islam</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p>পত্রিকার ডিযাইনে কলাম দেখা যায়, ছবিগুলো অ্যালবামে কলাম আকারে সাজানো থাকে, আপনার পোর্টফোলিও কলাম আকারে গুছিয়ে দেখাতে পারেন &#8211; কলাম ডিযাইন তৈরি ঘুরেফিরেই আপনার প্রয়োজন হবে। এজন্যই এর আগে আমরা দেখেছিলাম কিভাবে <a href="https://mayeenulislam.github.io/tuts/columns-php-loop/" target="_blank" rel="noreferrer noopener">পিএইচপি লুপ ব্যবহার করে ওয়েবসাইটে কলামের ডিযাইন</a> করা যায়। আমরা সেদিন বলেছিলাম, CSS3 দিয়েও কাজটা আরো সহজে করা যায়। এতোদিন পরে হলেও আমরা কথা রাখতে পেরেছি, আজ আমরা সেটাই দেখবো ইনশাল্লাহ।</p>
+
+
+
+<p>সিএসএস৩ দিয়ে তৈরি কলাম আরো পরিচ্ছন্ন, আরো সহজ। এখানে স্তবকে স্তবকে সাজানো<code> &lt;div&gt;</code>-গুলোকে কোনো ক্লাস কিংবা সিলেক্টরের তোয়াক্কা না করে শ্রেফ সিএসএস দিয়ে ধরে ধরে কলাম আকারে সাজিয়ে ফেলা যাবে। এবং রেসপন্সিভ ডিযাইনেও একই কৌশল কাজে লাগিয়ে লেআউটকে বিভিন্ন ভিউপোর্টে ইচ্ছামতো বদলে নেয়া যাবে।</p>
+
+
+
+<p>আসুন দেখা যাক, কিভাবে সেটা করা হয়। আমরা সহজ করার জন্য সবটুকু কাজ একটা ফাইলের মধ্যেই করে দেখাচ্ছি:</p>
+
+
+
+<span id="more-724"></span>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+View the code on <a href="https://gist.github.com/mayeenulislam/21d8e81800455702e4b9">Gist</a>.
+</div></figure>
+
+
+
+<p>আমরা <code>&lt;div&gt;</code>-কে বলে দিচ্ছি বামদিকে চলে যেতে, সবগুলো <code>&lt;div&gt;</code>-এর <code>width</code> বলে দিয়েছি, প্রয়োজনীয় মার্জিন দিয়ে সরিয়ে সরিয়ে দেখিয়েছি, আর সবগুলোতে একটা নির্দিষ্ট ম্যাটম্যাটে রং দিয়ে দিয়েছি। তাতে যেটা হবে, বামদিকে চেপে একের পর এক <code>&lt;div&gt;</code> বসে যাবে (আমরা <code>&lt;div&gt;</code>গুলোকে বোঝার জন্য <code>100px</code>-এর একটা উচ্চতা দিয়েছি)। এবারে আমরা CSS3 সিলেক্টর ব্যবহার করে কলাম ১ এবং কলাম ৩-এর জন্য আলাদা আলাদা সিএসএস র&#x200d;্যুল ডিক্লেয়ার করেছি। আমরা বলেছি:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+View the code on <a href="https://gist.github.com/mayeenulislam/21d8e81800455702e4b9">Gist</a>.
+</div></figure>
+
+
+
+<p>এখানে কমেন্ট করে বুঝিয়ে দিয়েছি, কোন কোডটা ১ম কলাম এবং কোন কোডটা তৃতীয় কলামকে ধরেছে। এতে যা হয়েছে, তা দেখা যাক:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-column.png"><img decoding="async" width="1024" height="314" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-column-1024x314.png" alt="সিএসএস৩ দিয়ে ৩ কলামের ডিযাইন" class="wp-image-728" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-column-1024x314.png 1024w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-column-300x92.png 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-column-768x236.png 768w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-column.png 1365w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><figcaption class="wp-element-caption">সিএসএস৩ দিয়ে ৩ কলামের ডিযাইন</figcaption></figure></div>
+
+
+<p>এখন সময় এসেছে CSS3 ছদ্ম (pseudo) সিলেক্টর <code>:nth-of-type(n)</code> সম্পর্কে জানার:</p>
+
+
+
+<p><code>:nth-of-type(n)</code> হলো কোনো একই এলিমেন্টের <code>n</code> তম-টিকে ধরার জন্য ব্যবহৃত সিলেক্টর। এটি ব্যবহার করে কোনো সিলেক্টরের, শীর্ষ&#8217;র&nbsp;ভিতরকার, নিজস্ব ধরণের <code>n</code> তম-টিকে ধরা যায়। <code>n</code> হতে পারে কোনো অংক, কীওয়ার্ড কিংবা কোনো ফর্মুলা।</p>
+
+
+
+<p>এই কথাটা&nbsp;বোঝার জন্য নিচের কোড স্নিপেটটি দেখা যাক:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+View the code on <a href="https://gist.github.com/mayeenulislam/21d8e81800455702e4b9">Gist</a>.
+</div></figure>
+
+
+
+<p>মানে হচ্ছে, একটা <code>&lt;div&gt;</code>-এর ভিতরে <code>&lt;p&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code> ইত্যাদি বিভিন্ন ধরণের&nbsp;ট্যাগ থাকলে, <code>&lt;div&gt;</code>টা হচ্ছে শীর্ষ বা প্যারেন্ট; এখন আমরা যদি <code>p:nth-of-type(2)</code> লিখি, তাহলে তা এর ভিতরকার দ্বিতীয় p ট্যাগকে ধরবে। যদিও দ্বিতীয় এলিমেন্টটা p না, বরং a, কিন্তু সে যেহেতু শুধুমাত্র একই ধরণের এলিমেন্টকে টার্গেট করে, তাই p-এর দ্বিতীয় এলিমেন্টকে সে ধরবে। আমাদের এই উদাহরণে <code>n</code> হচ্ছে ২, কেননা আমরা দ্বিতীয়টাকে সিলেক্ট করার জন্য বলেছি।</p>
+
+
+
+<p>ঠিক একইভাবে <code>:nth-child(n)</code>-ও ব্যবহার করা যায়, কিন্তু <code>nth-child</code> যেটা করে, সে, ধরণের ধার ধারে না, বরং শীর্ষ&#8217;র ভিতরকার <code>n</code>-তম সন্তানকে খুঁজে নেয়। যেমন: উপরের উদাহরণে আমরা যদি <code>p:nth-child(2)</code> লিখতাম, তাহলে সে কিন্তু কিছুই করতো না, কারণ আমাদের শীর্ষ&#8217;র দ্বিতীয় এলিমেন্টটা কোনো <code>&lt;p&gt;</code> ট্যাগ না, বরং একটা <code>&lt;a&gt;</code> ট্যাগ।</p>
+
+
+
+<p>আমরা যখন ডিযাইন করছি, তখন শুধু <code>&lt;div&gt;</code> দিয়ে হয়তো করছি, বিভিন্ন এলিমেন্টের মিশেল না হলে <code>nth-of-type</code> কিংবা <code>nth-child</code>-এর যেকোনোটি ব্যবহার করা যায়। কিন্তু যদি বিভিন্ন এলিমেন্টের মিশেল থাকে, তাহলে <code>nth-of-type</code>-এর ব্যবহার নির্দিষ্ট আর&nbsp;নিরাপদও।</p>
+
+
+
+<h3>ফর্মুলা</h3>
+
+
+
+<p>এখানে তো আমরা ৩টি কলামের কোড দেখিয়েছি বোঝানোর জন্য। আপনার তো ৪ কলাম, ৫ কলাম, ১০ কলাম অনেক কিছুরই দরকার হতে পারে, তখন কী করবেন? তাই জেনে নিতে হবে ফর্মুলাটা। তাহলে যেকোনো সংখ্যক কলাম তৈরিতে নিশ্চিন্ত থাকা যাবে:</p>
+
+
+
+<p class="has-text-align-center"><strong>কলাম সংখ্যা × n + লক্ষ্য কলাম</strong></p>
+
+
+
+<p>কয়টা কলাম হবে? ৪টা। তাহলে কলাম সংখ্যা হলো ৪। এবারে কোন কলামকে টার্গেট করে সিএসএস লিখতে চান? প্রথম&nbsp;কলামকে। তাহলে লক্ষ্য কলাম হচ্ছে ১। কোন কলামকে টার্গেট করে সিএসএস লিখতে চান? ৪র্থ কলামকে। তাহলে লক্ষ্য কলাম হচ্ছে ৪।</p>
+
+
+
+<pre class="wp-block-preformatted">.item:nth-of-type(4n + 1){ /* css rules here */ }
+.item:nth-of-type(4n + 4){ /* css rules here */ }
+</pre>
+
+
+
+<p>আমরা ঠিক এই কৌশল কাজে লাগিয়ে পত্রিকার জন্য একটা লেআউট তৈরি করলাম:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-columns-preview-by-nanodesigns.jpg"><img decoding="async" width="1008" height="1024" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-columns-preview-by-nanodesigns-1008x1024.jpg" alt="CSS3 দিয়ে করা কলাম দিয়ে পত্রিকার লেআউট" class="wp-image-729" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-columns-preview-by-nanodesigns-1008x1024.jpg 1008w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-columns-preview-by-nanodesigns-295x300.jpg 295w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-columns-preview-by-nanodesigns-768x780.jpg 768w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/10/css3-columns-preview-by-nanodesigns.jpg 1349w" sizes="(max-width: 1008px) 100vw, 1008px" /></a><figcaption class="wp-element-caption">CSS3 দিয়ে করা কলাম দিয়ে পত্রিকার লেআউট</figcaption></figure></div>
+
+
+<h3>সীমাবদ্ধতা</h3>
+
+
+
+<p>CSS3 ছদ্ম সিলেক্টরগুলো ব্যবহারে কিছুটা সীমাবদ্ধতা আছে। বিশেষ করে Internet Explorer 8-এ <code>:nth-of-type(n)</code> এবং <code>:nth-child(n)</code> কাজ করে না। এই ছদ্ম সিলেক্টরদ্বয় সমর্থনকারী প্রথম সংস্করণগুলো হলো: Google Chrome 4.0, Internet Explorer (IE) 9, Mozilla Firefox 3.5, Apple Safari 3.2, এবং Opera 9.6। যদি আপনার সাইট এসকল ব্রাউযারে ব্রাউয হবার সম্ভাবনা থাকে, তাহলে আপনার জন্য বিকল্প হিসেবে <a href="https://mayeenulislam.github.io/tuts/columns-php-loop/" target="_blank" rel="noreferrer noopener">PHP দিয়ে তৈরি কলাম</a> তো থাকলোই&#8230;। <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<div class="is-content-justification-center is-layout-flex wp-container-1 wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/mayeenulislam/css3-columns" target="_blank" rel="noreferrer noopener">Github রেপোযিটোরি</a></div>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="http://mayeenulislam.github.io/css3-columns/" target="_blank" rel="noreferrer noopener">প্রিভিউ দেখুন</a></div>
+</div>
+
+
+
+<p><strong>&#8211; মঈনুল ইসলাম</strong><br><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f517.png" alt="🔗" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a rel="noreferrer noopener" href="https://mayeenulislam.github.io/" target="_blank">mayeenulislam.github.io</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h3>বাড়তি সহায়তা</h3>
+
+
+
+<ul>
+<li><a rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type" target="_blank">CSS3 <code>:nth-of-type</code> Selector^</a> &#8211; MDN Dev Net</li>
+
+
+
+<li><a rel="noopener" href="https://css-tricks.com/examples/nth-child-tester/" target="_blank">nth-child, nth-of-type, nth-last-child, nth-last-of-type সিলেক্টর পরখ করে দেখার অনলাইন অ্যাপ^</a> &#8211; সিএসএস ট্রিক্‌স</li>
+</ul>
+<p>The post <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/column-design-css3/">CSS3 ব্যবহার করে কলাম তৈরি</a> appeared first on <a rel="nofollow" href="https://mayeenulislam.github.io/tuts/">Tuts by Mayeenul Islam</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://mayeenulislam.github.io/tuts/column-design-css3/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

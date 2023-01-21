@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	পিএইচপি লুপ দিয়ে কলাম তৈরি &#8211; ২ কলাম, ৩ কলাম এবং যত ইচ্ছা তে মন্তব্যসমূহ	</title>
+	<atom:link href="https://mayeenulislam.github.io/tuts/columns-php-loop/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mayeenulislam.github.io/tuts/columns-php-loop/</link>
+	<description>Technology Tutorials by Mayeenul Islam</description>
+	<lastBuildDate>Sat, 21 Jan 2023 12:44:44 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		লিখেছেনঃ faroque		</title>
+		<link>https://mayeenulislam.github.io/tuts/columns-php-loop/#comment-781</link>
+
+		<dc:creator><![CDATA[faroque]]></dc:creator>
+		<pubDate>Sat, 10 Oct 2015 22:36:59 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=417#comment-781</guid>
+
+					<description><![CDATA[চরম মজার একটা জিনিস আজ শিখলাম... খুব সহজে...
+আপনার লেখায় সত্যিই জাদু আছে...]]></description>
+			<content:encoded><![CDATA[<p>চরম মজার একটা জিনিস আজ শিখলাম&#8230; খুব সহজে&#8230;<br />
+আপনার লেখায় সত্যিই জাদু আছে&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

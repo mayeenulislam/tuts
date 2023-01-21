@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরির কৌশল তে মন্তব্যসমূহ	</title>
+	<atom:link href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/</link>
+	<description>Technology Tutorials by Mayeenul Islam</description>
+	<lastBuildDate>Sat, 21 Jan 2023 13:05:13 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-802</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Wed, 02 Mar 2016 03:39:30 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=894#comment-802</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-801&quot;&gt;M Asif Rahman&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+আসিফ ভাই, ধন্যবাদ পাঠকদের, যাঁরা এই ছাইপাশ আরো বেশি ধৈর্য্য ধরে পড়েন।]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-801">M Asif Rahman</a>-এর প্রত্যুত্তরে।</p>
+<p>আসিফ ভাই, ধন্যবাদ পাঠকদের, যাঁরা এই ছাইপাশ আরো বেশি ধৈর্য্য ধরে পড়েন।</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ M Asif Rahman		</title>
+		<link>https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-801</link>
+
+		<dc:creator><![CDATA[M Asif Rahman]]></dc:creator>
+		<pubDate>Wed, 02 Mar 2016 00:45:52 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=894#comment-801</guid>
+
+					<description><![CDATA[ধন্যবাদ! আপনার অনেক ধৈর্য মঈনুল সাহেব!]]></description>
+			<content:encoded><![CDATA[<p>ধন্যবাদ! আপনার অনেক ধৈর্য মঈনুল সাহেব!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-800</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Tue, 01 Mar 2016 18:06:13 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=894#comment-800</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-799&quot;&gt;Sajjad&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+জানি, বুঝি কম। যতটুকু শিখলাম, ততটুকু লিখলাম।
+শিখলেই লিখে ফেলবো ইনশাল্লাহ।
+ধৈর্য্য ধরে পড়ার জন্য ধন্যবাদ।]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-799">Sajjad</a>-এর প্রত্যুত্তরে।</p>
+<p>জানি, বুঝি কম। যতটুকু শিখলাম, ততটুকু লিখলাম।<br />
+শিখলেই লিখে ফেলবো ইনশাল্লাহ।<br />
+ধৈর্য্য ধরে পড়ার জন্য ধন্যবাদ।</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Sajjad		</title>
+		<link>https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-799</link>
+
+		<dc:creator><![CDATA[Sajjad]]></dc:creator>
+		<pubDate>Tue, 01 Mar 2016 18:03:54 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=894#comment-799</guid>
+
+					<description><![CDATA[How can we manage sign up form and add more field and validate? Please write an article about this issue.]]></description>
+			<content:encoded><![CDATA[<p>How can we manage sign up form and add more field and validate? Please write an article about this issue.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Sajjad		</title>
+		<link>https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-798</link>
+
+		<dc:creator><![CDATA[Sajjad]]></dc:creator>
+		<pubDate>Tue, 01 Mar 2016 17:58:18 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=894#comment-798</guid>
+
+					<description><![CDATA[Awesome .]]></description>
+			<content:encoded><![CDATA[<p>Awesome .</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

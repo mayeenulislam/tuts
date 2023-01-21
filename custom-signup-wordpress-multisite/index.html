@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="bn-BD">
+<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://mayeenulislam.github.io/tuts/xmlrpc.php">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.14 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরি - tuts nano</title>
+	<meta name="description" content="মার্চ 1, 2016 - ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ তৈরি নিয়ে রিসোর্সের বড় অভাব। তাই এই টিউটোরিয়ালে তার সব একত্র করে একটা পূর্ণাঙ্গ দিকনির্দেশনা দেয়া হলো।">
+	<link rel="canonical" href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরি - tuts nano">
+	<meta property="og:description" content="ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ তৈরি নিয়ে রিসোর্সের বড় অভাব। তাই এই টিউটোরিয়ালে তার সব একত্র করে একটা পূর্ণাঙ্গ দিকনির্দেশনা দেয়া হলো।">
+	<meta property="og:url" content="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/">
+	<meta property="og:site_name" content="Tuts by Mayeenul Islam">
+	<meta property="article:publisher" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:author" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:published_time" content="2016-03-01T17:14:57+00:00">
+	<meta property="article:modified_time" content="2023-01-21T13:05:13+00:00">
+	<meta property="og:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="658">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="মঈনুল ইসলাম">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরি - tuts nano">
+	<meta name="twitter:description" content="ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ তৈরি নিয়ে রিসোর্সের বড় অভাব। তাই এই টিউটোরিয়ালে তার সব একত্র করে একটা পূর্ণাঙ্গ দিকনির্দেশনা দেয়া হলো।">
+	<meta name="twitter:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg">
+	<meta name="twitter:creator" content="@mayeenulislam">
+	<meta name="twitter:site" content="@mayeenulislam">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="মঈনুল ইসলাম">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="49 মিনিট">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#article","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/"},"author":{"name":"মঈনুল ইসলাম","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"headline":"ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরির কৌশল","datePublished":"2016-03-01T17:14:57+00:00","dateModified":"2023-01-21T13:05:13+00:00","mainEntityOfPage":{"@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/"},"wordCount":9722,"commentCount":5,"publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"image":{"@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg","articleSection":["ওয়ার্ডপ্রেস টিউটোরিয়াল","ওয়েব ডেভলপমেন্ট টিউটোরিয়াল","জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল","থিম টিউটোরিয়াল","প্লাগইন টিউটোরিয়াল","মাধ্যমিক স্তরের টিউটোরিয়াল","মাল্টিসাইট টিউটোরিয়াল"],"inLanguage":"bn-BD","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#respond"]}]},{"@type":"WebPage","@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/","url":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/","name":"ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরি - tuts nano","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/#website"},"primaryImageOfPage":{"@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#primaryimage"},"image":{"@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg","datePublished":"2016-03-01T17:14:57+00:00","dateModified":"2023-01-21T13:05:13+00:00","description":"মার্চ 1, 2016 - ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ তৈরি নিয়ে রিসোর্সের বড় অভাব। তাই এই টিউটোরিয়ালে তার সব একত্র করে একটা পূর্ণাঙ্গ দিকনির্দেশনা দেয়া হলো।","breadcrumb":{"@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#breadcrumb"},"inLanguage":"bn-BD","potentialAction":[{"@type":"ReadAction","target":["https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/"]}]},{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#primaryimage","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg","width":1200,"height":658,"caption":"ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরি - tuts nano"},{"@type":"BreadcrumbList","@id":"https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mayeenulislam.github.io/tuts/"},{"@type":"ListItem","position":2,"name":"ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরির কৌশল"}]},{"@type":"WebSite","@id":"https://mayeenulislam.github.io/tuts/#website","url":"https://mayeenulislam.github.io/tuts/","name":"Tuts by Mayeenul Islam","description":"Technology Tutorials by Mayeenul Islam","publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mayeenulislam.github.io/tuts/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"bn-BD"},{"@type":["Person","Organization"],"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee","name":"মঈনুল ইসলাম","image":{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","width":2560,"height":1920,"caption":"মঈনুল ইসলাম"},"logo":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/"},"description":"নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ nishachor.com-এ লেখালেখি করেন।","sameAs":["https://nishachor.com","http://www.facebook.com/mayeenulislam","https://twitter.com/mayeenulislam"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ফীড" href="https://mayeenulislam.github.io/tuts/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; মন্তব্য ফীড" href="https://mayeenulislam.github.io/tuts/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরির কৌশল মন্তব্যের ফিড" href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/wp-emoji.js?ver=6.1.1","twemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/twemoji.js?ver=6.1.1"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0x1FAF1, 0x1F3FB, 0x200D, 0x1FAF2, 0x1F3FF],
+					[0x1FAF1, 0x1F3FB, 0x200B, 0x1FAF2, 0x1F3FF]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/dist/block-library/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/classic-themes.css?ver=1" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="flat-fonts-css" href="//fonts.googleapis.com/css?family=Yesteryear%7CRoboto:400,700%7CRoboto+Slab%7CRoboto+Condensed" media="all">
+<link rel="stylesheet" id="flat-theme-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/css/flat.min.css?ver=1.7.11" media="all">
+<link rel="stylesheet" id="flat-style-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="flat-bengali-css" href="https://mayeenulislam.github.io/tuts/wp-content/plugins/flat-bengali/flat-bengali.css?ver=1.0.1" media="all">
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery.js?ver=3.6.1" id="jquery-core-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery-migrate.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/js/flat.min.js?ver=1.7.11" id="flat-js-js"></script>
+<!--[if lt IE 9]>
+<script src='https://tuts.local/wp-content/themes/flat/assets/js/html5shiv.min.js?ver=3.7.2' id='html5shiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://mayeenulislam.github.io/tuts/wp-json/">
+<link rel="alternate" type="application/json" href="https://mayeenulislam.github.io/tuts/wp-json/wp/v2/posts/894">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mayeenulislam.github.io/tuts/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mayeenulislam.github.io/tuts/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://mayeenulislam.github.io/tuts/?p=894">
+<link rel="alternate" type="application/json+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fcustom-signup-wordpress-multisite%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fcustom-signup-wordpress-multisite%2F#038;format=xml">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3526212672565487",
+          enable_page_level_ads: true
+     });</script><link type="image/x-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/tuts-nano.png" rel="shortcut icon">
+<style type="text/css"></style>
+<style type="text/css">#masthead .site-title {font-family:Yesteryear}body {font-family:Roboto }h1,h2,h3,h4,h5,h6 {font-family:Roboto Slab}#masthead .site-description, .hentry .entry-meta {font-family:Roboto Condensed}</style>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-color: #d1d1d1; }</style>
+	<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-180x180.png">
+<meta name="msapplication-TileImage" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-270x270.png">
+		<style type="text/css" id="wp-custom-css">.wp-block-group.has-background {
+    padding: 1.25em 2.375em;
+}
+
+pre.wp-block-preformatted {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+#masthead .site-title.display-title {
+	padding-left: 15px;
+	padding-right: 15px;
+}</style>
+			</head>
+
+<body class="post-template-default single single-post postid-894 single-format-standard custom-background" itemscope itemtype="http://schema.org/WebPage">
+<div id="page">
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div id="secondary" class="col-lg-3">
+								<header id="masthead" class="site-header" role="banner">
+										<div class="hgroup">
+						<h1 class="site-title display-title"><a href="https://mayeenulislam.github.io/tuts/" title="Tuts by Mayeenul Islam" rel="home"><span itemprop="name">Tuts by Mayeenul Islam</span></a></h1>
+<h2 itemprop="description" class="site-description">Technology Tutorials by Mayeenul Islam</h2>					</div>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><i class="fa fa-gear"></i></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+						<ul id="menu-top-menu" class="nav-menu">
+<li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-282"><a href="https://mayeenulislam.github.io/tuts/">নীড়পাতা</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://mayeenulislam.github.io/tuts/contributing-bangla-wikipedia/">বাংলা উইকিপিডিয়ায় লিখুন</a></li>
+</ul>					</nav>
+									</header>
+				
+				<div class="sidebar-offcanvas">
+					<div id="main-sidebar" class="widget-area" role="complementary">
+											<aside id="search-2" class="widget widget_search">
+	<form method="get" id="searchform" action="https://tuts.local/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+					</aside>
+					<aside id="nav_menu-2" class="widget widget_nav_menu">
+						<h3 class="widget-title">ধরণভিত্তিক টিউটোরিয়াল</h3>
+<div class="menu-category-menu-container"><ul id="menu-category-menu" class="menu">
+<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-550"><a href="https://mayeenulislam.github.io/tuts/category/nano-basix/">ন্যানো বেসিX</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-551"><a href="https://mayeenulislam.github.io/tuts/category/photoshop-tuts/">ফটোশপ টিউটোরিয়াল</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-532">
+<a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/">ওয়েব ডিযাইন টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-533" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-533"><a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/css-tuts/">সিএসএস টিউটোরিয়াল</a></li>
+</ul>
+</li>
+<li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-534">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/">ওয়েব ডেভলপমেন্ট টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-539" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-539"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/php-tuts/">পিএইচপি টিউটোরিয়াল</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-535">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/">ওয়ার্ডপ্রেস টিউটোরিয়াল</a>
+	<ul class="sub-menu">
+		<li id="menu-item-537" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-537"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/theme-tuts/">থিম টিউটোরিয়াল</a></li>
+		<li id="menu-item-538" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-538"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/plugin-tuts/">প্লাগইন টিউটোরিয়াল</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-540" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-540"><a href="https://mayeenulislam.github.io/tuts/category/git-tuts/">গিট টিউটোরিয়াল</a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-530"><a href="https://mayeenulislam.github.io/tuts/category/other-tuts/">অন্যান্য টিউটোরিয়াল</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-541">
+<a href="https://mayeenulislam.github.io/tuts/category/tuts-level/">জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-543" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-543"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/primary-level-tuts/">প্রাথমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-544"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/mid-level-tuts/">মাধ্যমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-542" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-542"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/top-level-tuts/">উচ্চস্তরের টিউটোরিয়াল</a></li>
+</ul>
+</li>
+</ul></div>					</aside>
+					<aside id="prisna-google-website-translator-2" class="widget widget_prisna-google-website-translator">
+						<h3 class="widget-title">Translate the Site</h3>
+
+<style type="text/css"><!--
+
+.prisna-gwt-align-left {
+	text-align: left !important;
+}
+.prisna-gwt-align-right {
+	text-align: right !important;
+}
+
+
+
+body {
+	top: 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+--></style>
+
+
+
+<div id="google_translate_element" class="prisna-gwt-align-left"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+function initializeGoogleTranslateElement() {
+	new google.translate.TranslateElement({
+		pageLanguage: "bn"
+	}, "google_translate_element");
+}
+/*]]>*/
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=initializeGoogleTranslateElement"></script>					</aside>
+											</div>
+				</div>
+			</div>
+
+						<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+							<div id="content" class="site-content" role="main" itemscope itemtype="http://schema.org/Article">
+			<article id="post-894" class="post-894 post type-post status-publish format-standard has-post-thumbnail hentry category-wordpress-tuts category-web-development-tuts category-tuts-level category-theme-tuts category-plugin-tuts category-mid-level-tuts category-multisite-tuts">
+	<header class="entry-header">
+		<h1 class="entry-title" itemprop="name">ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরির কৌশল</h1>
+							<div class="entry-meta">
+<span class="entry-date"><a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/" rel="bookmark"><time class="entry-date published" datetime="2016-03-01T23:14:57+06:00" itemprop="datepublished">মার্চ 1, 2016</time></a></span> by <span class="author vcard"><a class="url fn n" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author" itemprop="url">মঈনুল ইসলাম</a></span><span class="sep">&middot;</span><span class="comments-link"><a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comments" itemprop="discussionUrl">5 Comments</a></span>
+</div>
+			</header>
+				<div class="entry-thumbnail"><img width="1200" height="658" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরি - tuts nano" decoding="async" itemprop="thumbnailUrl" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup.jpg 1200w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup-300x165.jpg 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup-1024x561.jpg 1024w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/03/wp-mu-signup-768x421.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px"></div>
+	
+	
+	<div class="entry-content" itemprop="articleBody">
+				
+<p class="has-text-align-center has-background" style="background-color:#c2ecdb">A brief <strong>English version </strong>of this article is available at this <a rel="noreferrer noopener" href="http://wordpress.stackexchange.com/q/219271/22728" target="_blank">WordPress Development StackExchange thread</a></p>
+
+
+
+<p>ওয়ার্ডপ্রেসে আমরা সচরাচর একক সাইট পরিচালনা করি, অর্থাৎ সেখানে একটা ইন্সটলেশনে একটাই সাইট চলে। কিন্তু ওয়ার্ডপ্রেস তার একটা ইন্সটলেশনে একাধিক সাইট চালানোরও একটা সুযোগ দিয়ে রেখেছে, আর তা হলো ওয়ার্ডপ্রেস মাল্টিসাইট। প্রথমদিকে ওয়ার্ডপ্রেস মাল্টিসাইট WordPress MU নামে কাজ শুরু করলেও তা পরবর্তিতে ওয়ার্ডপ্রেস কোর-এ অন্তর্ভুক্ত করা হয়। এবং বলা যায়, সবচেয়ে বড় ওয়ার্ডপ্রেস মাল্টিসাইট ইন্সটলেশন হচ্ছে WordPress.com, যেখানে আপনি চাইলেই বিনামূল্যে একটা ব্লগ খুলে ফেলতে পারেন।</p>
+
+
+
+<p>ওয়ার্ডপ্রেস মাল্টিসাইট তুলনামূলক কম জনপ্রিয় এবং এর রিসোর্সও কম পাওয়া যায়, কারণ এর ব্যবহারকারী কম। আবার, যেহেতু মাল্টিসাইটের আর্কিটেকচার ভিন্ন, তাই অনেক প্লাগইনই ওয়ার্ডপ্রেস মাল্টিসাইটে চলে না। কিংবা হয়তো&nbsp;অধিকাংশ মানুষই এই ভিন্ন আর্কিটেকচারের সুযোগটা নিতে জানেন না। আপনার একাধিক ভাষায় ওয়েবসাইট দরকার, সাবডোমেইন কিংবা সাবফোল্ডার করে সেখানে একাধিক ওয়ার্ডপ্রেস ইন্সটল করেই আপনি কাজ সেরে ফেলছেন &#8211; এরকম ঘটনা অহরহ ঘটে। কিন্তু যিনি এই সুবিধাটা সম্পর্কে ওয়াকিবহাল, এবং চ্যালেঞ্জটা নিতে আগ্রহী, তিনি আসলে সুযোগটা নিতে চান, এবং তখনই ওয়ার্ডপ্রেসের মাল্টিসাইট বা একই ওয়ার্ডপ্রেসে একাধিক আলাদা সত্ত্বার সাইটের জন্ম হয়।</p>
+
+
+
+<p>যাহোক, এবারে মূল কথায় আসা যাক-</p>
+
+
+
+<h3>মাল্টিসাইটের রেজিস্ট্রেশন পাতা</h3>
+
+
+
+<p>কিন্তু ওয়ার্ডপ্রেসে মাল্টিসাইট ইন্সটল করা হলে খুব বিরক্তি উদ্রেক করে যে ব্যাপারটা, তা হলো এর ব্যবহারকারী রেজিস্ট্রেশন পাতাটা। সাধারণত ওয়ার্ডপ্রেস সিঙ্গেল সাইটের রেজিস্ট্রেশন পাতাটা পাওয়া যায় এই ঠিকানায়:</p>
+
+
+
+<pre class="wp-block-preformatted">https://example.com/wp-login.php?action=register</pre>
+
+
+
+<p>আপনি যদি একটা ওয়ার্ডপ্রেস ইন্সটলেশন ফোল্ডার খুলে দেখেন, তাহলে রুট ফোল্ডারেই (অর্থাৎ যেখানে সাধারণত <code>wp-config.php</code> ফাইলটা থাকে) <code>wp-login.php</code> নামে একটা ফাইল দেখবেন, এটাই সেটা।</p>
+
+
+
+<p>কিন্তু ওয়ার্ডপ্রেস মাল্টিসাইট এই পাতা থেকে রেজিস্ট্রেশন করে না। মাল্টিসাইট ইন্সটল করা হলে তখন রেজিস্ট্রেশন পাতা হয় এই ঠিকানায়:</p>
+
+
+
+<pre class="wp-block-preformatted">https://example.com/wp-signup.php</pre>
+
+
+
+<p>যেখানে এইমাত্র <code>wp-login.php</code> ফাইলটা দেখেছেন, সেখানেই আপনি <code>wp-signup.php</code> ফাইলটাও পাবেন। যখনই আপনি &#8220;নিবন্ধন&#8221; (Register/ Sign up) লেখা কোনো লিংকে ক্লিক করবেন, ওয়ার্ডপ্রেস মাল্টিসাইট আপনাকে এই সাদামাটা পাতাটায় নিয়ে আসবে, যা অনেকেই পছন্দ করেন না।</p>
+
+
+
+<p>এই পাতাটা অপছন্দ করার কারণগুলোর মধ্যে অন্যতম হলো এর মধ্যে কোনো স্টাইল করা থাকে না। আর দ্বিতীয়ত হলো, এই পাতায় যা যা ত্রুটি কিংবা সফলতার বার্তা দেখায়, সেগুলোকে ফিল্টার করে বদলে নেয়া যায় না। এজন্যই বিকল্প খোঁজা&#8230;</p>
+
+
+
+<p>আজকে আমরা এই পাতাটিকে পাল্টে ফেলে নিজস্ব একটি সাইনআপ পাতা এর জায়গায় বসিয়ে দিতে হয় কিভাবে, তা-ই দেখবো। মনে রাখতে হবে, এজন্য আমরা যে কাজগুলো করছি না:</p>
+
+
+
+<ul>
+<li>আমরা <code>.htaccess</code> ফাইলে কোনো হাত দিচ্ছি না,</li>
+
+
+
+<li>আমরা আলাদা কোনো প্লাগইন ব্যবহার করছি না, এবং</li>
+
+
+
+<li>অতি অবশ্যই আমরা ওয়ার্ডপ্রেসের কোনো কোর ফাইলে হাত দিচ্ছি না</li>
+</ul>
+
+
+
+<span id="more-894"></span>
+
+
+
+<h3>নিজস্ব সাইনআপ পাতা</h3>
+
+
+
+<p>এই জ্ঞানার্জনে প্রাথমিকভাবে সহায়তা নিয়েছিলাম নিচের দুটি পাতার:</p>
+
+
+
+<ol>
+<li>
+<a href="https://www.chriswiegman.com/2010/02/using-a-custom-wp-signup-page-with-wordpress-mu/" target="_blank" rel="noopener">Using a Custom wp-signup Page With WordPress MU^</a> &#8211; <em>Chris Wiegman</em>
+</li>
+
+
+
+<li>
+<a href="https://wordpress.org/support/topic/individual-mu-registration-page-possible?replies=7#post-1711143" target="_blank" rel="noopener">individual MU Registration Page possible?^</a> &#8211; <em>David Sader</em>
+</li>
+</ol>
+
+
+
+<p>কিন্তু এই দুটো রিসোর্স সম্পূর্ণ ছিল না, এবং কোনো কোনো ক্ষেত্রে তাতে ত্রুটি (bug) ছিল। তাই এসময় আমাকে আন্তরিকতার সাথে সহায়তা করেছেন কিংবা সত্যি বলতে কি পথ দেখিয়েছেন জার্মানির <a href="https://twitter.com/thefuxia" target="_blank" rel="noopener">@thefuxia</a> (Thomas Scholz) এবং অচেনা&nbsp;majick।</p>
+
+
+
+<p>এই আলোচনার আগে ধরে নিচ্ছি আপনাদের ওয়ার্ডপ্রেস ইন্সটলেশনে:</p>
+
+
+
+<ul>
+<li>মাল্টিসাইট ইন্সটল করা রয়েছে,</li>
+
+
+
+<li>সার্ভারে mod_rewrite মড্যুল সক্রিয় আছে, এবং</li>
+
+
+
+<li>আপনার ওয়ার্ডপ্রেসের পার্মালিংক ডিফল্ট বা পূর্বনির্ধারিত পার্মালিক নয়</li>
+</ul>
+
+
+
+<h4><strong>ধাপ ১: নিজস্ব সাইনআপ পাতাটা তৈরি</strong></h4>
+
+
+
+<p>চাকা একবার আবিষ্কার হয়ে গেছে, কেন আবার আবিষ্কার করবো? তাই আমরা ওয়ার্ডপ্রেস কোর থেকে <code>wp-signup.php</code> পাতাটা কপি করে আমাদের থিমের (কিংবা চাইল্ড থিমের) ভিতরে রাখি। এটার নামটা পাল্টে ফেলি যাতে স্বকীয়তা প্রকাশ পায়, ধরা যাক দিলাম: <code>signup.php</code>।</p>
+
+
+
+<p>এবারে ফাইলটা কোনো টেক্সট এডিটরে খুলি: এই ফাইলে উপরের দিকে দুটো ফাইল লোড করা আছে, লাইন দুটো হলো:</p>
+
+
+
+<pre class="wp-block-preformatted">require( dirname(__FILE__) . '/wp-load.php' );</pre>
+
+
+
+<p>এবং</p>
+
+
+
+<pre class="wp-block-preformatted">require( dirname( __FILE__ ) . '/wp-blog-header.php' );</pre>
+
+
+
+<p>এই লাইন দুটো বন্ধ করে দেয়া যাক, মানে কমেন্ট আউট করে দেই। ফলে লাইন দুটো হয়ে গেল:</p>
+
+
+
+<pre class="wp-block-preformatted">// require( dirname(__FILE__) . '/wp-load.php' );</pre>
+
+
+
+<p>এবং</p>
+
+
+
+<pre class="wp-block-preformatted">// require( dirname( __FILE__ ) . '/wp-blog-header.php' );</pre>
+
+
+
+<p>কেন বন্ধ করলাম? &#8230;কারণ হলো, এতক্ষণ <code>wp-signup.php</code> ফাইলটা রুট থেকে লোড হচ্ছিল (থিম লোড হবারও আগে), তখনও ওয়ার্ডপ্রেসের কোনো ফাংশন লোড হয়নি। আর এখন এটাকে থিমের ভিতরে নিয়ে আসার মানে হচ্ছে, থিম যখন লোড হবে তখন এটার অস্তিত্ব প্রকাশ পাবে, এর আগে না। আর থিম যখন লোড হবে তখন ওয়ার্ডপ্রেসের <code>wp-load.php</code> আর <code>wp-blog-header.php</code> দুটো ফাইলই লোড হয়ে যাবে। সুতরাং আবারও ফাইল দুটো লোড করা মানেই পুণর্বার কাজ করা (repeat), এবং কখনও Repeat করা যাবে না (DRY &#8211; Don&#8217;t Repeat Yourself)।</p>
+
+
+
+<p>এই ফাইলের আরো দুটো লাইন আছে:</p>
+
+
+
+<pre class="wp-block-preformatted">get_header( 'wp-signup' );</pre>
+
+
+
+<p>এবং, একেবারে নিচে:</p>
+
+
+
+<pre class="wp-block-preformatted">get_footer( 'wp-signup' );</pre>
+
+
+
+<p>এই লাইন দুটোকে বদলে আমাদের থিমের হেডার কিংবা নিজস্ব কোনো ব্যতিক্রম হেডার কল করে দেয়া যেতে পারে। আমি আমার থিমে, সাইনআপ পাতার জন্য আলাদা একটি হেডার বানিয়েছি (<code>header-null.php</code>), তাই আমি সেটা যোগ করেছি এপর্যায়ে। তাই, আমার ক্ষেত্রে ব্যাপারটা ছিল:</p>
+
+
+
+<pre class="wp-block-preformatted">get_header( 'null' ); //instead of get_header( 'wp-signup' );</pre>
+
+
+
+<p>এবং</p>
+
+
+
+<pre class="wp-block-preformatted">get_footer( 'null' ); //instead of get_footer( 'wp-signup' );</pre>
+
+
+
+<p>ব্যস, আমাদের নিজস্ব সাইনআপ পাতা কিন্তু প্রস্তুত। এবারে এই ফাইলটাকে জায়গামতো কল করিয়ে দিলেই <em>কেল্লা ফতে</em>।</p>
+
+
+
+<h4><strong>ধাপ ২: এমইউ প্লাগইন তৈরি</strong></h4>
+
+
+
+<p><a href="https://codex.wordpress.org/Must_Use_Plugins" target="_blank" rel="noopener">MU Plugin</a>, এতক্ষণে বুঝে গেছি নিশ্চয়ই, এটা মাল্টিসাইটের সাথে সম্পর্কিত। আসলে এটা মাল্টিসাইটের সাথে সম্পর্কিত ছিল। পরবর্তিতে এর <a href="https://core.trac.wordpress.org/changeset/10737" target="_blank" rel="noopener">প্রয়োজন এখন আর তেমন একটা হয় না</a> বললেই চলে। আর এখানে MU মানে Multisite না, বরং Must Use, অর্থাৎ মাল্টিসাইটের সকল সাইটে আবশ্যকীয়ভাবে এই কোডগুলো লোড করার জন্যই MU Plugin ব্যবহার করা হতো। &#8230;সুতরাং, এখানে আমরা যে কোডগুলো ব্যবহার করবো, সেগুলো নিজস্ব কোনো সাধারণ প্লাগইনে বসিয়ে নিলেও কাজ করবে।</p>
+
+
+
+<p>আমরা আমাদের মাল্টিসাইট ইন্সটলেশনের <code>wp-content/</code> ডিরেক্টরির (ফোল্ডার) ভিতরে একটা ডিরেক্টরি তৈরি করি, নাম হবে &#8216;<code>mu-plugins</code>&#8216; (যদি আমরা মাস্ট ইউয প্লাগইনের পাথ বদলে <em>না</em> থাকি)। এবারে এই ডিরেক্টরির ভিতরে একটা ফাইল তৈরি করি, যেকোনো নাম দিয়ে, ধরা যাক দিলাম, <code>mu-signup.php</code>। এবারে এই ফাইলটার মধ্যে লিখি:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3.js?file=mu-signup.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>কোডগুলো বুঝে নেয়া যাক, প্রথম ফাংশনটা <code>wp_signup_location</code> ফিল্টার হুকে হুক করে আসলে যা করছে, তা হলো, ওয়ার্ডপ্রেসের নিজস্ব সাইনআপের যে ইউআরএল প্রথমে আমরা বলেছিলাম, সেটাকে বদলে, আমাদের নিজস্ব যে পাথে আমরা আমাদের সাইনআপ পাতা তৈরি করতে যাচ্ছি, সেখানে ঘুরিয়ে দিবো। যেমন: লগইন পাতার নিচে যে <kbd>Register</kbd> লিংকটা আছে, সেখানে ক্লিক করলে যেন সে আমাদের নিজস্ব সাইনআপ পাতায় নিয়ে আসে, সেটা তাকে বলে দিলাম। এটা আমরা লিখেছি 12 নম্বর লাইনে যে, ওয়ার্ডপ্রেস নেটওয়ার্ক সাইটের ইউআরএল-এর পরেই signup বসালে ইউআরএল যা হবে, সেটাকেই আমাদের মাল্টিসাইটের সাইনআপ ইউআরএল হিসেবে বুঝে নিবে:</p>
+
+
+
+<pre class="wp-block-preformatted">https://example.com/signup</pre>
+
+
+
+<p>আর দ্বিতীয় ফাংশনটা হচ্ছে একটা <code>wp_redirect()</code>। কেউ যদি মাল্টিসাইটের নিজস্ব সাইনআপ ইউআরএল পাতার লিংক (<code>/wp-signup.php</code>) টাইপ করে, তাকেও যেন ঐ পাতা থেকে সরিয়ে আমাদের নিজস্ব সাইনআপ পাতায় (<code>/signup</code>) নিয়ে আসে। অনেকেই এই কাজটুকু <code>.htaccess</code> ফাইল এডিট করে, করে থাকেন (যেমন ক্রিস-এর প্রথম লিংকটাতে দেখতে পাবেন)। কিন্তু আমরা এই কাজটার জন্য <code>.htaccess</code> এডিট করার ঝামেলায় যাইনি।</p>
+
+
+
+<p>অর্থাৎ, এপর্যন্ত করা হয়ে গেলে, লোকজন, ওয়ার্ডপ্রেসের পূর্বনির্ধারিত সাইনআপ পাতা না দেখে, আমাদের নিজস্ব ইউআরএল-এ চলে আসবে &#8211; এতটুকু আমরা করে ফেলেছি। (&#x1f44f; <em>হাততালি</em>)</p>
+
+
+
+<p>বাকিটুকু আমরা দুভাবে করতে পারি:</p>
+
+
+
+<ol>
+<li>সহজ পদ্ধতি: পেজ টেমপ্লেট তৈরি করে</li>
+
+
+
+<li>ঘাঁটাঘাঁটি পদ্ধতি: রিরাইট এন্ডপয়েন্ট তৈরি করে</li>
+</ol>
+
+
+
+<p>পছন্দটা আপনার, আপনি কিভাবে করতে চান&#8230; তবে দুটোই করা যাবে না। যেকোনো একটা।</p>
+
+
+
+<h4><strong>ধাপ ৩: সহজ পদ্ধতি: পেজ টেমপ্লেট তৈরি:</strong></h4>
+
+
+
+<p>আমরা থিমের ভিতরে যে <code>signup.php</code> ফাইলটা [ওয়ার্ডপ্রেস কোর থেকে কপি করে] বানিয়েছিলাম, সেটা টেক্সট এডিটরে খুলে এক্কেবারে উপরে আমরা কিছু কথা লিখি, যাতে এটা একটা <a href="https://developer.wordpress.org/themes/template-files-section/page-template-files/#creating-custom-page-templates-for-global-use" target="_blank" rel="noopener">পেজ টেমপ্লেট^</a> হয়ে যায়:</p>
+
+
+
+<pre class="wp-block-preformatted">&lt;?php
+/**
+* Template name: tuts nano signup
+*/</pre>
+
+
+
+<p>পাতার এক্কেবারে উপরে একটা পিএইচপি শুরুর ট্যাগ দিয়ে শুরু হয়েছে, সেটার ঠিক পরেই এই কথাটা লিখে দেয়া যাক। আপনাদের যা ইচ্ছা নাম দিতে পারেন, তবে বোধগম্য এবং অবিরোধপূর্ণ নাম দিবেন আশা করি। সংরক্ষণ করুন ফাইলটা।</p>
+
+
+
+<p>এবারে, ওয়ার্ডপ্রেসের অ্যাডমিন প্যানেলে একটা পাতা তৈরি করি, যার নাম দিই Signup এবং slug হিসেবে দিই <code>signup</code>। এবারে পেজ টেমপ্লেট হিসেবে মাত্র তৈরি করা tuts nano signup [কিংবা আপনাদের দেয়া নামের] টেমপ্লেটটা বাছাই করে দিন। পাতাটা সংরক্ষণ করুন।</p>
+
+
+
+<p>কাজ শেষ। 🙂</p>
+
+
+
+<p><strong>ধাপ ৩: ঘাঁটাঘাঁটি পদ্ধতি: রিরাইট এন্ডপয়েন্ট তৈরি:</strong></p>
+
+
+
+<p>বলেছি যেকোনো একটা পদ্ধতি করতে। যদি &#8216;সহজ পদ্ধতি&#8217; করে ফেলেন, তাহলে আগের অবস্থায় ফেরত যান, যা করেছেন মুছে ফেলুন, এবারে এই পদ্ধতিতে করে দেখা যাক:</p>
+
+
+
+<p>একাজে আমাদেরকে সহায়তা করতে পারবে এই ডিবাগিং প্লাগইনটি:</p>
+
+
+
+<ul>
+<li>
+<a href="https://wordpress.org/plugins/rewrite-rules-inspector/" target="_blank" rel="noopener"><strong>Rewrite Rules Inspector</strong>^</a> &#8211; WordPress.org Plugins, <em>Daniel Bachhuber</em> and his team</li>
+</ul>
+
+
+
+<p>ইন্সটল করে সক্রিয় করে নেয়া যেতে পারে। না করলেও ক্ষতি নেই। কিন্তু কী ঘটছে, কিভাবে ঘটছে, দেখলেই না শেখা হয়&#8230;। এবারে আমাদের থিমের <code>functions.php</code>-তে এই কোডগুলো বসিয়ে নেয়া যাক:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3.js?file=functions.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>প্রথম ফাংশনটা দিয়ে আমরা একটা এন্ডপয়েন্ট যোগ করছি, মানে ইউআরএল-এর শেষে একটা লেজ যোগ করছি। এই লেজটাতো হাতে লিখেই যোগ করা যায়, যেমন: <code>example.com/kauwa</code>; হ্যা, ঠিক, কিন্তু আসলে এই লেজ, সেই লেজ না। এই লেজটা ডায়নামিকভাবে প্রোগ্রামের মাধ্যমে কাজ করবে &#8211; ওয়ার্ডপ্রেসের কাছে এর একটা অর্থ থাকবে। আমরা যে লেজটা যোগ করেছি, তা হলো: signup। অর্থাৎ, আমাদের ডোমেইন নামের শেষে লেজটা যোগ হয়ে ডায়নামিক ইউআরএলটা হবে:</p>
+
+
+
+<pre class="wp-block-preformatted">https://example.com/signup</pre>
+
+
+
+<p>যেহেতু রিরাইট র&#x200d;্যুল ফ্লাশ না করলে নতুন মান নিবে না, তাই হাসিন হায়দার&nbsp;ভাইয়ের অনুকরণে, আমরা একবার, হ্যা, একবার রিরাইট র&#x200d;্যুলটা ফ্লাশ করেছি। এটা ম্যানুয়ালিও করা যায়, সেটা পরে বলছি।</p>
+
+
+
+<p>এবারে দ্বিতীয় ফাংশনটা দিয়ে আমরা বলে দিচ্ছি যে, যখন তোমার ইউআরএল থেকে query_variable হিসেবে &#8216;signup&#8217; পাবে, তখন যে টেমপ্লেট তুমি দেখাবে বলে ঠিক করেছিলে, সেটার বদলে তুমি আমাদের বলে দেয়া টেমপ্লেটটা দেখাবে। এবং আমরা, ঐ যে, প্রথমে কোর থেকে কপি করে ফাইলটা তৈরি করেছিলাম, সেই ফাইলটার পাথ, ফাংশনটার ভিতরে দেখিয়ে দিয়েছি।</p>
+
+
+
+<p>ব্যস, কাজ শেষ। আমরা, পূর্বনির্ধারিত পাতা থেকে ব্যবহারকারীদের আমাদের পাতায় রিডিরেক্ট করে নিয়ে এসেছি। ওয়ার্ডপ্রেসের নিবন্ধন ইউআরএল বদলে দিয়েছি। আমাদের কাঙ্ক্ষিত প্যারামিটার (লেজ) যোগ করেছি। এবং সেই লেজে গেলে যে আমাদের তৈরি করা ফাইলটা দেখাবে তাও বলে দিয়েছি। সুতরাং এবারে পরীক্ষা করে দেখাই যায়, কী করেছি আমরা। ব্রাউযারে টাইপ করুন আপনার নির্ধারিত সাইনআপ পাতার ইউআরএল:</p>
+
+
+
+<pre class="wp-block-preformatted">https://example.com/signup</pre>
+
+
+
+<p>দুঃখিত! কাজ করছে না। হয় 404 টেমপ্লেট দেখাচ্ছে, নয়তো প্রথম পাতায় নিয়ে গেছে। কেন হচ্ছে এমন? সব তো ঠিকই আছে। আপনি ঠিকই <code>/signup</code> লেজও যোগ করেছেন।</p>
+
+
+
+<p><span style="text-decoration: underline;"><strong>রিরাইট র&#x200d;্যুল্‌স ফ্ল্যাশ করা:</strong></span> এই অবস্থায় দেখা না যাওয়ার একটা কারণ হতে পারে আপনার রিরাইট র&#x200d;্যুল্‌স ফ্লাশ করা হয়নি। এজন্য যেটা করতে হবে, যে প্লাগইনটা ইন্সটল করতে বলেছিলাম, সেটাতে গেলেই উপরে ডানে <kbd>Flush Rules</kbd> বোতাম চেপে কাজটা করা যায়। আর যদি প্লাগইনটা ইন্সটল না করে থাকেন, সেক্ষেত্রে Settings » Permalinks-এ গিয়ে কোনো পরিবর্তন না করে একবার সংরক্ষণ বোতাম চাপুন।</p>
+
+
+
+<p>তবু দেখা যাচ্ছে না, তাই না? লেজের পরে আরেকটা লেজ লাগালে কী হয়, দেখি তো? লিখলাম: <code>example.com/signup/asd</code>, এবং নিমিষেই আমাদের কাঙ্ক্ষিত টেমপ্লেটটা লোড হয়ে গেল।</p>
+
+
+
+<p>সমস্যাটা আসলে অন্য জায়গায়, এবং একটা সমস্যা ঠিকই আছে।</p>
+
+
+
+<p><span style="text-decoration: underline;"><strong>ঐচ্ছিক:</strong></span> পরীক্ষা করার জন্য, দ্বিতীয় ফাংশনটার ভিতরে <code>if(!is_admin()) {</code> লেখাটার ঠিক আগে লিখুন: <code>echo get_query_var('signup');</code> এবং ফাইলটা সংরক্ষণ করে এসে রিফ্রেশ করে দেখুন তো কিছু দেখা যায় কিনা ব্রাউযারে। টেমপ্লেটটার উপরে asd লেখাটা দেখাচ্ছে। এর মানে, <code>?signup=asd</code> ভ্যালুটা দেখাচ্ছে। যদি আমরা <code>asd</code> মুছে ফেলি, তাহলে আবারও 404 কিংবা প্রথম পাতা দেখাচ্ছে এবং কোনো লেখা ইকো হচ্ছে না। অর্থাৎ query_variable-টা কোনো মান পাচ্ছে না। <em>echo &#8230;</em> লেখাটুকু মুছে ফেলি, আমাদের পরীক্ষা শেষ।</p>
+
+
+
+<p>কারণটা হলো:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>যেহেতু <code>add_rewrite_endpoint()</code> তার প্যারামিটারের মান প্রত্যাশা করছে, অথচ আমরা কোনো মান দিচ্ছি না, সে আসলে <code>null</code>&nbsp;মানকে&nbsp;<code>false</code> হিসেবে ধরে নিচ্ছে। অবস্থাটা দাঁড়াচ্ছে: <code>example.com?signup=false</code>। এমতাবস্থায় কোনো টেমপ্লেট লোড করার প্রশ্নই উঠে না। এই সমস্যাটার সমাধান করতে আমাদেরকে <code>request</code>-এ হুক করে ওর জন্য একটা মান সেট করে দিয়ে আসতে হবে। (<a href="https://www.pmg.com/blog/a-mostly-complete-guide-to-the-wordpress-rewrite-api/" target="_blank" rel="noopener">ব্যাখ্যার উৎস^</a>)</p>
+</blockquote>
+
+
+
+<p>Thomas Scholz বলছেন, এটা ওয়ার্ডপ্রেসের রিরাইট এপিআই-এর একটা ত্রুটি (bug)।</p>
+
+
+
+<p>যাহোক, এর সমাধানও আছে। সমাধান, যেমনটা ক্রিস্টোফার ড্যাভিস বলেছেন, এর সমাধান করতে নিচের কোডটুকু <code>functions.php</code>-তে যোগ করে নিতে হবে, এতে মানটা আর <code>false</code> আসবে না, বরং <code>true</code> আসবে:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3.js?file=functions-part-2.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>&#8230;এবং আমাদের কাঙ্ক্ষিত টেমপ্লেটও লোড হবে।</p>
+
+
+
+<h4><strong>ধাপ ৪: বার্তাগুলো দেখানোর ব্যবস্থা</strong></h4>
+
+
+
+<p>সব সুন্দর মতো হয়ে গেলেও আরো একটা ছোট্ট কাজ বাকি আছে। আপনি যখন এই সাইনআপ ফর্মে কোনো কিছু না লিখে <kbd>পরবর্তি</kbd> (<kbd>next</kbd>)&nbsp;বোতামে ক্লিক করবেন, তখন কিন্তু সাইনআপও হবে না আবার কোনো ত্রুটি বার্তাও দেখাবে না। এর কারণ, ফর্মটা সাবমিট হচ্ছে <code>wp-signup.php</code> পাতায়, আর সেখানেই ত্রুটি বার্তা দেখাচ্ছে, আর আমরা সেখান থেকে <code>wp_redirect()</code> চালিয়ে ব্যবহারকারীকে আমাদের পাতায় ঘুরিয়ে আনছি, ফলে ত্রুটি বার্তাগুলো হারিয়ে যাচ্ছে।</p>
+
+
+
+<p>খুব ছোট্ট একটা ফিক্স দরকার। আমরা যে <code>signup.php</code> ফাইলটা বানিয়েছিলাম নিজের মতো করে, সেই ফাইলটাতে থাকা তিনটা <code>&lt;form&gt;</code> ট্যাগের সাবমিশন অ্যাকশন অংশটা বদলে দিতে হবে। ফাইলের মধ্যে অনুসন্ধান করতে পারেন:&nbsp;<code>action="wp-signup.php"</code> লিখে। তাহলে ফর্ম ট্যাগগুলোর <code>action="wp-signup.php"</code>-এর জায়গায় লিখা যাক:</p>
+
+
+
+<pre class="wp-block-preformatted">action=""</pre>
+
+
+
+<p>অথবা লেখা যাক:</p>
+
+
+
+<pre class="wp-block-preformatted">action="&lt;?php echo esc_url($_SERVER['REQUEST_URI']); ?&gt;"</pre>
+
+
+
+<p>ব্যস। কাজ শেষ। এতে আমাদের ফর্মটা এই পাতায়ই সাবমিট হবে এবং ত্রুটি কিংবা সফলতার বার্তাও সে অনুযায়ী দেখাবে। আমাদের কাজ শেষ এবং আমরা সফল।</p>
+
+
+
+<h3><strong>স্ক্রিপ্ট&nbsp;যোগ করা</strong></h3>
+
+
+
+<p>ওয়ার্ডপ্রেসের পূর্বনির্ধারিত সাইন-আপ পাতা বদলানোর মূল কারণই হলো এর চেহারা। তাই এই নতুন তৈরি পাতায় কিছু স্টাইলিং দেয়া লাগতেই পারে কিংবা কোনো জাভাস্ক্রিপ্ট ভ্যালিডেশন দেয়া লাগতে পারে। সেজন্য ওয়ার্ডপ্রেসের ফ্রন্ট এন্ডে যেভাবে স্টাইলশিট কিংবা স্ক্রিপ্ট যোগ করি আমরা, সেভাবেই স্টাইল করা যেতে পারে। কিংবা সরাসরি ফ্রন্টএন্ডের স্টাইলশিটেও (<code>style.css</code>) স্টাইল করা যেতে পারে। খুবই সহজ:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3.js?file=functions-scripts.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/3e332efd44a3388034c3">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>এবারে আপনার স্টাইলশীটে (<code>nanotuts-signup-styles.css</code>) নিজের মতো করে স্টাইল করুন। আপনি বুঝবেন, তবু বলে রাখছি: কন্টেইনারের ক্লাস&nbsp;<code>.mu_register</code> &nbsp;আর ফর্মের আইডি হচ্ছে <code>#setupform</code>। এছাড়া আমাদের তৈরিকৃত <code>signup.php</code> পাতায়&nbsp;<code>wpmu_signup_stylesheet()</code> ফাংশনে দেখবেন কিছু ইন্টার্নাল সিএসএস করা। সেগুলো, প্রয়োজনমতো কাটছাঁট করতেই পারেন এখন।</p>
+
+
+
+<p>এবারে এগুলো ধরে&nbsp;অন্তর্বর্তি এলিমেন্টগুলোর জন্য স্টাইল করে নিলেই সব ফকফকা। 🙂</p>
+
+
+
+<h3>প্লাগইন না থিম</h3>
+
+
+
+<p>আমরা পুরো ব্যাপারটা প্লাগইন আর থিমের একটা ভজকট করেছি। আপনি চাইলে পুরো ব্যাপারটা একটা নিজস্ব প্লাগইনে করে ফেলতে পারেন। কিংবা এমনও হতে পারে, এই জ্ঞানটুকু কাজে লাগিয়ে, বুদ্ধি করে একটা পূর্ণাঙ্গ ডায়নামিক প্লাগইনই বানিয়ে ফেললেন, আর ক&#8217;দিন বাদে আমরা আর এতো বড় নিবন্ধ না দেখিয়ে মানুষকে বলবো, অমুক ভাই/বোন-এর তমুক প্লাগইনটা ইনস্টল করে নেন, <em>সাফা খিরখিরা</em>!&nbsp;&#x270c;&#xfe0f;</p>
+
+
+
+<h3>কৃতজ্ঞতা</h3>
+
+
+
+<p>আবারও বলছি, এইটুকুতে পথনির্দেশ করার জন্য Thomas Scholz, majick, Chris Wiegman, David Sader, Chris Davis, হাসিন হায়দার ভাই-সহ অন্যান্য সকলের আকুন্ঠ কৃতজ্ঞতা স্মরণ করছি।</p>
+
+
+
+<p>এই লেখাটির সংক্ষিপ্ত সংস্করণ ইংরেজিতে পাওয়া যাবে <a href="http://wordpress.stackexchange.com/q/219271/22728" target="_blank" rel="noopener">WordPress Development StackExchange ওয়েবসাইটের এই থ্রেডে^</a>।</p>
+							</div>
+		</article>
+			<div class="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<div class="author-avatar" itemprop="image">
+		<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" class="avatar avatar-80 photo" height="80" width="80">	</div>
+	<div class="author-description">
+		<h4>About <span itemprop="name">মঈনুল ইসলাম</span>
+</h4>
+		<p>
+						<span itemprop="description">নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ <a href="https://nishachor.com/" title="নিশাচর - অমনিশায় লুকানো যত রহস্য আমার চাই">nishachor.com</a>-এ লেখালেখি করেন।</span>
+			<a itemprop="url" class="author-link" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author">
+				View all posts by মঈনুল ইসলাম <span class="meta-nav">&rarr;</span>			</a>
+		</p>
+	</div>
+</div>
+	
+	<nav class="navigation post-navigation" aria-label="প্রকাশনাসমূহ">
+		<h2 class="screen-reader-text">পোস্ট ন্যাভিগেশন</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://mayeenulislam.github.io/tuts/git-branching/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">গিট দিয়ে ভার্ষন নিয়ন্ত্রণ &#8211; git branch</span></a></div>
+<div class="nav-next"><a href="https://mayeenulislam.github.io/tuts/releasing-github-project/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">কিভাবে গিটহাবে প্রোজেক্ট রিলিয করতে হয়</span></a></div>
+</div>
+	</nav>
+
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			<span itemprop="interactionCount">5</span> comments		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-798" class="comment even thread-even depth-1">
+			<article id="div-comment-798" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fa4e9b43a336c79586e3228c0a15cfb4?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fa4e9b43a336c79586e3228c0a15cfb4?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Sajjad</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-798"><time datetime="2016-03-01T23:58:18+06:00">মার্চ 1, 2016; 11:58 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Awesome .</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-798" data-commentid="798" data-postid="894" data-belowelement="div-comment-798" data-respondelement="respond" data-replyto="Sajjad-এর প্রত্যুত্তর" aria-label="Sajjad-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-799" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-799" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fa4e9b43a336c79586e3228c0a15cfb4?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fa4e9b43a336c79586e3228c0a15cfb4?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">Sajjad</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-799"><time datetime="2016-03-02T00:03:54+06:00">মার্চ 2, 2016; 12:03 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>How can we manage sign up form and add more field and validate? Please write an article about this issue.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-799" data-commentid="799" data-postid="894" data-belowelement="div-comment-799" data-respondelement="respond" data-replyto="Sajjad-এর প্রত্যুত্তর" aria-label="Sajjad-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-800" class="comment byuser comment-author-admin bypostauthor even depth-2">
+			<article id="div-comment-800" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-800"><time datetime="2016-03-02T00:06:13+06:00">মার্চ 2, 2016; 12:06 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>জানি, বুঝি কম। যতটুকু শিখলাম, ততটুকু লিখলাম।<br>
+শিখলেই লিখে ফেলবো ইনশাল্লাহ।<br>
+ধৈর্য্য ধরে পড়ার জন্য ধন্যবাদ।</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-800" data-commentid="800" data-postid="894" data-belowelement="div-comment-800" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		<li id="comment-801" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-801" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/1852249120f11f0a4a73590292ab27e5?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/1852249120f11f0a4a73590292ab27e5?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://asif.im/" rel="external nofollow ugc" class="url">M Asif Rahman</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-801"><time datetime="2016-03-02T06:45:52+06:00">মার্চ 2, 2016; 6:45 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>ধন্যবাদ! আপনার অনেক ধৈর্য মঈনুল সাহেব!</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-801" data-commentid="801" data-postid="894" data-belowelement="div-comment-801" data-respondelement="respond" data-replyto="M Asif Rahman-এর প্রত্যুত্তর" aria-label="M Asif Rahman-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-802" class="comment byuser comment-author-admin bypostauthor even depth-2">
+			<article id="div-comment-802" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#comment-802"><time datetime="2016-03-02T09:39:30+06:00">মার্চ 2, 2016; 9:39 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>আসিফ ভাই, ধন্যবাদ পাঠকদের, যাঁরা এই ছাইপাশ আরো বেশি ধৈর্য্য ধরে পড়েন।</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-802" data-commentid="802" data-postid="894" data-belowelement="div-comment-802" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		</ol>
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">মন্তব্য করুন <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/#respond" style="display:none;">জবাব বাতিল</a></small>
+</h3>
+<form action="https://tuts.local/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">আপনার ই-মেইল এ্যাড্রেস প্রকাশিত হবে না।</span> <span class="required-field-message"><span class="required">*</span> চিহ্নিত বিষয়গুলো আবশ্যক।</span></p>
+<p class="comment-form-comment"><label for="comment">মন্তব্য <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">নাম <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">ইমেইল <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">ওয়েবসাইট</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">পরবর্তিতে ব্যবহারের জন্য আপনার নাম, ইমেইল ঠিকানা এবং ওয়েব ঠিকানা এই ব্রাউজারে সংরক্ষণ করুন।</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="মন্তব্য প্রকাশ করুন"> <input type="hidden" name="comment_post_ID" value="894" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+	
+</div>
+
+			</div>
+											<footer class="site-info" itemscope itemtype="http://schema.org/WPFooter">
+										<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>.
+					Theme: Flat 1.7.11 by <a rel="nofollow" href="https://themeisle.com/themes/flat/" title="Flat WordPress Theme">Themeisle</a>.				</footer>
+														</div>
+					</div>
+	</div>
+</div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39984706-1', 'auto');
+      ga('send', 'pageview');</script>
+<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/comment-reply.js?ver=6.1.1" id="comment-reply-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/plugins/oembed-gist/js/script.min.js?ver=4.9.1" id="oembed-gist-js"></script>
+</body>
+</html>

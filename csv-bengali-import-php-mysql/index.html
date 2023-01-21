@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="bn-BD">
+<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://mayeenulislam.github.io/tuts/xmlrpc.php">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.14 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>PHP-MySQL দিয়ে CSV থেকে বাংলা তথ্য আপলোড - tuts nano</title>
+	<meta name="description" content="বিপুল তথ্য একসাথে আপলোড করার জন্য CSV, অনেকগুলো বিকল্পের একটা। PHP-MySQL-এ কিভাবে CSV দিয়ে কাজটি করা হয়, তার আদ্যোপান্ত থাকছে। বোনাস হিসেবে রয়েছে WordPress।">
+	<link rel="canonical" href="https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="PHP-MySQL দিয়ে CSV থেকে বাংলা তথ্য আপলোড - tuts nano">
+	<meta property="og:description" content="বিপুল তথ্য একসাথে আপলোড করার জন্য CSV, অনেকগুলো বিকল্পের একটা। PHP-MySQL-এ কিভাবে CSV দিয়ে কাজটি করা হয়, তার আদ্যোপান্ত থাকছে। বোনাস হিসেবে রয়েছে WordPress।">
+	<meta property="og:url" content="https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/">
+	<meta property="og:site_name" content="Tuts by Mayeenul Islam">
+	<meta property="article:publisher" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:author" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:published_time" content="2015-08-27T12:48:40+00:00">
+	<meta property="article:modified_time" content="2023-01-21T13:01:50+00:00">
+	<meta property="og:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="300">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="মঈনুল ইসলাম">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="PHP-MySQL দিয়ে CSV থেকে বাংলা তথ্য আপলোড - tuts nano">
+	<meta name="twitter:description" content="বিপুল তথ্য একসাথে আপলোড করার জন্য CSV, অনেকগুলো বিকল্পের একটা। PHP-MySQL-এ কিভাবে CSV দিয়ে কাজটি করা হয়, তার আদ্যোপান্ত থাকছে। বোনাস হিসেবে রয়েছে WordPress।">
+	<meta name="twitter:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg">
+	<meta name="twitter:creator" content="@mayeenulislam">
+	<meta name="twitter:site" content="@mayeenulislam">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="মঈনুল ইসলাম">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="50 মিনিট">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#article","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/"},"author":{"name":"মঈনুল ইসলাম","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"headline":"PHP-MySQL দিয়ে CSV ফাইল থেকে বাংলা তথ্য আপলোড","datePublished":"2015-08-27T12:48:40+00:00","dateModified":"2023-01-21T13:01:50+00:00","mainEntityOfPage":{"@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/"},"wordCount":9990,"commentCount":0,"publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"image":{"@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg","keywords":["CSV","Unicode CSV","অ্যাক্সেস থেকে সিএসভি","বাংলায় সিএসভি","সিএসভি আপলোড"],"articleSection":["ওয়ার্ডপ্রেস টিউটোরিয়াল","জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল","ন্যানো বেসিX","পিএইচপি টিউটোরিয়াল","মাধ্যমিক স্তরের টিউটোরিয়াল"],"inLanguage":"bn-BD","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#respond"]}]},{"@type":"WebPage","@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/","url":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/","name":"PHP-MySQL দিয়ে CSV থেকে বাংলা তথ্য আপলোড - tuts nano","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/#website"},"primaryImageOfPage":{"@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#primaryimage"},"image":{"@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg","datePublished":"2015-08-27T12:48:40+00:00","dateModified":"2023-01-21T13:01:50+00:00","description":"বিপুল তথ্য একসাথে আপলোড করার জন্য CSV, অনেকগুলো বিকল্পের একটা। PHP-MySQL-এ কিভাবে CSV দিয়ে কাজটি করা হয়, তার আদ্যোপান্ত থাকছে। বোনাস হিসেবে রয়েছে WordPress।","breadcrumb":{"@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#breadcrumb"},"inLanguage":"bn-BD","potentialAction":[{"@type":"ReadAction","target":["https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/"]}]},{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#primaryimage","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg","width":800,"height":300},{"@type":"BreadcrumbList","@id":"https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mayeenulislam.github.io/tuts/"},{"@type":"ListItem","position":2,"name":"PHP-MySQL দিয়ে CSV ফাইল থেকে বাংলা তথ্য আপলোড"}]},{"@type":"WebSite","@id":"https://mayeenulislam.github.io/tuts/#website","url":"https://mayeenulislam.github.io/tuts/","name":"Tuts by Mayeenul Islam","description":"Technology Tutorials by Mayeenul Islam","publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mayeenulislam.github.io/tuts/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"bn-BD"},{"@type":["Person","Organization"],"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee","name":"মঈনুল ইসলাম","image":{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","width":2560,"height":1920,"caption":"মঈনুল ইসলাম"},"logo":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/"},"description":"নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ nishachor.com-এ লেখালেখি করেন।","sameAs":["https://nishachor.com","http://www.facebook.com/mayeenulislam","https://twitter.com/mayeenulislam"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ফীড" href="https://mayeenulislam.github.io/tuts/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; মন্তব্য ফীড" href="https://mayeenulislam.github.io/tuts/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; PHP-MySQL দিয়ে CSV ফাইল থেকে বাংলা তথ্য আপলোড মন্তব্যের ফিড" href="https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/wp-emoji.js?ver=6.1.1","twemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/twemoji.js?ver=6.1.1"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0x1FAF1, 0x1F3FB, 0x200D, 0x1FAF2, 0x1F3FF],
+					[0x1FAF1, 0x1F3FB, 0x200B, 0x1FAF2, 0x1F3FF]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/dist/block-library/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/classic-themes.css?ver=1" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="flat-fonts-css" href="//fonts.googleapis.com/css?family=Yesteryear%7CRoboto:400,700%7CRoboto+Slab%7CRoboto+Condensed" media="all">
+<link rel="stylesheet" id="flat-theme-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/css/flat.min.css?ver=1.7.11" media="all">
+<link rel="stylesheet" id="flat-style-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="flat-bengali-css" href="https://mayeenulislam.github.io/tuts/wp-content/plugins/flat-bengali/flat-bengali.css?ver=1.0.1" media="all">
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery.js?ver=3.6.1" id="jquery-core-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery-migrate.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/js/flat.min.js?ver=1.7.11" id="flat-js-js"></script>
+<!--[if lt IE 9]>
+<script src='https://tuts.local/wp-content/themes/flat/assets/js/html5shiv.min.js?ver=3.7.2' id='html5shiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://mayeenulislam.github.io/tuts/wp-json/">
+<link rel="alternate" type="application/json" href="https://mayeenulislam.github.io/tuts/wp-json/wp/v2/posts/666">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mayeenulislam.github.io/tuts/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mayeenulislam.github.io/tuts/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://mayeenulislam.github.io/tuts/?p=666">
+<link rel="alternate" type="application/json+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fcsv-bengali-import-php-mysql%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fcsv-bengali-import-php-mysql%2F#038;format=xml">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3526212672565487",
+          enable_page_level_ads: true
+     });</script><link type="image/x-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/tuts-nano.png" rel="shortcut icon">
+<style type="text/css"></style>
+<style type="text/css">#masthead .site-title {font-family:Yesteryear}body {font-family:Roboto }h1,h2,h3,h4,h5,h6 {font-family:Roboto Slab}#masthead .site-description, .hentry .entry-meta {font-family:Roboto Condensed}</style>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-color: #d1d1d1; }</style>
+	<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-180x180.png">
+<meta name="msapplication-TileImage" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-270x270.png">
+		<style type="text/css" id="wp-custom-css">.wp-block-group.has-background {
+    padding: 1.25em 2.375em;
+}
+
+pre.wp-block-preformatted {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+#masthead .site-title.display-title {
+	padding-left: 15px;
+	padding-right: 15px;
+}</style>
+			</head>
+
+<body class="post-template-default single single-post postid-666 single-format-standard custom-background" itemscope itemtype="http://schema.org/WebPage">
+<div id="page">
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div id="secondary" class="col-lg-3">
+								<header id="masthead" class="site-header" role="banner">
+										<div class="hgroup">
+						<h1 class="site-title display-title"><a href="https://mayeenulislam.github.io/tuts/" title="Tuts by Mayeenul Islam" rel="home"><span itemprop="name">Tuts by Mayeenul Islam</span></a></h1>
+<h2 itemprop="description" class="site-description">Technology Tutorials by Mayeenul Islam</h2>					</div>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><i class="fa fa-gear"></i></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+						<ul id="menu-top-menu" class="nav-menu">
+<li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-282"><a href="https://mayeenulislam.github.io/tuts/">নীড়পাতা</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://mayeenulislam.github.io/tuts/contributing-bangla-wikipedia/">বাংলা উইকিপিডিয়ায় লিখুন</a></li>
+</ul>					</nav>
+									</header>
+				
+				<div class="sidebar-offcanvas">
+					<div id="main-sidebar" class="widget-area" role="complementary">
+											<aside id="search-2" class="widget widget_search">
+	<form method="get" id="searchform" action="https://tuts.local/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+					</aside>
+					<aside id="nav_menu-2" class="widget widget_nav_menu">
+						<h3 class="widget-title">ধরণভিত্তিক টিউটোরিয়াল</h3>
+<div class="menu-category-menu-container"><ul id="menu-category-menu" class="menu">
+<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-550"><a href="https://mayeenulislam.github.io/tuts/category/nano-basix/">ন্যানো বেসিX</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-551"><a href="https://mayeenulislam.github.io/tuts/category/photoshop-tuts/">ফটোশপ টিউটোরিয়াল</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-532">
+<a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/">ওয়েব ডিযাইন টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-533" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-533"><a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/css-tuts/">সিএসএস টিউটোরিয়াল</a></li>
+</ul>
+</li>
+<li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-534">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/">ওয়েব ডেভলপমেন্ট টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-539" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-539"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/php-tuts/">পিএইচপি টিউটোরিয়াল</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-535">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/">ওয়ার্ডপ্রেস টিউটোরিয়াল</a>
+	<ul class="sub-menu">
+		<li id="menu-item-537" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-537"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/theme-tuts/">থিম টিউটোরিয়াল</a></li>
+		<li id="menu-item-538" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-538"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/plugin-tuts/">প্লাগইন টিউটোরিয়াল</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-540" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-540"><a href="https://mayeenulislam.github.io/tuts/category/git-tuts/">গিট টিউটোরিয়াল</a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-530"><a href="https://mayeenulislam.github.io/tuts/category/other-tuts/">অন্যান্য টিউটোরিয়াল</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-541">
+<a href="https://mayeenulislam.github.io/tuts/category/tuts-level/">জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-543" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-543"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/primary-level-tuts/">প্রাথমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-544"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/mid-level-tuts/">মাধ্যমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-542" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-542"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/top-level-tuts/">উচ্চস্তরের টিউটোরিয়াল</a></li>
+</ul>
+</li>
+</ul></div>					</aside>
+					<aside id="prisna-google-website-translator-2" class="widget widget_prisna-google-website-translator">
+						<h3 class="widget-title">Translate the Site</h3>
+
+<style type="text/css"><!--
+
+.prisna-gwt-align-left {
+	text-align: left !important;
+}
+.prisna-gwt-align-right {
+	text-align: right !important;
+}
+
+
+
+body {
+	top: 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+--></style>
+
+
+
+<div id="google_translate_element" class="prisna-gwt-align-left"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+function initializeGoogleTranslateElement() {
+	new google.translate.TranslateElement({
+		pageLanguage: "bn"
+	}, "google_translate_element");
+}
+/*]]>*/
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=initializeGoogleTranslateElement"></script>					</aside>
+											</div>
+				</div>
+			</div>
+
+						<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+							<div id="content" class="site-content" role="main" itemscope itemtype="http://schema.org/Article">
+			<article id="post-666" class="post-666 post type-post status-publish format-standard has-post-thumbnail hentry category-wordpress-tuts category-tuts-level category-nano-basix category-php-tuts category-mid-level-tuts tag-csv tag-unicode-csv tag-ms-access-csv tag-bangla-csv tag-csv-upload">
+	<header class="entry-header">
+		<h1 class="entry-title" itemprop="name">PHP-MySQL দিয়ে CSV ফাইল থেকে বাংলা তথ্য আপলোড</h1>
+							<div class="entry-meta">
+<span class="entry-date"><a href="https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/" rel="bookmark"><time class="entry-date published" datetime="2015-08-27T18:48:40+06:00" itemprop="datepublished">আগস্ট 27, 2015</time></a></span> by <span class="author vcard"><a class="url fn n" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author" itemprop="url">মঈনুল ইসলাম</a></span><span class="sep">&middot;</span><span class="comments-link"><a href="https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#respond" itemprop="discussionUrl">0 Comments</a></span>
+</div>
+			</header>
+				<div class="entry-thumbnail"><img width="800" height="300" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" itemprop="thumbnailUrl" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano.jpg 800w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano-300x113.jpg 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-bengali-tuts-nano-768x288.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></div>
+	
+	
+	<div class="entry-content" itemprop="articleBody">
+				
+<p>অনেক তথ্য একসাথে, ডাটাবেযে ঢুকানো বা আপলোড করার (bulk upload) কাজটি অনেক ব্লগে, টিউটোরিয়ালেই আলোচনা করা হয়েছে। আমরা আসলে সেগুলো পড়েই কাজটা খুব সহজে করে ফেলতে পারি। কিন্তু সমস্যাটা সৃষ্টি হবে, যদি আপনি বাংলায় লেখা তথ্যগুলো ডাটাবেযে ঢুকাতে যান&#8230; তাছাড়া পুরো প্রক্রিয়াটা কিভাবে কী হচ্ছে, তাও জানা থাকা দরকার। শেঁকড়টা পোক্ত থাকলে ডালপালায় দৌঁড়ানো খুব সহজ। আমরা তাই পুরো প্রক্রিয়াটি এখানে বিস্তারিত আলোচনা করছি:</p>
+
+
+
+<span id="more-666"></span>
+
+
+
+<h3>CSV ফাইল কী?</h3>
+
+
+
+<p>Comma Separated Values কথাটিকে সংক্ষেপে CSV বলে। এধরণের ফাইলগুলোর এক্সটেনশন হলো <code>.csv</code> [ডট সিএসভি]। ব্যাপারটা খুব সহজ:</p>
+
+
+
+<pre class="wp-block-preformatted">1,Someone Extraordinary,Developer
+2,Someone New,Debugger
+3,John Kauwa Kala,QA Manager</pre>
+
+
+
+<p>এই যে ফাইলের তথ্যগুলো উপরে দেখা যাচ্ছে, এখানে তথ্য থেকে তথ্যকে আলাদা করা হয়েছে কমা (,) দিয়ে আর একেকটা আলাদা আলাদা তথ্যগোষ্ঠিকে আলাদা করা হয়েছে এন্টার চেপে লাইন ব্রেক করে। এখন এই তথ্যগুলো একটা ফাইলে রেখে তার এক্সটেনশন <code>.csv</code> করে নিলেই তা হয়ে যাবে আমাদের কাঙ্ক্ষিত CSV ফাইল।</p>
+
+
+
+<h3>কখন লাগবে সিএসভি ফাইল?</h3>
+
+
+
+<p>ধরা যাক, আপনার ডাটাবেযের টেবিলে তিনটা ফিল্ড আছে: id, name, এবং designation। এই টেবিলে ৫০০০ [পাঁচ হাজার] জন আলাদা আলাদা ব্যক্তির তথ্য আছে। এবারে কোনো কারণে আরেকটা ফিল্ড বাড়ানো লাগলো: age। তখন এই ৫০০০ জনের তথ্য আলাদা আলাদা করে এডিট করে করে তাদের প্রত্যেকের বয়স ডাটাবেযে ঢুকিয়ে নিতে হবে। চিন্তা করুন তো একবার? ৫০০০টা তথ্য খুলে, এডিট করে, সংরক্ষণ করা&#8230; কতটা বিরক্তিজনক কাজ হবে! &#8230;কিংবা এমনও হতে পারে, একটা কোম্পানী ২০ বছর ধরে খাতায়-পত্রে তাদের কোম্পানীর কর্মচারীদের তথ্য লিখে রাখতো। এখন তারা আপনাকে দিয়ে একটা সফ্‌টওয়্যার বানিয়েছে। তো তারা চায় নতুন যারা আসবে, তাদের তথ্য তো সফ্‌টওয়্যারে নতুন করে লিখে নিবেনই, কিন্তু ২০ বছরের পুরোন সব কর্মচারীদের তথ্যও যেন সফ্‌টওয়্যারে ঢোকানো থাকে। এখানেই বিপুল পরিমাণ তথ্য একবারে ঢুকিয়ে দেয়ার জন্য ব্যবহার করা হয় CSV।</p>
+
+
+
+<h3>CSV কিভাবে তৈরি করতে হয়?</h3>
+
+
+
+<p>এরকম ক্ষেত্রে আমরা সাধারণত মাইক্রোসফ্‌ট এক্সেল-এর বহুল ব্যবহার করে থাকি, তবে অন্য যেকোনো স্প্রেডশিট সফ্‌টওয়্যার ব্যবহার করা যেতে পারে। আমরা এখানে এক্সেল এবং Open Office-এর OpenOffice Calc ব্যবহার করে কাজটি করা দেখাবো ইনশাল্লাহ। স্প্রেডশিটে মূলত দরকারি তথ্যগুলো বিভিন্ন রো&#8217; এবং কলামে লিখে ফেলা হয়:</p>
+
+
+
+<pre class="wp-block-preformatted">+----+-----------------------+----------------+-----+
+| id | Name                  | Designation    | Age |
++----+-----------------------+----------------+-----+
+| 1  | Someone Extraordinary | Developer      | 26  |
+| 2  | Someone New           | Debugger       | 21  |
+| 3  | John Kauwa Kala       | QA Manager     | 32  |
++----+-----------------------+----------------+-----+</pre>
+
+
+
+<p>যেমন আমরা মান্ধাত্যা আমলের সব তথ্য নিতে হলে এভাবে নিলাম। কিন্তু ধরা যাক, আগের সব তথ্য আছে, এখন শুধু &#8216;বয়স&#8217;-এর তথ্যটা নতুন যোগ হবে, সেক্ষেত্রে id আর age কলামই শুধু লিখলাম। আইডি এজন্য লিখলাম, যাতে একটা আনকোরা (unique) তথ্য যেন থাকে, যা দিয়ে আমরা একটা তথ্য থেকে আরেকটা তথ্যকে আলাদা করতে পারি, এবং বয়সের তথ্যটা ঠিক সেই ব্যক্তির ক্ষেত্রেই বসে, যার বয়স যেটা। সেক্ষেত্রে তাদের আইডি ধরে ধরে বসানোটাই সবচেয়ে সহজ।</p>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb">&#x26a0;&#xfe0f; <strong>মনে রাখতে হবে,</strong> স্প্রেডশিটে তথ্য ঢোকানোর সময় যদি কোনো কলামের তথ্যে কমা (,) থেকে থাকে, তাহলে পুরো কলামের তথ্যটাকে অবশ্যই ডাবল কো’ট (“) দিয়ে আলাদা করে নিতে হবে। এই তথ্যগুলোকে আলাদা করার পদ্ধতি নিচে ফাংশনের ডেলিমিটার অংশে আলোচিত হলো।</p>
+
+
+
+<p>এভাবে যত লক্ষ-কোটি তথ্য ইচ্ছা, আপনি প্রস্তুত করে নিতে পারেন স্প্রেডশিটে। এরপর <code>.csv</code> ফাইলে একে সংরক্ষণ করে নিতে হবে:</p>
+
+
+
+<h4>মাইক্রোসফ্‌ট এক্সেল (২০০৭+) হলে:</h4>
+
+
+
+<ul>
+<li>ধরে নিচ্ছি আপনি স্প্রেডশিটে এভাবে তথ্যগুলো বসিয়ে নিয়েছেন, এবং একটা <code>.xlsx</code> কিংবা <code>.xls</code> ফাইল আছে আপনার। এবারে সেই ফাইল খুলে Office Button &gt; Save As &gt; Other Formats</li>
+
+
+
+<li>ফাইলের একটা নাম দিয়ে, Save as type: ড্রপডাউন মেনু থেকে CSV (Comma delimited) (*.csv) বাছাই করুন</li>
+
+
+
+<li>Save বোতাম চাপুন</li>
+
+
+
+<li>ওয়ার্নিং আসতে পারে: প্রথম ওয়ার্নিং বলছে, <em>শুধু কিন্তু এই শিটটা সংরক্ষণ হচ্ছে (বাদবাকি শিট-এর খবর জানি না)</em> &#8211; আমরা Ok চাপবো</li>
+
+
+
+<li>দ্বিতীয় ওয়ার্নিং বলছে, <em>CSV-তে এমন কিছু ফিচার আছে, যেগুলো কিন্তু সাপোর্ট করবে না</em> &#8211; আমরা সেটা মেনে নিবো &#8211; Yes চাপবো</li>
+
+
+
+<li>এক্সেল বন্ধ করে দিই, এবং কোনো ডায়লগ বক্স এলে বলে দিই &#8211; No &#8211; আমরা আর সংরক্ষণ করতে চাই না (কারণ আমাদের কাজ তো হয়ে গেছে)</li>
+</ul>
+
+
+
+<h4><strong>ওপেনঅফিস ক্যাল্‌ক (4+) হলে:</strong></h4>
+
+
+
+<ul>
+<li>ধরে নিচ্ছি আপনি ক্যাল্‌ক-এর স্প্রেডশিটে তথ্যগুলো বসিয়ে নিয়েছেন, এবং একটা <code>.ods</code> ফাইল আছে আপনার। এবারে সেই ফাইল খুলে File &gt; Save as (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>) চাপুন</li>
+
+
+
+<li>ফাইলের একটা নাম দিয়ে, Save as type: ড্রপডাউন মেনু থেকে Text CSV (.csv) (*.csv) বাছাই করুন</li>
+
+
+
+<li>Save বোতাম চাপুন</li>
+
+
+
+<li>ওয়ার্নিং আসতে পারে: <em>আপনি কি আসলেই ODS ফর্মেটের বাইরে সেভ করতে যাচ্ছেন</em> &#8211; আমরা Keep Current Format বাছাই করবো</li>
+
+
+
+<li>Export Text File নামের একটা ডায়লগ বক্স আসবে, এখানে: Character set: থেকে Unicode (UTF-8) বাছাই করে দিন। আর বাকিগুলো যেমন আছে থাকুক: আমরা কমা (,) দিয়ে আলাদা করছি, আর টেক্সট ডেলিমিটার ডাবল কো&#8217;ট রাখছি (&#8220;) &#8211; OK বোতাম চাপুন</li>
+
+
+
+<li>ওয়ার্নিং আসতে পারে: <em>শুধু কিন্তু এই শিটটা সংরক্ষিত হচ্ছে</em> &#8211; আমরা বলবো &#8211; OK</li>
+</ul>
+
+
+
+<p>কাজ শেষ।</p>
+
+
+
+<p>আমাদের <code>.csv</code> ফাইল তৈরি। এবারে ফাইলটা সরাসরি Open না করে মাউসের ডান বোতাম চেপে Notepad (অথবা যেকোনো টেক্সট এডিটর, যেমন: Notepad++, Sublime Text)-এ খুলি। তাহলেই দেখতে পাবো, আমাদের স্প্রেডশিটে দেয়া তথ্যগুলো কমা দিয়ে আলাদা আলাদা হয়ে সুন্দর করে বসে গেছে।</p>
+
+
+
+<h3>কিভাবে PHP দিয়ে CSV ফাইল পড়বো?</h3>
+
+
+
+<p>এবারে খুব সহজেই আমরা PHP ব্যবহার করে তথ্যগুলো পড়তে পারি। নিচের কোড স্নিপেটটি একটা ফাইলে রেখে ফাইলটা সার্ভার থেকে খোলা যাক&#8230; ইনলাইন মন্তব্যগুলো দেখুন, বিস্তারিত পরে বলছি:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/03864e63b073fc81694b.js?file=reading-csv-in-php.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/03864e63b073fc81694b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>এবারে এই পাতাটা খুললে আমরা খুব সাধারণ একটা এইচটিএমএল ফর্ম দেখতে পাবো:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/simple-form-to-upload-csv-file.png"><img decoding="async" width="431" height="92" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/simple-form-to-upload-csv-file.png" alt="সিএসভি আপলোড করার জন্য খুবই সাধারণ একটা HTML ফর্ম" class="wp-image-669" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/simple-form-to-upload-csv-file.png 431w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/simple-form-to-upload-csv-file-300x64.png 300w" sizes="(max-width: 431px) 100vw, 431px"></a></figure>
+</div>
+
+
+<p>এখানে আমাদের তৈরি করা <code>.csv</code> ফাইলটা আপলোড করে Submit বোতাম চাইলেই সিএসভি&#8217;র চারটা কলামের তথ্যকে আমরা খুব সহজে দেখতে পাবো পর্দায়।</p>
+
+
+
+<p>উপরের কোডটা এবার বোঝা যাক: একেবারে নিচে আমরা খুবই সাধারণ একটা এইচটিএমএল ফর্ম ব্যবহার করেছি, যা দিয়ে আমরা ফাইল আপলোড করতে পারি। ফর্মে <code>post</code> মেথড ব্যবহার করেছি, এবং এনক্রিপশন টাইপ রেখেছি <code>multipart/form-data</code>। এই ফর্মটা সাবমিট হলে উপরের পিএইচপি ব্লকে যায়। সেখানে চেক করে আসলেই কি কোনো ফাইল আপলোড হয়েছে কিনা, ফাইলের আকার (<code>size &gt; 0</code>) দেখে। তারপর আমরা ফাইলটাকে <code>$file</code> ভ্যারিয়েবলে রেখেছি। <code>$handle</code>-এ এসে আমরা ফাইলটাকে খুলে পড়েছি। এরপরে <code>while</code> loop-এর ভিতরে আমরা পিএইচপি&#8217;রই দেয়া <a href="http://php.net/manual/en/function.fgetcsv.php" target="_blank" rel="nofollow noopener"><code>fgetcsv()</code>^</a> ফাংশনটা ব্যবহার করেছি সিএসভি ফাইলটা নিজেদের মতো করে পড়ার জন্য। বাকিটা কেবলই ইতিহাস।</p>
+
+
+
+<p>এপর্যায়ে fgetcsv() ফাংশনটাকে চেনা যাক:</p>
+
+
+
+<pre class="wp-block-preformatted">fgetcsv( file, length, separator, enclosure);</pre>
+
+
+
+<p>এখানে:</p>
+
+
+
+<ul>
+<li>
+<code>file</code>&nbsp;হচ্ছে প্রথম প্যারামিটার, যা দিতেই হয়, এখানে আমরা আমাদের সিএসভি ফাইলটাকে দিবো</li>
+
+
+
+<li>
+<code>length</code>&nbsp;হচ্ছে আমাদের প্রতিটা লাইনে কতগুলো ক্যারেক্টার থাকবে তার পরিমাণ (যদি নিশ্চিত না হোন, তাহলে উল্লেখ করা থেকে বিরত থাকুন, কারণ ভুল হলে তথ্য ভেঙে যেতে পারে)</li>
+
+
+
+<li>
+<code>separator</code>&nbsp;হচ্ছে সেই ক্যারেক্টার, যা দিয়ে আপনার কলামগুলো আলাদা করা থাকবে, আমরা কমা দিয়ে কাজটি করছি। এক্ষেত্রে ফাংশনে তাই ডিফল্ট করা কমা (,), আমরা যদি অন্য কিছু দিয়ে করতাম, তাহলে এই প্যারামিটারে তা বলে দিতাম</li>
+
+
+
+<li>
+<code>delimiter</code>&nbsp;হচ্ছে স্ট্রিং-কে চিনিয়ে দেয়ার পদ্ধতি। CSV-তে কমা পেলেই সে আলাদা কলাম ধরে নিবে। কিন্তু আপনার তথ্যের মধ্যেই যদি কোনো কমা থেকে থাকে (যেমন: “He, you and I went there”), তখন কী হবে? তখন ঐ লেখাটিকে ডাবল কো’ট (“) দিয়ে আটকে দিতে হবে। আর সেটা এই প্যারামিটারে বলে দিলে একেকটা ডাবল কোটের ভিতরকার তথ্যে কমা থাকলেও সে সেটাকে কলাম ধরে নিবে না। এর ডিফল্ট হিসেবে ডাবল কো’ট (“) নির্ধারণ করে দেয়া আছে</li>
+</ul>
+
+
+
+<p>আমরা তথ্যগুলো পিএইচপি দিয়ে পড়ে ফেলার পর এতটুকু নিশ্চয়ই বুঝে গেছি যে, আমাদের স্প্রেডশিটে লেখা তথ্যগুলোর উপর দখল নিতে পেরেছি আমরা। তাহলে এপর্যায়ে আমরা এই তথ্য নিয়ে যা ইচ্ছা তা করতে পারি। আমরা নিশ্চয়ই এও বুঝে গেছি যে, কমা (,) দিয়ে আলাদা করা প্রতিটা কলামকে <code>fgetcsv()</code> একটা পিএইচপি অ্যারেতে নিয়েছে, তাই প্রথম কলামটা পেতে আমরা অ্যারের যিরো ইনডেক্স (<code>$data[0]</code>) ধরেছি। এভাবে প্রতিটা লাইনকে <code>fgetcsv()</code> আমাদের জন্য আলাদা করে বের করে নিয়ে এসেছে। যারা আগে থেকে কাজ করছেন, তাদেরকে আর বুঝিয়ে বলা লাগবে না, কিভাবে এই তথ্যকে ডাটাবেযে নিয়ে যেতে হবে। তবু আমরা সেবিষয়েও আলোকপাত করছি:</p>
+
+
+
+<h3>কিভাবে MySQL ব্যবহার করে CSV ফাইলের তথ্য ডাটাবেযে নিবো?</h3>
+
+
+
+<p>আমার উপরে কোড স্নিপেটটির সাথে MySQL কোড যোগ করে এখানে দেখিয়েছি, কিভাবে সিএসভি ফাইল থেকে আমরা যা পড়তে পারছি, তা খুব সহজে ডাটাবেযে নিয়ে যেতে পারি:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/03864e63b073fc81694b.js?file=inserting-csv-data-into-mysql-db.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/03864e63b073fc81694b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb">&#x26a0;&#xfe0f; <strong>সচেতন থাকুন,</strong> অপরিশোধিত তথ্য ডাটাবেযে নেয়া খুবই বিপজ্জনক। এজন্য অবশ্যই তথ্যকে যথাযথ sanitization, validation আগে থেকে আপনাকে করে নিতে হবে – যা আমরা এখানে দেখাইনি।</p>
+
+
+
+<p>আমরা ধরে নিয়েছি আপনি একটা MySQL ডাটাবেয তৈরি করে নিয়েছেন, যার নাম <code>csv_db</code> এবং তাতে একটা টেবিল আছে, যার নাম <code>csv_table</code>, যেখানে <code>id</code>, <code>name</code>, <code>designation</code>, <code>age</code> নামে চারটা কলাম তৈরি করাই আছে (এতগুলো বিষয় আমরা ইচ্ছে করেই দেখাচ্ছি না, টিউটোরিয়ালটাকে যথাসম্ভব ছোট রাখার জন্য)।</p>
+
+
+
+<h4>
+<code>$find_header &gt; 1</code> কেন?</h4>
+
+
+
+<p>আপনারা আগের কোডের সাথে এখানে অতিরিক্ত একটা পিএইচপি কাউন্টার দেখতে পাচ্ছেন। আপনারা আগের কোডটি রান করালে দেখতে পাবেন, id, name, designation, age &#8211; স্প্রেডশিটের এই লাইনটাও আমাদের সিএসভি থেকে সে রিড করে ফেলেছে। এখন যখন আপনি বিপুল পরিমাণ ডাটা ডাটাবেযে ঢুকাতে যাবেন, তখন কিন্তু প্রথম ডাটা হিসেবে সে হেডারের এই তথ্যগুলোও নিয়ে নিবে। তাই আমরা প্রথম লুপটা অযথাই ঘুরিয়ে আনছি, আর যখন লুপটা একবার ঘুরে গেল, তার মানে প্রথম রো&#8217;-টা পার করে গেল, তখনই আমরা বলছি: <em>এবার তুমি ইনসার্ট করা শুরু করো</em>। তাই আমরা আমাদের কাউন্টার ১-এর বেশি হলে তখন থেকে শুরু করতে বলে দিচ্ছি।</p>
+
+
+
+<p>ব্যস, আমরা আমাদের সিএসভি থেকে বিপুল পরিমাণ তথ্য নিয়ে ডাটাবেযে ঢুকিয়ে নিতে পেরেছি।</p>
+
+
+
+<h3>CSV&#8217;র তথ্য যদি হয় বাংলায়?</h3>
+
+
+
+<p>এটা একটা মহামসিবতের কথা!</p>
+
+
+
+<p>আসলে, আমরা যখন প্রথম এই সমস্যার সম্মুখিন হয়েছিলাম, তখন আমরা মূলত বাংলা তথ্যকে ডাটাবেযে নিচ্ছিলাম। এবং মহামসিবতে পড়ে গিয়েছিলাম, কারণ ইউনিকোডে সিএসভি কনভার্শন রীতিমতো মহা ঝামেলার ছিল। কারণ উপরের পদ্ধতিমতে CSV-তে সংরক্ষণ করার পর ফাইলটা টেক্সট এডিটরে খুলে দেখা যায় সব বাংলা লেখা <code>??????</code> -এরকম প্রশ্নবোধক চিহ্ন হয়ে আছে।</p>
+
+
+
+<p>তখন আমরা OpenOffice ব্যবহার করতাম না। কারণ ওপেনঅফিস-এর পদ্ধতিতে ৫ নম্বর ধাপে এনকোডিং যে Unicode (UTF-8)-এ হবে, তা বলে দেয়া যায়। আর তাতেই সমাধানটা হয়ে যায়। আমরা সমস্যায় পড়েছিলাম মাইক্রোসফ্‌টের Excell দিয়ে কাজটা করতে গিয়ে।</p>
+
+
+
+<p>আমরা অনেক ঘাঁটাঘাঁটি করে তখন দুটো সমাধান পেয়েছিলাম, এখন আরেকটা বোনাস:</p>
+
+
+
+<h4>এক্সেল দিয়ে Unicode CSV &#8211; সমাধান ১ (ঝামেলার):</h4>
+
+
+
+<ul>
+<li>
+<a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-tab-replacing-with-commas.png"><img decoding="async" class="alignright size-medium wp-image-672" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-tab-replacing-with-commas-300x265.png" alt="csv-tab-replacing-with-commas" width="300" height="265" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-tab-replacing-with-commas-300x265.png 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/csv-tab-replacing-with-commas.png 417w" sizes="(max-width: 300px) 100vw, 300px"></a>প্রথম ধাপ আগের মতো</li>
+
+
+
+<li>দ্বিতীয় ধাপে এসে Save as type: থেকে Unicode Text (*.txt) বাছাই করুন (বুঝতেই পারছেন, আমরা সরাসরি সিএসভি বানাচ্ছি না)</li>
+
+
+
+<li>ওয়ার্নিংগুলো আগের মতোই ডীল করুন, এবং এক্সেল বন্ধ করে দিন (এক্সেলে আর কোনো কাজ নেই)</li>
+
+
+
+<li>এবারে যে <code>.txt</code> ফাইলটা তৈরি হয়েছে, তা Notepad-এ খুলুন, দেখবেন সবগুলো লেখাই পড়া যাচ্ছে, আগের মতো প্রশ্নবোধক চিহ্ন হয়ে যায়নি। কিন্তু এটা সিএসভি না, কারণ কলামগুলো কমা দিয়ে আলাদা নয়, বরং ট্যাব দিয়ে আলাদা করা</li>
+
+
+
+<li>এবারে নোটপ্যাডের Edit &gt; Replace (<kbd>Ctrl</kbd> + <kbd>H</kbd>) চেপে Find&amp;Replace ডায়লগ বক্সটা খুলে নিয়ে Find what:-এ ছবিতে দেখানো পদ্ধতিতে ট্যাব-স্পেসটুকু কপি করে বসিয়ে দিতে পারেন। এতে দৃশ্যত প্রথম ফিল্ডটা আসলে ফাঁকাই দেখা যাবে। এবারে Replace with:-এ একটা কমা (,) বসিয়ে দিন। &#8230;হ্যা, বুঝে ফেলেছেন, যেহেতু পুরো ডকুমেন্ট ট্যাব দিয়ে আলাদা করা, আমরা ট্যাবগুলোকে কমা বানিয়ে ফেললেই এটা একটা কমা সেপারেটেড ফাইল হয়ে যাবে। &#8230;এবারে Replace All চাপুন</li>
+
+
+
+<li>এবারে সাবধানতার জন্য ফাইলের এনকোডিংকে Unicode থেকে Unicode (UTF-8) করে নিতে হবে। এজন্য নোটপ্যাডে File &gt; Save as-এ ক্লিক করুন, এবং একেবারে নিচে Save বোতামের বাম দিকে Encoding থেকে UTF-8 বাছাই করে দিন। ফাইলের নতুন একটা নাম দিলে ঝামেলা নেই, একই নাম দিলে, রিপ্লেস করে নিতে হবে। কাজ শেষ, নোটপ্যাড বন্ধ করে দিন</li>
+
+
+
+<li>এবারে ফাইলটা রিনেম করে এর <code>.txt</code> এক্সটেনশনটাকে বদলে <code>.csv</code> করে ফেলুন। যদি ফাইলের নাম হয়: <code>data.txt</code>, তাহলে একে আপনি বানাচ্ছেন <code>data.csv</code>
+</li>
+</ul>
+
+
+
+<h4>এক্সেল দিয়ে Unicode CSV &#8211; সমাধান ২ (তুলনামূলক ঝামেলাহীন):</h4>
+
+
+
+<ul>
+<li>আমরা Jaimon Mathew-এর <a href="https://jaimonmathew.wordpress.com/2011/08/23/excel_addin_to_work_with_unicode_csv/" target="_blank" rel="nofollow noopener">এই ব্লগ পোস্টটি^</a> পেয়েছিলাম, যেখানে তাঁর তৈরি একটা অ্যাডইন রয়েছে (পুরো প্রোজেক্টের কোডটি তিনি <a href="https://github.com/jaimonmathew/Unicode-CSV-Addin" target="_blank" rel="nofollow noopener">গিটহাবে হোস্ট^</a> করে রেখেছেন)। অ্যাডইনটি ডাউনলোড করে নিতে হবে আগে (<a href="http://blog.jaimon.co.uk/UnicodeCSV/setupfiles.zip" target="_blank" rel="nofollow noopener">ডাউনলোড লিংক^</a> : <code>setupfiles.zip</code> &#8211; filesize: 247kb)</li>
+
+
+
+<li>সেটআপ চালু হলে পিসি রিস্টার্ট নিবে, তাই কোনো কাজ থাকলে আগে ব্যাকআপ নিয়ে নিন</li>
+
+
+
+<li>আনযিপ করে নিয়ে <code>Setup.exe</code> চালু করুন (ওটা কাজ না করলে <code>UnicodeCSVAddin.vsto</code> ফাইলটা চালু করতে নির্দেশনা রয়েছে)</li>
+
+
+
+<li>এতে সে তার প্রয়োজনীয় ফাইল ইন্টারনেট ব্যবহার করে নামিয়ে নিয়ে তা কম্পিউটারে ইন্সটল করে নিবে। ইন্সটলেশনের অংশ হিসেবে সে পিসিকে নিজে থেকেই রিস্টার্ট করে নিবে। পিসিকে রিস্টার্ট হতে দিন</li>
+
+
+
+<li>ইন্সটল করা হয়ে গেলে সরাসরি আপনার বাংলা লেখা এক্সেল ফাইলটা খুলে নিন এক্সেলে। এবারে রিবনে একটা আলাদা নাম দেখতে পাবেন: Unicode CSV। ওটাতে গিয়ে Save বোতাম চাপুন। নাম দিয়ে ফাইলটা সংরক্ষণ করে নিন</li>
+
+
+
+<li>ব্যস, ইউনিকোডে আপনার সিএসভি ফাইল প্রস্তুত। যাচাই করতে এক্সেল বন্ধ করে দিয়ে <code>.csv</code> ফাইলটা নোটপ্যাডে খুলে দেখে নিন</li>
+</ul>
+
+
+
+<h4>এক্সেল দিয়ে Unicode CSV &#8211; সমাধান ৩ (গুগল ডক্স):</h4>
+
+
+
+<ul>
+<li>আপনার এক্সেল ফাইলটা <a href="http://drive.google.com/" target="_blank" rel="nofollow noopener">গুগল ড্রাইভে^</a> আপলোড করে দিন</li>
+
+
+
+<li>এবারে তাকে Open with Google Sheets করে নিন</li>
+
+
+
+<li>নতুন গুগল শিটে এবারে আপনার বাংলা স্প্রেডশিটটা খুললে File &gt; Download as &gt; Comma-separated values (.csv, current sheet) বাছাই করুন</li>
+
+
+
+<li>ব্যস, ইউনিকোডে বদলে সিএসভি হয়ে নেমে আসবে আপনার স্প্রেডশিটটা</li>
+</ul>
+
+
+
+<h3>পরিশেষ</h3>
+
+
+
+<p>দারুণ না! আমরা স্প্রেডশিট থেকে সিএসভি ফাইল তৈরি করা শিখলাম। তথ্যে ভাষা ইংরেজিভিন্ন অন্য যে কোনো ইউনিকোড হরফে হলে তাও আমরা সফলভাবে সিএসভি করে নিতে শিখলাম। এবং সর্বোপরি সিএসভি ফাইল পিএইচপি দিয়ে পড়তে পারলাম, এমনকি লুপ চালিয়ে তা সংযুক্ত মাইএসকিউএল ডাটাবেযেও ঢুকিয়ে নিতে পারলাম। <span style="text-decoration: underline;">আমরা অবশ্য ডাটাবেযে তথ্য নেয়ার আগে প্রয়োজনীয় স্যানিটাইযেশন, ভ্যালিডেশন এখানে দেখাইনি, যা খুবই গুরুত্বপূর্ণ, এবং বাস্তবে, কাজে সেগুলো অবশ্যই আসা উচিত।</span></p>
+
+
+
+<h3>বোনাস: ওয়ার্ডপ্রেসে CSV পড়া</h3>
+
+
+
+<p>ওয়ার্ডপ্রেসও কিন্তু PHP-MySQL-ভিত্তিক সিএমএস, সুতরাং আলাদা ঝামেলার কিছুই নেই। তবু আমি যেহেতু একজন ওয়ার্ডপ্রেস ডেভলপার, তাই ওয়ার্ডপ্রেসে কাজটি সহজে কিভাবে করা যায়, তা হয়তো বলে দিতেই পারি।</p>
+
+
+
+<p>ওয়ার্ডপ্রেসে একটা পিএইচপি কোড রান করানোর জন্য বিভিন্নরকম প্লাগইন রয়েছে, যেমন: Otto&#8217;র <a href="https://wordpress.org/plugins/php-code-widget/" target="_blank" rel="nofollow noopener">PHP Code Widget^</a>। এই উইজেটে আপনার পিএইচপি কোড বসিয়ে নিয়ে তা ওয়ার্ডপ্রেসের যেকোনো উইজেট সক্রীয় অংশে রান করাতে পারবেন।</p>
+
+
+
+<p>যাদের প্লাগইন ব্যবহার করতে মন চাইছে না, তারা কোডের বিপুল ঝামেলায় না গিয়ে যে কাজটি করতে পারেন খুব সহজে, তা হলো একটা Page Template বানিয়ে ফেলা, কিছুই না, শুধুমাত্র কমেন্টের ভিতরে Template Name: CSV বসিয়ে নিলেই যেকোনো ফাইলকে WordPress-এর পাতায় রান করানো যায়। এই ফাইলটা থিমের ফোল্ডারে থাকলে Add New Page থেকে নতুন পাতা তৈরি করে পেজ টেমপ্লেট হিসেবে CSV (আমাদের টেমপ্লেটের নাম) বাছাই করে দিলেই হলো।</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/03864e63b073fc81694b.js?file=importing-csv-wordpress-template.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/03864e63b073fc81694b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>আমরা ধরে নিয়েছি, আপনি কর্মচারীদের তথ্যাদি রাখার জন্য একটা কাস্টম পোস্টটাইপ তৈরি করে নিয়েছেন, এবং অতিরিক্ত তথ্যগুলো পোস্টমেটা হিসেবে postmeta টেবিলে সংরক্ষণ করছেন। এখানেও একই কথা প্রযোজ্য: <strong>কোনো স্যানিটাইযেশন কিংবা ভ্যালিডেশনের ধার ধারা হয়নি। বাস্তবে প্রয়োগের আগে অবশ্যই কাজগুলো করে নিতে হবে যথাযথ।</strong></p>
+
+
+
+<p>এই লেখনি একটা প্রাথমিক দিকনির্দেশনা বলা যায়। আপনি কাজ করতে গিয়ে আরো সমস্যার সম্মুখিন হতে পারেন। সমাধানও বেরিয়ে আসবে ইনশাল্লাহ। তবে কাজে নেমে পড়ার জন্য যথেষ্ট তথ্য এখানে রয়েছে। কেমন কাজে লাগালেন, জানাতে ভুলবেন না কিন্তু।</p>
+
+
+
+<p><strong>-মঈনুল ইসলাম</strong><br>&#x1f517; <a rel="noreferrer noopener" href="https://mayeenulislam.github.io/" target="_blank">mayeenulislam.github.io</a></p>
+
+
+
+<p><span style="color: #999999;">____________________________________________________________</span></p>
+
+
+
+<h3><strong>কৃতজ্ঞতা</strong></h3>
+
+
+
+<p class="has-small-font-size">এই যাবতীয় অনুসন্ধিৎসায় আমার প্রাক্তন সহকর্মী ও টীম লীড তাহমিনা আখতার-এর সহায়তা কৃতজ্ঞতাচিত্তে স্মরণ করছি। আসলে আমরা উভয়ে মিলে, একটা পিএইচপি প্রোজেক্টে, এবিষয়ক সমস্যার সমাধান করছিলাম। এবং প্রায় ৩ লাখের বেশি তথ্য নিয়ে কাজ করেছিলাম আমরা, সাফল্যের সাথে, আলহ্বামদুলিল্লাহ। &#x1f60d;</p>
+
+
+
+<p class="has-small-font-size">প্রচ্ছদের ছবি <a href="https://commons.wikimedia.org/wiki/File:CSV_Logo.svg" target="_blank" rel="nofollow noopener">Christlich Soziale Volkspartei-এর তৈরি ছবি^</a>, উইকিমিডিয়া কমন্স থেকে নিয়ে বদলে নেয়া হয়েছে প্রয়োজনমতো।</p>
+							</div>
+		<div class="tags-links">
+<a href="https://mayeenulislam.github.io/tuts/tag/csv/" rel="tag">CSV</a> <a href="https://mayeenulislam.github.io/tuts/tag/unicode-csv/" rel="tag">Unicode CSV</a> <a href="https://mayeenulislam.github.io/tuts/tag/ms-access-csv/" rel="tag">অ্যাক্সেস থেকে সিএসভি</a> <a href="https://mayeenulislam.github.io/tuts/tag/bangla-csv/" rel="tag">বাংলায় সিএসভি</a> <a href="https://mayeenulislam.github.io/tuts/tag/csv-upload/" rel="tag">সিএসভি আপলোড</a>
+</div></article>
+			<div class="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<div class="author-avatar" itemprop="image">
+		<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" class="avatar avatar-80 photo" height="80" width="80">	</div>
+	<div class="author-description">
+		<h4>About <span itemprop="name">মঈনুল ইসলাম</span>
+</h4>
+		<p>
+						<span itemprop="description">নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ <a href="https://nishachor.com/" title="নিশাচর - অমনিশায় লুকানো যত রহস্য আমার চাই">nishachor.com</a>-এ লেখালেখি করেন।</span>
+			<a itemprop="url" class="author-link" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author">
+				View all posts by মঈনুল ইসলাম <span class="meta-nav">&rarr;</span>			</a>
+		</p>
+	</div>
+</div>
+	
+	<nav class="navigation post-navigation" aria-label="প্রকাশনাসমূহ">
+		<h2 class="screen-reader-text">পোস্ট ন্যাভিগেশন</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://mayeenulislam.github.io/tuts/gcli-powerful-console-firefox/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">GCLI &#8211; ফায়ারফক্সের শক্তিশালী কনসোল টুল</span></a></div>
+<div class="nav-next"><a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার &#8211; সম্পূর্ণ গাইড</span></a></div>
+</div>
+	</nav>
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">মন্তব্য করুন <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/#respond" style="display:none;">জবাব বাতিল</a></small>
+</h3>
+<form action="https://tuts.local/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">আপনার ই-মেইল এ্যাড্রেস প্রকাশিত হবে না।</span> <span class="required-field-message"><span class="required">*</span> চিহ্নিত বিষয়গুলো আবশ্যক।</span></p>
+<p class="comment-form-comment"><label for="comment">মন্তব্য <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">নাম <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">ইমেইল <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">ওয়েবসাইট</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">পরবর্তিতে ব্যবহারের জন্য আপনার নাম, ইমেইল ঠিকানা এবং ওয়েব ঠিকানা এই ব্রাউজারে সংরক্ষণ করুন।</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="মন্তব্য প্রকাশ করুন"> <input type="hidden" name="comment_post_ID" value="666" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+	
+</div>
+
+			</div>
+											<footer class="site-info" itemscope itemtype="http://schema.org/WPFooter">
+										<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>.
+					Theme: Flat 1.7.11 by <a rel="nofollow" href="https://themeisle.com/themes/flat/" title="Flat WordPress Theme">Themeisle</a>.				</footer>
+														</div>
+					</div>
+	</div>
+</div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39984706-1', 'auto');
+      ga('send', 'pageview');</script>
+<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/comment-reply.js?ver=6.1.1" id="comment-reply-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/plugins/oembed-gist/js/script.min.js?ver=4.9.1" id="oembed-gist-js"></script>
+</body>
+</html>

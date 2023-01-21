@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	ওয়ার্ডপ্রেস সাইটকে গতিশীল করতে gZip Compression চালু করার পদ্ধতি তে মন্তব্যসমূহ	</title>
+	<atom:link href="https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/feed/" rel="self" type="application/rss+xml" />
+	<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/</link>
+	<description>Technology Tutorials by Mayeenul Islam</description>
+	<lastBuildDate>Sat, 21 Jan 2023 14:44:52 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+	<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-788</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2015 17:33:59 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=738#comment-788</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-783&quot;&gt;Fakharuddin Manik&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+দারুণ! শুনে ভালো লাগলো।]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-783">Fakharuddin Manik</a>-এর প্রত্যুত্তরে।</p>
+<p>দারুণ! শুনে ভালো লাগলো।</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-785</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Sun, 11 Oct 2015 11:16:27 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=738#comment-785</guid>
+
+					<description><![CDATA[&lt;a href=&quot;https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-784&quot;&gt;sohaga&lt;/a&gt;-এর প্রত্যুত্তরে।
+
+আপনি বোধহয় পুরো লেখাটা পড়েননি। যাহোক, আপনাদের মতো কুইক স্ক্যানারদের জন্য একটা হেডিং ট্যাগ যোগ করলাম ঐ অংশে - &lt;a href=&quot;https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#যাচাই করুন&quot; rel=&quot;nofollow&quot;&gt;যাচাই করুন&lt;/a&gt;।]]></description>
+			<content:encoded><![CDATA[<p><a href="https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-784">sohaga</a>-এর প্রত্যুত্তরে।</p>
+<p>আপনি বোধহয় পুরো লেখাটা পড়েননি। যাহোক, আপনাদের মতো কুইক স্ক্যানারদের জন্য একটা হেডিং ট্যাগ যোগ করলাম ঐ অংশে &#8211; <a href="https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#যাচাই করুন" rel="nofollow">যাচাই করুন</a>।</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ sohaga		</title>
+		<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-784</link>
+
+		<dc:creator><![CDATA[sohaga]]></dc:creator>
+		<pubDate>Sun, 11 Oct 2015 10:25:01 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=738#comment-784</guid>
+
+					<description><![CDATA[How I will understand it&#039;s working?]]></description>
+			<content:encoded><![CDATA[<p>How I will understand it&#8217;s working?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Fakharuddin Manik		</title>
+		<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-783</link>
+
+		<dc:creator><![CDATA[Fakharuddin Manik]]></dc:creator>
+		<pubDate>Sun, 11 Oct 2015 04:16:04 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=738#comment-783</guid>
+
+					<description><![CDATA[options.php তে ০ থেকে ১ করে দেওয়ার পরেইতো দেখি কাজ হইছে :)]]></description>
+			<content:encoded><![CDATA[<p>options.php তে ০ থেকে ১ করে দেওয়ার পরেইতো দেখি কাজ হইছে 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ নীরব মাহমুদ		</title>
+		<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-782</link>
+
+		<dc:creator><![CDATA[নীরব মাহমুদ]]></dc:creator>
+		<pubDate>Sun, 11 Oct 2015 03:48:56 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=738#comment-782</guid>
+
+					<description><![CDATA[৩য় পদ্ধতির কাছাকাছি একটা রেডিমেড কোড স্নিপেট দিয়ে কাজ করেছিলাম। ধন্যবাদ নতুন আরো পদ্ধতি জানানোর জন্য। বাকীগুলো সুযোগ হলে টেষ্ট করে দেখবো। :)]]></description>
+			<content:encoded><![CDATA[<p>৩য় পদ্ধতির কাছাকাছি একটা রেডিমেড কোড স্নিপেট দিয়ে কাজ করেছিলাম। ধন্যবাদ নতুন আরো পদ্ধতি জানানোর জন্য। বাকীগুলো সুযোগ হলে টেষ্ট করে দেখবো। 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Mayeenul Islam		</title>
+		<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-780</link>
+
+		<dc:creator><![CDATA[Mayeenul Islam]]></dc:creator>
+		<pubDate>Sat, 10 Oct 2015 18:55:09 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=738#comment-780</guid>
+
+					<description><![CDATA[সমস্যা সমাধানের আলোচনায় আরেকটা সমস্যা দিতে হয় না, সমাধান উল্লেখ করতে হয়। :)
+সমাধান পাচ্ছি তো?]]></description>
+			<content:encoded><![CDATA[<p>সমস্যা সমাধানের আলোচনায় আরেকটা সমস্যা দিতে হয় না, সমাধান উল্লেখ করতে হয়। 🙂<br />
+সমাধান পাচ্ছি তো?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		লিখেছেনঃ Sufe		</title>
+		<link>https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/#comment-778</link>
+
+		<dc:creator><![CDATA[Sufe]]></dc:creator>
+		<pubDate>Sat, 10 Oct 2015 17:16:15 +0000</pubDate>
+		<guid isPermaLink="false">https://mayeenulislam.github.io/tuts/?p=738#comment-778</guid>
+
+					<description><![CDATA[ধন্যবাদ ভাই। নতুন কিছু শিখলাম।]]></description>
+			<content:encoded><![CDATA[<p>ধন্যবাদ ভাই। নতুন কিছু শিখলাম।</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

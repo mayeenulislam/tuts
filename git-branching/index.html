@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="bn-BD">
+<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://mayeenulislam.github.io/tuts/xmlrpc.php">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.14 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>গিট দিয়ে ভার্ষন নিয়ন্ত্রণ - git branch - tuts nano</title>
+	<meta name="description" content="গিট ব্যবহার করে কিভাবে ব্রাঞ্চ তৈরি করা যায়, ব্রাঞ্চে কাজ করা যায়, একাধিক ব্রাঞ্চ মার্জ করা যায়, সার্ভারে পুশ করা যায় এবং ব্রাঞ্চ ডিলিট করা যায়...">
+	<link rel="canonical" href="https://mayeenulislam.github.io/tuts/git-branching/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="গিট দিয়ে ভার্ষন নিয়ন্ত্রণ - git branch - tuts nano">
+	<meta property="og:description" content="গিট ব্যবহার করে কিভাবে ব্রাঞ্চ তৈরি করা যায়, ব্রাঞ্চে কাজ করা যায়, একাধিক ব্রাঞ্চ মার্জ করা যায়, সার্ভারে পুশ করা যায় এবং ব্রাঞ্চ ডিলিট করা যায়...">
+	<meta property="og:url" content="https://mayeenulislam.github.io/tuts/git-branching/">
+	<meta property="og:site_name" content="Tuts by Mayeenul Islam">
+	<meta property="article:publisher" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:author" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:published_time" content="2016-02-21T15:45:12+00:00">
+	<meta property="article:modified_time" content="2023-01-21T14:45:26+00:00">
+	<meta property="og:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="658">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="মঈনুল ইসলাম">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="গিট দিয়ে ভার্ষন নিয়ন্ত্রণ - git branch - tuts nano">
+	<meta name="twitter:description" content="গিট ব্যবহার করে কিভাবে ব্রাঞ্চ তৈরি করা যায়, ব্রাঞ্চে কাজ করা যায়, একাধিক ব্রাঞ্চ মার্জ করা যায়, সার্ভারে পুশ করা যায় এবং ব্রাঞ্চ ডিলিট করা যায়...">
+	<meta name="twitter:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg">
+	<meta name="twitter:creator" content="@mayeenulislam">
+	<meta name="twitter:site" content="@mayeenulislam">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="মঈনুল ইসলাম">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="14 মিনিট">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://mayeenulislam.github.io/tuts/git-branching/#article","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/git-branching/"},"author":{"name":"মঈনুল ইসলাম","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"headline":"গিট দিয়ে ভার্ষন নিয়ন্ত্রণ – git branch","datePublished":"2016-02-21T15:45:12+00:00","dateModified":"2023-01-21T14:45:26+00:00","mainEntityOfPage":{"@id":"https://mayeenulislam.github.io/tuts/git-branching/"},"wordCount":9842,"commentCount":1,"publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"image":{"@id":"https://mayeenulislam.github.io/tuts/git-branching/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg","keywords":["গিট","গিট ব্যবহারের কৌশল","গিটহাব"],"articleSection":["গিট টিউটোরিয়াল","জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল","মাধ্যমিক স্তরের টিউটোরিয়াল"],"inLanguage":"bn-BD","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://mayeenulislam.github.io/tuts/git-branching/#respond"]}]},{"@type":"WebPage","@id":"https://mayeenulislam.github.io/tuts/git-branching/","url":"https://mayeenulislam.github.io/tuts/git-branching/","name":"গিট দিয়ে ভার্ষন নিয়ন্ত্রণ - git branch - tuts nano","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/#website"},"primaryImageOfPage":{"@id":"https://mayeenulislam.github.io/tuts/git-branching/#primaryimage"},"image":{"@id":"https://mayeenulislam.github.io/tuts/git-branching/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg","datePublished":"2016-02-21T15:45:12+00:00","dateModified":"2023-01-21T14:45:26+00:00","description":"গিট ব্যবহার করে কিভাবে ব্রাঞ্চ তৈরি করা যায়, ব্রাঞ্চে কাজ করা যায়, একাধিক ব্রাঞ্চ মার্জ করা যায়, সার্ভারে পুশ করা যায় এবং ব্রাঞ্চ ডিলিট করা যায়...","breadcrumb":{"@id":"https://mayeenulislam.github.io/tuts/git-branching/#breadcrumb"},"inLanguage":"bn-BD","potentialAction":[{"@type":"ReadAction","target":["https://mayeenulislam.github.io/tuts/git-branching/"]}]},{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/git-branching/#primaryimage","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg","width":1200,"height":658,"caption":"গিট ব্রাঞ্চিং - tuts nano"},{"@type":"BreadcrumbList","@id":"https://mayeenulislam.github.io/tuts/git-branching/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mayeenulislam.github.io/tuts/"},{"@type":"ListItem","position":2,"name":"গিট দিয়ে ভার্ষন নিয়ন্ত্রণ – git branch"}]},{"@type":"WebSite","@id":"https://mayeenulislam.github.io/tuts/#website","url":"https://mayeenulislam.github.io/tuts/","name":"Tuts by Mayeenul Islam","description":"Technology Tutorials by Mayeenul Islam","publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mayeenulislam.github.io/tuts/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"bn-BD"},{"@type":["Person","Organization"],"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee","name":"মঈনুল ইসলাম","image":{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","width":2560,"height":1920,"caption":"মঈনুল ইসলাম"},"logo":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/"},"description":"নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ nishachor.com-এ লেখালেখি করেন।","sameAs":["https://nishachor.com","http://www.facebook.com/mayeenulislam","https://twitter.com/mayeenulislam"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ফীড" href="https://mayeenulislam.github.io/tuts/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; মন্তব্য ফীড" href="https://mayeenulislam.github.io/tuts/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; গিট দিয়ে ভার্ষন নিয়ন্ত্রণ &#8211; git branch মন্তব্যের ফিড" href="https://mayeenulislam.github.io/tuts/git-branching/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/wp-emoji.js?ver=6.1.1","twemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/twemoji.js?ver=6.1.1"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0x1FAF1, 0x1F3FB, 0x200D, 0x1FAF2, 0x1F3FF],
+					[0x1FAF1, 0x1F3FB, 0x200B, 0x1FAF2, 0x1F3FF]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/dist/block-library/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/classic-themes.css?ver=1" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="flat-fonts-css" href="//fonts.googleapis.com/css?family=Yesteryear%7CRoboto:400,700%7CRoboto+Slab%7CRoboto+Condensed" media="all">
+<link rel="stylesheet" id="flat-theme-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/css/flat.min.css?ver=1.7.11" media="all">
+<link rel="stylesheet" id="flat-style-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="flat-bengali-css" href="https://mayeenulislam.github.io/tuts/wp-content/plugins/flat-bengali/flat-bengali.css?ver=1.0.1" media="all">
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery.js?ver=3.6.1" id="jquery-core-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery-migrate.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/js/flat.min.js?ver=1.7.11" id="flat-js-js"></script>
+<!--[if lt IE 9]>
+<script src='https://tuts.local/wp-content/themes/flat/assets/js/html5shiv.min.js?ver=3.7.2' id='html5shiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://mayeenulislam.github.io/tuts/wp-json/">
+<link rel="alternate" type="application/json" href="https://mayeenulislam.github.io/tuts/wp-json/wp/v2/posts/850">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mayeenulislam.github.io/tuts/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mayeenulislam.github.io/tuts/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://mayeenulislam.github.io/tuts/?p=850">
+<link rel="alternate" type="application/json+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fgit-branching%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fgit-branching%2F#038;format=xml">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3526212672565487",
+          enable_page_level_ads: true
+     });</script><link type="image/x-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/tuts-nano.png" rel="shortcut icon">
+<style type="text/css"></style>
+<style type="text/css">#masthead .site-title {font-family:Yesteryear}body {font-family:Roboto }h1,h2,h3,h4,h5,h6 {font-family:Roboto Slab}#masthead .site-description, .hentry .entry-meta {font-family:Roboto Condensed}</style>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-color: #d1d1d1; }</style>
+	<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-180x180.png">
+<meta name="msapplication-TileImage" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-270x270.png">
+		<style type="text/css" id="wp-custom-css">.wp-block-group.has-background {
+    padding: 1.25em 2.375em;
+}
+
+pre.wp-block-preformatted {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+#masthead .site-title.display-title {
+	padding-left: 15px;
+	padding-right: 15px;
+}</style>
+			</head>
+
+<body class="post-template-default single single-post postid-850 single-format-standard custom-background" itemscope itemtype="http://schema.org/WebPage">
+<div id="page">
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div id="secondary" class="col-lg-3">
+								<header id="masthead" class="site-header" role="banner">
+										<div class="hgroup">
+						<h1 class="site-title display-title"><a href="https://mayeenulislam.github.io/tuts/" title="Tuts by Mayeenul Islam" rel="home"><span itemprop="name">Tuts by Mayeenul Islam</span></a></h1>
+<h2 itemprop="description" class="site-description">Technology Tutorials by Mayeenul Islam</h2>					</div>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><i class="fa fa-gear"></i></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+						<ul id="menu-top-menu" class="nav-menu">
+<li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-282"><a href="https://mayeenulislam.github.io/tuts/">নীড়পাতা</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://mayeenulislam.github.io/tuts/contributing-bangla-wikipedia/">বাংলা উইকিপিডিয়ায় লিখুন</a></li>
+</ul>					</nav>
+									</header>
+				
+				<div class="sidebar-offcanvas">
+					<div id="main-sidebar" class="widget-area" role="complementary">
+											<aside id="search-2" class="widget widget_search">
+	<form method="get" id="searchform" action="https://tuts.local/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+					</aside>
+					<aside id="nav_menu-2" class="widget widget_nav_menu">
+						<h3 class="widget-title">ধরণভিত্তিক টিউটোরিয়াল</h3>
+<div class="menu-category-menu-container"><ul id="menu-category-menu" class="menu">
+<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-550"><a href="https://mayeenulislam.github.io/tuts/category/nano-basix/">ন্যানো বেসিX</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-551"><a href="https://mayeenulislam.github.io/tuts/category/photoshop-tuts/">ফটোশপ টিউটোরিয়াল</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-532">
+<a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/">ওয়েব ডিযাইন টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-533" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-533"><a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/css-tuts/">সিএসএস টিউটোরিয়াল</a></li>
+</ul>
+</li>
+<li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-534">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/">ওয়েব ডেভলপমেন্ট টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-539" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-539"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/php-tuts/">পিএইচপি টিউটোরিয়াল</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-535">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/">ওয়ার্ডপ্রেস টিউটোরিয়াল</a>
+	<ul class="sub-menu">
+		<li id="menu-item-537" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-537"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/theme-tuts/">থিম টিউটোরিয়াল</a></li>
+		<li id="menu-item-538" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-538"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/plugin-tuts/">প্লাগইন টিউটোরিয়াল</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-540" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-540"><a href="https://mayeenulislam.github.io/tuts/category/git-tuts/">গিট টিউটোরিয়াল</a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-530"><a href="https://mayeenulislam.github.io/tuts/category/other-tuts/">অন্যান্য টিউটোরিয়াল</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-541">
+<a href="https://mayeenulislam.github.io/tuts/category/tuts-level/">জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-543" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-543"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/primary-level-tuts/">প্রাথমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-544"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/mid-level-tuts/">মাধ্যমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-542" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-542"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/top-level-tuts/">উচ্চস্তরের টিউটোরিয়াল</a></li>
+</ul>
+</li>
+</ul></div>					</aside>
+					<aside id="prisna-google-website-translator-2" class="widget widget_prisna-google-website-translator">
+						<h3 class="widget-title">Translate the Site</h3>
+
+<style type="text/css"><!--
+
+.prisna-gwt-align-left {
+	text-align: left !important;
+}
+.prisna-gwt-align-right {
+	text-align: right !important;
+}
+
+
+
+body {
+	top: 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+--></style>
+
+
+
+<div id="google_translate_element" class="prisna-gwt-align-left"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+function initializeGoogleTranslateElement() {
+	new google.translate.TranslateElement({
+		pageLanguage: "bn"
+	}, "google_translate_element");
+}
+/*]]>*/
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=initializeGoogleTranslateElement"></script>					</aside>
+											</div>
+				</div>
+			</div>
+
+						<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+							<div id="content" class="site-content" role="main" itemscope itemtype="http://schema.org/Article">
+			<article id="post-850" class="post-850 post type-post status-publish format-standard has-post-thumbnail hentry category-git-tuts category-tuts-level category-mid-level-tuts tag-git tag-using-git tag-github">
+	<header class="entry-header">
+		<h1 class="entry-title" itemprop="name">গিট দিয়ে ভার্ষন নিয়ন্ত্রণ &#8211; git branch</h1>
+							<div class="entry-meta">
+<span class="entry-date"><a href="https://mayeenulislam.github.io/tuts/git-branching/" rel="bookmark"><time class="entry-date published" datetime="2016-02-21T21:45:12+06:00" itemprop="datepublished">ফেব্রুয়ারী 21, 2016</time></a></span> by <span class="author vcard"><a class="url fn n" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author" itemprop="url">মঈনুল ইসলাম</a></span><span class="sep">&middot;</span><span class="comments-link"><a href="https://mayeenulislam.github.io/tuts/git-branching/#comments" itemprop="discussionUrl">1 Comment</a></span>
+</div>
+			</header>
+				<div class="entry-thumbnail"><img width="1200" height="658" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="গিট ব্রাঞ্চিং - tuts nano" decoding="async" itemprop="thumbnailUrl" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover.jpg 1200w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover-300x165.jpg 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover-1024x561.jpg 1024w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-cover-768x421.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px"></div>
+	
+	
+	<div class="entry-content" itemprop="articleBody">
+				
+<p>গিট নিয়ে ভয়-ভীতি আমরা এবারে কাটিয়ে উঠেছি। এখন সময় এসেছে এর নতুন নতুন ফিচার জানার। তাই এই ধারাবাহিক আলোচনাকে &#8220;একেবারে প্রাথমিক জ্ঞান&#8221; আর বলছি না, বরং গিট নিয়ে খেলাধুলা বলা যেতে পারে। কিন্তু যারা এখনও গিট নিয়ে ভয়-ভীতি কিংবা দোটানার মধ্যে আছেন, এবারে তাদেরকে অনুরোধ করবো আমাদের পূর্বতন দুটো টিউটোরিয়াল দেখে নেয়ার জন্য, আগে (কথা দিচ্ছি এর চেয়ে সহজ করে কেউ বলবে না কখনও):</p>
+
+
+
+<ul>
+<li>
+<a href="https://mayeenulislam.github.io/tuts/git-basics-1/" target="_blank" rel="noreferrer noopener">গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ১</a>, এবং</li>
+
+
+
+<li><a href="https://mayeenulislam.github.io/tuts/git-basics-2/" target="_blank" rel="noreferrer noopener">গিট ব্যবহারের একেবারে প্রাথমিক জ্ঞান : পর্ব ২</a></li>
+</ul>
+
+
+
+<p>এবারে আমরা জানি গিট কাকে বলে, কত প্রকার, কী কী 🙂 । তাই আজকে আমরা আলোচনা করছি গিট ব্রাঞ্চিং নিয়ে।</p>
+
+
+
+<p>অন্যান্য ভার্ষন নিয়ন্ত্রণ সফ্‌টওয়্যারের সাথে গিট-এর পার্থক্য করতে গেলে অনেককেই বলতে শুনি যে, গিটে ব্রাঞ্চিং যথেষ্ট cheap। এই cheap কথাটার&nbsp;মানে যেমন স্বল্প খরচসাপেক্ষ, তেমনি এর দ্বারা বোঝায় এটা যথেষ্ট সহজ, দ্রুত এবং ঝামেলাহীনও। স্বস্তা, কারণ খুব অল্প রিসোর্স ব্যবহার করেই গিট ব্রাঞ্চিং করা যায় অগণিত।</p>
+
+
+
+<p>কী এই গিট ব্রাঞ্চিং? ব্রাঞ্চ শব্দটা শুনলেই ব্যাংকের ব্রাঞ্চের কথা মনে হয় না? ঠিকই আছে। ব্রাঞ্চিং সেরকমইতো।&nbsp;এবারে একটা ঘটনা দেখা যাক:</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching.jpg" rel="attachment wp-att-853"><img decoding="async" width="200" height="300" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-200x300.jpg" alt="গিট-এ ব্রাঞ্চিং-এর সহজ চিত্র" class="wp-image-853" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-200x300.jpg 200w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching.jpg 668w" sizes="(max-width: 200px) 100vw, 200px"></a><figcaption class="wp-element-caption">গিট-এ ব্রাঞ্চিং-এর সহজ চিত্র</figcaption></figure>
+</div>
+
+
+<p>আমি <strong>মূল রাস্তা</strong> ধরে হাঁটছি। আমার সাথে <strong>২জন</strong>&nbsp;বন্ধু আছেন।</p>
+
+
+
+<p>আমি মূল রাস্তা ধরে আরো এক মাইল এগোলাম, এবারে আমার সাথে আরো ২জন&nbsp;বন্ধু যোগ দিলেন।&nbsp;অর্থাৎ মোট বন্ধুর সংখ্যা&nbsp;<strong>৪জন</strong>।</p>
+
+
+
+<p>এবারে আমি রাস্তা বদল করলাম। <strong>ডানের গলি</strong>তে ঢুকে গেলাম। এই গলিতে আমি আরো ২জন&nbsp;বন্ধু জুটিয়ে নিলাম। মোট বন্ধু: [আগের] ৪জন + [নতুন] ২জন = <strong>৬জন</strong>।</p>
+
+
+
+<p>আরো এক মাইল এগোলাম, আরো ৪জন&nbsp;বন্ধু জুটিয়ে&nbsp;নিলাম, মোট বন্ধু&nbsp;হলেন ৬+৪=<strong>১০জন</strong>।</p>
+
+
+
+<p>এমন সময় হঠাৎ, পথে আপনার সাথে দেখা। আপনি জিজ্ঞেস করলেন, আপনি এই রাস্তায় কেন? আপনার মূল রাস্তা কোথায়? আমি বললাম, সেটাতো ফেলে এসেছি। আপনি বললেন, বাহ, দারুণ! ১০জন বন্ধু নিয়ে পথ চলছেন!&nbsp;<strong>মূল রাস্তা</strong>তে&nbsp;আপনার কয় জন বন্ধু&nbsp;ছিলেন? বললাম, ৪জন। কেন, ১০জন নয় কেন? কারণ, বাকি ৬জন যে আমি <strong>ডানের গলি</strong>তে পেয়েছি।</p>
+
+
+
+<p>হ্যা, ব্রাঞ্চিং-এর ক্ষেত্রে এই ব্যাপারটাই ঘটে। যতক্ষণ পর্যন্ত আপনি মূল রাস্তা ধরে হাঁটছেন, ততক্ষণ পর্যন্ত যা ঘটেছে, গলিপথে বা শাখা পথে ঢোকার সময় শাখা পথ কিন্তু ততটুকুর খবরই জানে। আর গলিপথে ঢুকে আপনি কতটুকু এগিয়েছেন, কী করেছেন, মূল পথ কিন্তু তার খবর জানে না।</p>
+
+
+
+<p>স্বস্তাশ্রেণীর&nbsp;একটা উদাহরণ হয়ে গেল, তবু এটা বুঝলে ব্রাঞ্চিং-এর কিছুটা ধারণা পাওয়া যাবে। &#8230;কথা না বাড়িয়ে এবারে হাত নোংরা করা যাক&#8230;</p>
+
+
+
+<p></p>
+
+
+
+<span id="more-850"></span>
+
+
+
+<h3>গিট ব্রাঞ্চ তৈরি করা</h3>
+
+
+
+<p>নিজের কম্পিউটারে&nbsp;একটা ডিরেক্টরি (ফোল্ডার)&nbsp;তৈরি করি test নামে। এই ডিরেক্টরিতে ১টা&nbsp;ফাইল তৈরি করি <code>index.html</code> এবং সেই ফাইলে কিছু একটা লিখে দিই।&nbsp;যা ইচ্ছা লিখতে না চাইলে নিচের মতো লিখে একটা ভ্যালিড HTML ফাইল বানিয়ে নেয়া যেতে পারে:</p>
+
+
+
+<pre class="wp-block-preformatted">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+   &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;title&gt;Testing Git Branching&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Testing Git Branching&lt;/h1&gt;
+   &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+
+<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-init-and-first-commit.png" rel="attachment wp-att-856"><img decoding="async" width="300" height="221" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-init-and-first-commit-300x221.png" alt=" গিট রেপোযিটরি তৈরি এবং প্রথম কমিট করা" class="wp-image-856" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-init-and-first-commit-300x221.png 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-init-and-first-commit-768x567.png 768w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-init-and-first-commit.png 810w" sizes="(max-width: 300px) 100vw, 300px"></a><figcaption class="wp-element-caption"><strong>পর্দাদৃশ্য ১:</strong> গিট রেপোযিটরি তৈরি এবং প্রথম কমিট করা</figcaption></figure>
+</div>
+
+
+<p>ব্রাউযারে <code>index.html</code> ফাইলটা খুললে দেখা যাবে, সাদা দৃশ্যপটে কালো লেখা স্পষ্ট দেখা যাচ্ছে। এবারে সেই ডিরেক্টরি-পাথে git bash চালু করি (মাউসের ডান বোতামে git bash here চেপে &#8211; <a href="https://mayeenulislam.github.io/tuts/git-basics-2/" target="_blank" rel="noreferrer noopener">বিস্তারিত</a>)। যেহেতু এটা শ্রেফ একটা ডিরেক্টরি, তাই একে আগে গিট রেপোযিটোরিতে রূপান্তর করি: ব্যাশ-এ লিখি: <code>git init</code>। ব্যস, আমাদের ১টা ফাইলসমৃদ্ধ ডিরেক্টরিটা একটা গিট রেপোযিটোরিতে বদলে গেলো। আমরা এবারে আমাদের প্রথম commit করি, মানে আক্ষরিক অর্থে ভার্ষন নিয়ন্ত্রণ শুরু করি&#8230;। (দেখুন <strong>পর্দাদৃশ্য ১</strong>)</p>
+
+
+
+<p>ভালো করে খেয়াল করে দেখুন, ঠিক প্রথম লাইনটার পরে পরের লাইনগুলোতে কোনো বিশেষ কিছু আপনার চোখে পড়ছে কিনা&#8230; &#8216;<strong><span style="color: #00ccff;">(master)</span></strong>&#8216; কথাটা যোগ হয়েছে প্রথম লাইনের পরে, এবং সেটা প্রতিবারই আপনার সাথে সাথে চলছে।</p>
+
+
+
+<p>কী এই master?</p>
+
+
+
+<h4><strong>কমান্ড: <code>git branch</code></strong></h4>
+
+
+
+<p>কমান্ড দিই:</p>
+
+
+
+<pre class="wp-block-preformatted">$ git branch</pre>
+
+
+
+<p>অর্থাৎ, আমরা গিটকে বললাম, গিট তোমার ব্রাঞ্চের খবর জানাও। এবারে সে আমাদের দেখাবে:</p>
+
+
+
+<pre class="wp-block-preformatted">* master</pre>
+
+
+
+<p>আবারো সেই master।&nbsp;মানে সে জানালো, তোমার ব্রাঞ্চ বা শাখা হচ্ছে master। ঠিকইতো আছে, এখনও তো আমি মূল রাস্তায় আছি। তো আমাকে যদি কেউ জিজ্ঞেস করে, কোন রাস্তায়? আমি বলবো, মূল রাস্তায় (master)&nbsp;&#8211;&nbsp;এর বাইরে তো কিছু বলার প্রশ্নই উঠে না, তাই না?</p>
+
+
+
+<p>এবারে চলুন আমরা ব্রাঞ্চ তৈরি করে দেখি&#8230; ধরা যাক, আমরা ঠিক করলাম, এবারে আমরা এই প্রোজেক্টে কিছু স্টাইলিং যোগ করবো। কিন্তু মূল প্রোজেক্টটাতে সেই স্টাইলিং নিবো কি নিবো না, তা এখনও সিদ্ধান্ত নিতে পারিনি আমরা। হয়তো, এমন হতে পারে, স্টাইল ছাড়াই প্রোজেক্টটা আমাদের ঠিকই আছে। কিন্তু স্টাইল করলে কেমন লাগবে, সেটা একটু পরখ করে দেখতেও চাচ্ছি। যদি ভালো লেগে যায়, তাহলে কাজে লাগালেও লাগাতে পারি আমরা। &#8230;তো এরকম অবস্থায় আমরা style নামে একটা ব্রাঞ্চ তৈরির সিদ্ধান্ত নিয়েছি।</p>
+
+
+
+<h4><strong>কমান্ড: <code>git branch &lt;branch-name&gt;</code></strong></h4>
+
+
+
+<p>ব্যাশে লিখলাম:</p>
+
+
+
+<pre class="wp-block-preformatted">$ git branch style</pre>
+
+
+<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching.png" rel="attachment wp-att-865"><img decoding="async" width="300" height="211" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-300x211.png" alt="পর্দাদৃশ্য ২: গিট ব্রাঞ্চিং" class="wp-image-865" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching-300x211.png 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/git-branching.png 675w" sizes="(max-width: 300px) 100vw, 300px"></a><figcaption class="wp-element-caption"><strong>পর্দাদৃশ্য ২:</strong> গিট ব্রাঞ্চিং</figcaption></figure>
+</div>
+
+
+<p>সে আমাদের কিছু না বললেও আসলে style নামে একটা ব্রাঞ্চ তৈরি করা শেষ। আপনার নামের ডানদিকে, এখনও দেখুন (master) কথাটাই আছে, তার মানে আমরা এখনও master ব্রাঞ্চেই রয়েছি। কিন্তু আমাদেরতো নতুন খোলা style ব্রাঞ্চে কাজ করার কথা। আসুন তবে নতুন পথ ধরি&#8230;</p>
+
+
+
+<h3>গিট ব্রাঞ্চ অদলবদল</h3>
+
+
+
+<h4><strong>কমান্ড: <code>git checkout&nbsp;&lt;branch-name&gt;</code></strong></h4>
+
+
+
+<p>ব্যাশে লিখি:</p>
+
+
+
+<pre class="wp-block-preformatted">$ git checkout style</pre>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb"><strong>টিপ্‌স:</strong><br>ব্রাঞ্চ তৈরি আর বদল করার জন্য দুটো কমান্ড শিখেছি। শর্টকাটে একটা কমান্ড দিয়েও কাজটা করা যায়, লিখতে হবে:<br><code>git checkout -b &lt;branch-name&gt;</code></p>
+
+
+
+<p>সে বলছে, হ্যা, style ব্রাঞ্চে বদলে নিয়েছি। আমরা কিন্তু এবারে নতুন রাস্তায় উঠে গেছি। নতুন রাস্তাকে যদি জিজ্ঞেস করি, তোমার কাছে&nbsp;কয়টা ফাইল আছে? বলবে, ১টা (<code>index.html</code>)। তোমার কাছে কয়টা commit রেকর্ড আছে?&nbsp;বলবে, ১টা। আমরা যে আসলেই master ব্রাঞ্চ থেকে বদলে style ব্রাঞ্চে চলে এসেছি, সেটা আমরা এবারে নিজের নামের ডানদিকে দেখতেও পাচ্ছি, (master) নামটা বদলে &#8216;<strong><span style="color: #00ccff;">(style)</span></strong>&#8216; হয়ে গেছে। তবু আমরা একটু যাচাই করে দেখলাম:</p>
+
+
+
+<pre class="wp-block-preformatted">$ git branch
+  master
+* style</pre>
+
+
+
+<p>আশা করি বুঝে গেছি যে, ঐ স্টারটা (asterisk &#8211; <code>*</code>) আসলে আমাদের দেখায় আমার সক্রীয় ব্রাঞ্চ কোনটা।</p>
+
+
+
+<p>এবারে আমাদের ডিরেক্টরিতে (ফোল্ডারে)&nbsp;একটা ফাইল তৈরি করলাম, <code>style.css</code> এবং তাতে লিখলাম:</p>
+
+
+
+<pre class="wp-block-preformatted">body{
+&nbsp; &nbsp;background-color: black;
+&nbsp; &nbsp;color: white;
+}
+</pre>
+
+
+
+<p>আর <code>index.html</code> ফাইলটা খুলে স্টাইলশিটটা লিংক&nbsp;করে দিলাম, <code>&lt;title&gt;</code> ট্যাগের ঠিক নিচেই লিখলাম:</p>
+
+
+
+<p><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
+
+
+
+<p>ব্যস, আমাদের সাইটে একটা দারুণ স্টাইলিং করা হয়ে গেল 🙂 ।</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/working-on-git-branch.png" rel="attachment wp-att-864"><img decoding="async" width="300" height="235" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/working-on-git-branch-300x235.png" alt="পর্দাদৃশ্য ৩: গিট ব্রাঞ্চে কাজ করা" class="wp-image-864" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/working-on-git-branch-300x235.png 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/working-on-git-branch-768x602.png 768w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2016/02/working-on-git-branch.png 810w" sizes="(max-width: 300px) 100vw, 300px"></a><figcaption class="wp-element-caption"><strong>পর্দাদৃশ্য ৩:</strong> গিট ব্রাঞ্চে কাজ করা</figcaption></figure>
+</div>
+
+
+<p>এবারে ব্যাশে <code>git status</code> জানতে চাইলে দেখাবে <code>index.html</code> পরিবর্তন হয়েছে, আর <code>style.css</code> নতুন যোগ হয়েছে, তাই untracked। আমরা সব পরিবর্তনকে স্টেজ করে তারপর আরেকটা কমিট করি (ধরা যাক, কমিট বার্তা দিয়েছি: &#8220;styles added&#8221;)। এবারে গিটের লগ (কমান্ড: <code>git log</code>) পরখ করলে দেখা যাবে দুটো কমিট হয়েছে:</p>
+
+
+
+<ul>
+<li>একটা কমিট হয়েছিল master ব্রাঞ্চে থাকা অবস্থায় (বার্তা: &#8220;Initial Commit&#8221;)</li>
+
+
+
+<li>আরেকটা কমিট এইমাত্র করলাম, style ব্রাঞ্চে থাকা অবস্থায় (বার্তা: &#8220;styles added&#8221;)</li>
+</ul>
+
+
+
+<p>আমরা যা শিখেছিলাম, সব মিলে গেল। মূল রাস্তা পর্যন্ত যা যা হয়েছিল, সব শাখা রাস্তায় এসেছে। আর শাখা রাস্তায়ও নতুন বন্ধু জুটিয়ে নিয়েছি (নতুন ফাইল কিংবা নতুন লাইন কিংবা পরিবর্তিত লাইন)। ব্রাউযারে <code>index.html</code> ফাইলটা খুললে দেখা যাবে, কালো দৃশ্যপটে সাদা লেখা স্পষ্ট দেখা যাচ্ছে।</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<p>আসল মজাটা এখনও শুরু হয়নি। আসল মজাটা দেখা যাবে, যদি আমরা এখন আবার master ব্রাঞ্চে ফিরে যাই। ব্যাশ খুলে লিখলাম:</p>
+
+
+
+<pre class="wp-block-preformatted">$ git checkout master</pre>
+
+
+
+<p>master ব্রাঞ্চে নিয়ে চলো। সে বরাবরের মতোই বলবে:</p>
+
+
+
+<pre class="wp-block-preformatted">Switched to branch 'master'</pre>
+
+
+
+<p>হ্যা, master ব্রাঞ্চে, মানে মূল রাস্তায় ফিরে এসেছি। এবারে ডিরেক্টরিটা (ফোল্ডার) খুলে একটু দেখুন তো&#8230;</p>
+
+
+
+<p><span style="color: #ff6600;"><em>অ্যাবরাক্যাডাবরা! ছুহ মন্তর ছুহ, যাদু মন্তর ছুহ!</em></span></p>
+
+
+
+<p>আমাদের <code>style.css</code> হাওয়ায় মিলিয়ে গেছে। শুধু তা-ই নয়, <code>index.html</code> ফাইলটা খুলে দেখুন, স্টাইলশিটটা লিংক করেছিলেন যে লাইন লিখে, সেই লাইনটিও নেই। কী মনে করে ব্রাউযার খুলে দেখলেন, কালো রঙের ব্যাকগ্রাউন্ডও হাওয়া। মাথায় হাত:&nbsp;<em>হায়, হায়! আমার এতো কষ্টের কোড সব মুছে ফেললো গিট!</em></p>
+
+
+
+<p>না বৎস, ধৈর্য্যই ধর্ম্ম!</p>
+
+
+
+<p>গিট একেবারে ঠিক কাজটিই করেছে। আপনি গিটকে জিজ্ঞেস করেছেন, গিট তোমার মূল রাস্তার খবর বলো। সে বলছে, ১টা ফাইল, আর ১০ লাইনের কোড। বাকি যা যা যোগ করেছিলেন এই রেপোযিটোরিতে, সব করেছেন নতুন রাস্তায় গিয়ে। পরে যে রাস্তা যোগ হয়েছে, আগের রাস্তা তার খবর কী করে রাখবে? তাই সে আসলে নতুন রাস্তার খবর জানে না। &#8230;শান্ত হোন, আপনার কোড হারিয়ে যায়নি। আপনার কোড এখনও নতুন রাস্তায় আছে ঠিকই। আবারও যদি নতুন রাস্তায় ঘুরতে যান, ঠিকই সবকিছু ঠিকঠাক পাবেন, সেখানকার বন্ধুদেরও পাবেন। ব্যাশে লিখুন:</p>
+
+
+
+<pre class="wp-block-preformatted">$ git checkout style</pre>
+
+
+
+<p>দেখুন তো সব ফিরে এসেছে কিনা? &#8230;এবার একটু প্রাণ খুলে হাসুন 😀 ।</p>
+
+
+
+<p>আমি যখন প্রথম ব্যাপারটা লক্ষ করেছিলাম, আমি ব্যাশটাকে একপাশে এমনভাবে সরিয়ে রেখেছিলাম, যাতে মনিটরের আরেক পাশে ডিরেক্টরিটাও দেখতে পারি। তারপর ব্রাঞ্চ থেকে ব্রাঞ্চে একটু চেকআউট করে এই মজার দৃশ্য দেখেছিলাম মন ভরে। দারুণ লেগেছিল ব্যাপারটা আমার কাছে। 🙂</p>
+
+
+
+<p>ব্যস, ব্রাঞ্চিং শেখা শেষ।</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h3>গিট ব্রাঞ্চ মিশিয়ে&nbsp;নেয়া</h3>
+
+
+
+<p>এবারে যদি আপনার style ব্রাঞ্চে করা স্টাইলগুলো দেখে আপনার মন পরিবর্তন করেন, চিন্তা করেন যে, <em>নাহ্‌! ভালোইতো লাগছে কালো ব্যাকগ্রাউন্ডটা</em> (নতুন রাস্তার বন্ধুরা তো ভালো মানুষই)। এক কাজ করি না কেন, মুল প্রজেক্টেই নিয়ে আসি না কেন (মূল রাস্তায়ই নিয়ে আসি বন্ধুদের)? যেই ভাবা, সেই কাজ। আপনি এবারে আপনার style ব্রাঞ্চটিকে master ব্রাঞ্চের সাথে মিলিয়ে নিবেন (merge করবেন)।</p>
+
+
+
+<h4><strong>কমান্ড: <code>git merge&nbsp;&lt;branch-name&gt;</code></strong></h4>
+
+
+
+<p>গাছের একটা ডাল কাটবেন, তো সেটা কি ডালে বসে কাটবেন, নাকি গাছের কান্ডে বসে কাটবেন?&nbsp;&#8230;তো সেজন্যই আগে কান্ডে ফিরে আসুন (মানে যে ব্রাঞ্চের মধ্যে অন্য ব্রাঞ্চটাকে মিলিয়ে নিতে চলেছেন)। আর তারপর ডালটার বিহিত করুন (master ব্রাঞ্চে style ব্রাঞ্চটা মার্জ্‌ করুন):</p>
+
+
+
+<pre class="wp-block-preformatted">$ git checkout master
+$ git merge style</pre>
+
+
+
+<p>এতে সে দেখাবে: <em>এই হয়েছে, সেই হয়েছে, তোমার দুটো ব্রাঞ্চ মার্জ করে ফেলেছি।</em> অর্থাৎ style ব্রাঞ্চে যা যা করেছিলে, এখন তা হুবহু master ব্রাঞ্চেও যোগ/বিয়োগ করে মিলিয়ে নিয়েছি। তোমার সবকিছু রেডি। ব্যাশে লক্ষ করুন, আপনি এখন master ব্রাঞ্চে আছেন। ডিরেক্টরিতে লক্ষ করুন, style.css ফাইলটা দেখা যাচ্ছে। এই অবস্থায় আপনি ব্রাউযার রিলোড করে দেখুন, আপনার ওয়েবসাইট কালো ব্যাকগ্রাউন্ডে সাদা লেখা দেখাচ্ছে।</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h3>গিট ব্রাঞ্চ&nbsp;রিমোটে তোলা</h3>
+
+
+
+<p>যদি আপনি আপনার রেপোযিটরিটা সার্ভারে কোথাও ব্যাকআপ রাখেন, হতে পারে সেটা github, gitlab, bitbucket, meat ইত্যাদি আপনার নিজস্ব git সার্ভার কিংবা শ্রেফ কোনো শেয়ার্ড রেপোযিটরি। আমরা বোধহয় আলাদা করে গিট রিমোট যোগ করা দেখিনি। খুবই মামুলি কাজ, আমরা এবারে সেটা করে নিই। ধরা যাক, আমাদের গিটহাবে একটা রেপোযিটরি আছে test নামে, তার পাথটা নিলাম, তারপর ব্যাশে লিখলাম:</p>
+
+
+
+<pre class="wp-block-preformatted">$ <span class="user-select-contain">git remote add origin <span class="js-git-clone-help-text">https://github.com/mayeenulislam/test.git</span></span></pre>
+
+
+
+<p>ব্যস, তাতেই হয়ে গেল। origin নামে আমাদের একটা রিমোট যোগ হয়ে গেল, অর্থাৎ একটা সার্ভার কানেক্ট করে ফেললাম আমরা আমাদের এই রেপোযিটরিতে। এবারে আমরা চাচ্ছি, আমাদের style ব্রাঞ্চটা [মার্জ করি বা না করি], সেটা সার্ভারেও তুলে দিতে।</p>
+
+
+
+<h4><strong>কমান্ড: <code>git push&nbsp;&lt;remote-name&gt; &lt;branch-name&gt;</code></strong></h4>
+
+
+
+<p>ব্যাশে লিখতে হবে, সেই পুরোন জানা কমান্ডটি, ধাক্কা দিয়ে তুলে দাও:</p>
+
+
+
+<pre class="wp-block-preformatted"><span class="user-select-contain">$ git push origin master</span>
+$ git push origin style</pre>
+
+
+
+<p>প্রথমে&nbsp;আমরা master ব্রাঞ্চটাকে ধাক্কা দিয়ে তুলে তারপর style ব্রাঞ্চটাকে ধাক্কা দিয়ে তুলে দিচ্ছি। (ইউযারনেম, পাসওয়ার্ড চাইলে দিয়ে দিতে হবে)</p>
+
+
+
+<p>ব্রাঞ্চগুলোকে একবার পরখ করে দেখে নেয়া যেতে পারে:</p>
+
+
+
+<pre class="wp-block-preformatted"><span class="user-select-contain">$ git branch --all</span>
+* master
+  style
+  remotes/origin/master
+  remotes/origin/style</pre>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h3>গিট ব্রাঞ্চ&nbsp;মুছে ফেলা</h3>
+
+
+
+<p>যেহেতু আমাদের style ব্রাঞ্চের কাজটা আমরা মূল ব্রাঞ্চে (master) মিশিয়ে নিয়েছি, আর ঐ ব্রাঞ্চ নিয়ে কাজ করারও ইচ্ছে নেই, তাই এখন আমরা চাইলে ব্রাঞ্চটা মুছে ফেলতে পারি। নতুন রাস্তার বন্ধুরা যদি আমার রাস্তায় চলে আসে, নাইবা থাকলো সে নতুন রাস্তা। 🙂</p>
+
+
+
+<h4><strong>কমান্ড: <code>git branch -d&nbsp;&lt;branch-name&gt;</code></strong></h4>
+
+
+
+<p>মুছে ফেলার কাজটা খুব সোজা, কান্ডে থাকা অবস্থায় কিন্তু ডাল কাটতে হবে, অর্থাৎ master ব্রাঞ্চে থাকা অবস্থায় শাখা মুছে ফেলার কমান্ড দিতে হবে:</p>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb">&#x26a0;&#xfe0f; <strong>সতর্ক থাকুন:</strong><br>ব্রাঞ্চ ডিলিট করার জন্য -d লেখাটা নিরাপদ। এতে সে মার্জ করতে না পারলেও কারণ দেখাবে। আর যদি আমরা -d না লিখে -D লিখতাম, তাহলে কিন্তু সে জোর করে ব্রাঞ্চটা ডিলিট করে দিত।</p>
+
+
+
+<pre class="wp-block-preformatted">$ git branch -d style</pre>
+
+
+
+<p>অর্থাৎ, গিট, style ব্রাঞ্চটাকে মুছে ফেলো তো। এতে সে লোকাল রেপোযিটরি থেকে style ব্রাঞ্চটা মুছে ফেলবে। পরখ করে দেখে নিতে পারেন:</p>
+
+
+
+<pre class="wp-block-preformatted"><span class="user-select-contain">$ git branch --all</span>
+* master
+  remotes/origin/master
+  remotes/origin/style</pre>
+
+
+
+<p>আমরা যেহেতু style ব্রাঞ্চটাকে master ব্রাঞ্চে মার্জ করেই ফেলেছি, সেটাকে তাহলে আর সার্ভারে তুলে দেখানোর কোনো মানেই ছিল না। ভুয়া একটা কাজ করেছি। কিন্তু তবু শিখে রাখলাম, মার্জ করি বা না করি, উভয় অবস্থায়ই ব্রাঞ্চকে রিমোটে তুলে রাখা যায়। কিন্তু এইমাত্র আমরা লোকাল style ব্রাঞ্চটাকে মুছে ফেলেছি। সার্ভারেরটা কিন্তু এখনও আছে। সেটা কিভাবে মুছবো?</p>
+
+
+
+<p>সার্ভারের style ব্রাঞ্চটা মুছে ফেলা খুব সোজা। শুধু লোকালের style ব্রাঞ্চটা সার্ভারে একটু কেরামতি করি তুলে দিলেই হলো।</p>
+
+
+
+<h4><strong>কমান্ড: <code>git push &lt;remote-name&gt;&nbsp;:&lt;branch-name&gt;</code></strong></h4>
+
+
+
+<p>তাহলে আমাদের origin রিমোট থেকে style ব্রাঞ্চটি মুছে ফেলতে লিখতে হবে:</p>
+
+
+
+<pre class="wp-block-preformatted">$ git push origin :style</pre>
+
+
+
+<p>ব্রাঞ্চের নামের আগে কোলন (<code>:</code>) খেয়াল করবেন কিন্তু। এটা হচ্ছে <code>true</code>&#8216;র প্রতীক।</p>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb">&#x26a0;&#xfe0f; <strong>সতর্কতা</strong><br>গিট ব্রাঞ্চিং ব্যবহার করার সময় খুব সতর্ক থাকতে হয় আপনি আসলে&nbsp;<em>কোন</em>&nbsp;ব্রাঞ্চে কাজ করছেন। ধরা যাক আপনি একটা ফিচার ব্রাঞ্চ খুলে কাজ করছিলেন, অথচ সপ্তা’খানেক পরে ভুলে গেলেন সেটা। আপনি অন্য কোনো কাজ ভুলে, এই ব্রাঞ্চে করে যাচ্ছেন অনবরত। অনেকদিন কাজ করার পর মনে পড়লো, হায় হায়, এটা কী করলাম, এই কাজ তো এই ব্রাঞ্চে করার কথা ছিল না। এই এত্তোগুলো কমিট তো এই ব্রাঞ্চে করার কথা ছিল না। তখন হয়তো ফেরা যাবে, কিন্তু সেটা যে বন্ধুর পথ হবে, সেটা আন্দাজ করা যায়।<br><br>এজন্য, যে এডিটর/আইডিই আপনি ব্যবহার করছেন, তাতে গিট ইন্টেগ্রেড করা গেলে খুব কাজের হয়। আর যদি তা না করা যায়, তাহলে প্রতিবার কাজে নামার আগে ব্যাশ খুলে ব্রাঞ্চটা দেখে নেয়ার অভ্যাস করতে পারেন।</p>
+
+
+
+<p class="has-background has-small-font-size" style="background-color:#c2ecdb"><strong>আমার অভিজ্ঞতা:</strong><br>যারা আমার মতো LESS বা Sass দিয়ে সিএসএস করেন, তারা কোনো না কোনো কম্পাইলার ব্যবহার করে থাকেন। এই কম্পাইলারগুলো যদি সেটআপ করা থাকে যে স্বয়ংক্রীয়ভাবে কম্পাইল হবে, তাহলে এগুলো ফাইলের modified টাইমস্ট্যাম্পের দিকে খেয়াল রাখে। যদি এধরণের কম্পাইলার সক্রীয় থাকে আর আপনি কম্পাইল করে একটা মিনিফাইড সিএসএস ফাইল তৈরি করে থাকেন, তাহলে ব্রাঞ্চ থেকে ব্রাঞ্চে অদলবদল হবার সময় সে মনে করে ফাইলটা বদলেছে, সাথে সাথে সে একটা কম্পাইল্‌ড সংস্করণ তৈরি করে। এটা ব্রাঞ্চ থেকে ব্রাঞ্চে দৌঁড়াদৌঁড়ির সময় খুবই বিশ্রী রকমের ঝামেলা তৈরি করে। এই ঝামেলা এড়াতে আমি ব্রাঞ্চ বদলের আগে কম্পাইলারটা সাময়িক বন্ধ করে নিই। …আপনাদের কাছে ভালো কোনো সমাধান থাকলে, তা মন্তব্য করে জানালে খুব উপকার হবে।</p>
+
+
+
+<h3>পরিশেষ</h3>
+
+
+
+<p>ব্যস, গিট ব্রাঞ্চিং-এর প্রাথমিক আলোচনা শেষ। এবারে এই জ্ঞানকে আরো বাড়িয়ে নিতে হবে। <a href="https://www.youtube.com/watch?v=ZDR433b0HJY" target="_blank" rel="nofollow noopener">স্কট চ্যাকনের যে ভিডিও ইন্ট্রোটা দিয়েছিলাম গত পর্বে</a>, তাতে ব্রাঞ্চিং বিষয়ে আলোচনা আছে বিস্তারিত। এই আলোচনা আর কিছু অনুশীলনের পরে ঐ ভিডিওটা রীতিমতো চক্ষু-খুলে-দেয়া&#8217;র মতো হবে, কথা দিচ্ছি।</p>
+
+
+
+<p>ব্রাঞ্চিং-এ গেলে কিংবা একাধিক ডেভলপার মিলে কাজ করতে গেলে সবচেয়ে বড় যে সমস্যাটার সম্মুখিন সবাই হয়, তা হলো merge conflict বা মেশানোতে&nbsp;সংঘর্ষ। এই মার্জ কনফ্লিক্ট, কলেবোরেট করে, মানে একাধিক ডেভলপার মিলে ঝামেলা না করে কাজ করা বিষয়ে আরেকটা আলোচনার জোর দাবি রাখে। আগামী কোনো পর্বে সেটা নিয়ে আলোচনা করার আশা রাখি, ইনশাল্লাহ। সেদিন আমরা সহজে বোধগম্য কোনো গিট মডেল নিয়ে আলোচনা করতে পারি, যা আমাদের কাজকে আরো ঝামেলাহীন করে কলেবোরেটিভ কোড করতে সহায়তা করবে।</p>
+
+
+
+<h3>আরো গভীরে জানা যাক:</h3>
+
+
+
+<ol>
+<li>
+<a href="https://git-scm.com/book/en/v2/Git-Branching-Branch-Management" target="_blank" rel="nofollow noopener">Git Branching &#8211; Branch Management &#8211; Git^</a> &#8211; Scott Chacon-এর বই</li>
+
+
+
+<li>
+<a href="http://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote" target="_blank" rel="nofollow noopener">Git: Delete a branch (local or remote)^</a> &#8211; Tobias Kraze</li>
+
+
+
+<li>
+<a href="http://stackoverflow.com/q/24582319/1743124" target="_blank" rel="nofollow noopener">Branching and merging best practices in Git^</a> &#8211; StackOverflow</li>
+</ol>
+
+
+
+<p><small>প্রচ্ছদের ছবি:&nbsp;chloepettersson.com থেকে নেয়া ছবি ও অন্যান্য গিট ব্রাঞ্চিং মডেলের মন্তাজ।</small></p>
+
+
+
+<p><strong>হালনাগাদ:</strong> ৩১ জানুয়ারি ২০১৭</p>
+							</div>
+		<div class="tags-links">
+<a href="https://mayeenulislam.github.io/tuts/tag/git/" rel="tag">গিট</a> <a href="https://mayeenulislam.github.io/tuts/tag/using-git/" rel="tag">গিট ব্যবহারের কৌশল</a> <a href="https://mayeenulislam.github.io/tuts/tag/github/" rel="tag">গিটহাব</a>
+</div></article>
+			<div class="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<div class="author-avatar" itemprop="image">
+		<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" class="avatar avatar-80 photo" height="80" width="80">	</div>
+	<div class="author-description">
+		<h4>About <span itemprop="name">মঈনুল ইসলাম</span>
+</h4>
+		<p>
+						<span itemprop="description">নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ <a href="https://nishachor.com/" title="নিশাচর - অমনিশায় লুকানো যত রহস্য আমার চাই">nishachor.com</a>-এ লেখালেখি করেন।</span>
+			<a itemprop="url" class="author-link" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author">
+				View all posts by মঈনুল ইসলাম <span class="meta-nav">&rarr;</span>			</a>
+		</p>
+	</div>
+</div>
+	
+	<nav class="navigation post-navigation" aria-label="প্রকাশনাসমূহ">
+		<h2 class="screen-reader-text">পোস্ট ন্যাভিগেশন</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://mayeenulislam.github.io/tuts/gzip-compression-wordpress/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">ওয়ার্ডপ্রেস সাইটকে গতিশীল করতে gZip Compression চালু করার পদ্ধতি</span></a></div>
+<div class="nav-next"><a href="https://mayeenulislam.github.io/tuts/custom-signup-wordpress-multisite/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">ওয়ার্ডপ্রেস মাল্টিসাইটে নিজস্ব সাইনআপ পাতা তৈরির কৌশল</span></a></div>
+</div>
+	</nav>
+
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			<span itemprop="interactionCount">1</span> comment		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-797" class="comment even thread-even depth-1">
+			<article id="div-comment-797" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/28733273eda487af5bc13dce8b288ce5?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/28733273eda487af5bc13dce8b288ce5?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn">King Rayhan</b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/git-branching/#comment-797"><time datetime="2016-02-23T05:34:44+06:00">ফেব্রুয়ারী 23, 2016; 5:34 পূর্বাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>অসাধারন লেখেছেন।<br>
+বাংলা ভাষায় গিট শেখার জন্য এর চেয়ে ভালো আর কোন Resource হতে পারে না।</p>
+<p>সবচেয়ে মজার ব্যপার হচ্ছে আমি যখন পড়ছিলাম তখন একবার এর জন্যও আমার মনে হয়নি আমি কোন টিউটরিয়াল পড়ছি, মনে হচ্ছিল একটা গল্পের বই পড়ছি।</p>
+<p>আমি আপনার লেখার প্রেমে পরে গেছি 🙂</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-797" data-commentid="797" data-postid="850" data-belowelement="div-comment-797" data-respondelement="respond" data-replyto="King Rayhan-এর প্রত্যুত্তর" aria-label="King Rayhan-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		</ol>
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">মন্তব্য করুন <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://mayeenulislam.github.io/tuts/git-branching/#respond" style="display:none;">জবাব বাতিল</a></small>
+</h3>
+<form action="https://tuts.local/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">আপনার ই-মেইল এ্যাড্রেস প্রকাশিত হবে না।</span> <span class="required-field-message"><span class="required">*</span> চিহ্নিত বিষয়গুলো আবশ্যক।</span></p>
+<p class="comment-form-comment"><label for="comment">মন্তব্য <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">নাম <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">ইমেইল <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">ওয়েবসাইট</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">পরবর্তিতে ব্যবহারের জন্য আপনার নাম, ইমেইল ঠিকানা এবং ওয়েব ঠিকানা এই ব্রাউজারে সংরক্ষণ করুন।</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="মন্তব্য প্রকাশ করুন"> <input type="hidden" name="comment_post_ID" value="850" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+	
+</div>
+
+			</div>
+											<footer class="site-info" itemscope itemtype="http://schema.org/WPFooter">
+										<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>.
+					Theme: Flat 1.7.11 by <a rel="nofollow" href="https://themeisle.com/themes/flat/" title="Flat WordPress Theme">Themeisle</a>.				</footer>
+														</div>
+					</div>
+	</div>
+</div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39984706-1', 'auto');
+      ga('send', 'pageview');</script>
+<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/comment-reply.js?ver=6.1.1" id="comment-reply-js"></script>
+</body>
+</html>

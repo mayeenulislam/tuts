@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="bn-BD">
+<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://mayeenulislam.github.io/tuts/xmlrpc.php">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.14 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার - সম্পূর্ণ গাইড - tuts nano</title>
+	<meta name="description" content="ওয়ার্ডপ্রেসে ট্যাক্সোনমিতে (ক্যাটাগরি, ট্যাগ কিংবা নিজস্ব ট্যাক্সোনমি) ট্যাক্সোনমি মেটা যোগ করা চাট্টিখানি কথা নয়। আর তারই আদ্যোপান্ত এখানে উল্লেখ করা হলো..">
+	<link rel="canonical" href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটার ব্যবহার - সম্পূর্ণ গাইড - tuts nano">
+	<meta property="og:description" content="ওয়ার্ডপ্রেসে ট্যাক্সোনমিতে (ক্যাটাগরি, ট্যাগ কিংবা নিজস্ব ট্যাক্সোনমি) ট্যাক্সোনমি মেটা যোগ করা চাট্টিখানি কথা নয়। আর তারই আদ্যোপান্ত এখানে উল্লেখ করা হলো..">
+	<meta property="og:url" content="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/">
+	<meta property="og:site_name" content="Tuts by Mayeenul Islam">
+	<meta property="article:publisher" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:author" content="http://www.facebook.com/mayeenulislam">
+	<meta property="article:published_time" content="2015-09-05T07:45:54+00:00">
+	<meta property="article:modified_time" content="2023-01-21T10:57:59+00:00">
+	<meta property="og:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="450">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="মঈনুল ইসলাম">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটার ব্যবহার - সম্পূর্ণ গাইড - tuts nano">
+	<meta name="twitter:description" content="ওয়ার্ডপ্রেসে ট্যাক্সোনমিতে (ক্যাটাগরি, ট্যাগ কিংবা নিজস্ব ট্যাক্সোনমি) ট্যাক্সোনমি মেটা যোগ করা চাট্টিখানি কথা নয়। আর তারই আদ্যোপান্ত এখানে উল্লেখ করা হলো..">
+	<meta name="twitter:image" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg">
+	<meta name="twitter:creator" content="@mayeenulislam">
+	<meta name="twitter:site" content="@mayeenulislam">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="মঈনুল ইসলাম">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="58 মিনিট">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#article","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/"},"author":{"name":"মঈনুল ইসলাম","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"headline":"ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার – সম্পূর্ণ গাইড","datePublished":"2015-09-05T07:45:54+00:00","dateModified":"2023-01-21T10:57:59+00:00","mainEntityOfPage":{"@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/"},"wordCount":11498,"commentCount":5,"publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"image":{"@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg","articleSection":["ওয়ার্ডপ্রেস টিউটোরিয়াল","ওয়েব ডেভলপমেন্ট টিউটোরিয়াল","জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল","থিম টিউটোরিয়াল","প্লাগইন টিউটোরিয়াল","মাধ্যমিক স্তরের টিউটোরিয়াল"],"inLanguage":"bn-BD","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#respond"]}]},{"@type":"WebPage","@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/","url":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/","name":"ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার - সম্পূর্ণ গাইড - tuts nano","isPartOf":{"@id":"https://mayeenulislam.github.io/tuts/#website"},"primaryImageOfPage":{"@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#primaryimage"},"image":{"@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#primaryimage"},"thumbnailUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg","datePublished":"2015-09-05T07:45:54+00:00","dateModified":"2023-01-21T10:57:59+00:00","description":"ওয়ার্ডপ্রেসে ট্যাক্সোনমিতে (ক্যাটাগরি, ট্যাগ কিংবা নিজস্ব ট্যাক্সোনমি) ট্যাক্সোনমি মেটা যোগ করা চাট্টিখানি কথা নয়। আর তারই আদ্যোপান্ত এখানে উল্লেখ করা হলো..","breadcrumb":{"@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#breadcrumb"},"inLanguage":"bn-BD","potentialAction":[{"@type":"ReadAction","target":["https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/"]}]},{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#primaryimage","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg","width":1200,"height":450,"caption":"ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটার ব্যবহার - tuts nano"},{"@type":"BreadcrumbList","@id":"https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mayeenulislam.github.io/tuts/"},{"@type":"ListItem","position":2,"name":"ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার – সম্পূর্ণ গাইড"}]},{"@type":"WebSite","@id":"https://mayeenulislam.github.io/tuts/#website","url":"https://mayeenulislam.github.io/tuts/","name":"Tuts by Mayeenul Islam","description":"Technology Tutorials by Mayeenul Islam","publisher":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://mayeenulislam.github.io/tuts/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"bn-BD"},{"@type":["Person","Organization"],"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/0ddda51cd9559ddedb1281bcf31242ee","name":"মঈনুল ইসলাম","image":{"@type":"ImageObject","inLanguage":"bn-BD","@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/","url":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","contentUrl":"https://mayeenulislam.github.io/tuts/wp-content/uploads/2023/01/Mayeenul-Islam-self-portrait-scaled.jpg","width":2560,"height":1920,"caption":"মঈনুল ইসলাম"},"logo":{"@id":"https://mayeenulislam.github.io/tuts/#/schema/person/image/"},"description":"নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ nishachor.com-এ লেখালেখি করেন।","sameAs":["https://nishachor.com","http://www.facebook.com/mayeenulislam","https://twitter.com/mayeenulislam"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ফীড" href="https://mayeenulislam.github.io/tuts/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; মন্তব্য ফীড" href="https://mayeenulislam.github.io/tuts/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Tuts by Mayeenul Islam &raquo; ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার &#8211; সম্পূর্ণ গাইড মন্তব্যের ফিড" href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/wp-emoji.js?ver=6.1.1","twemoji":"https:\/\/mayeenulislam.github.io\/tuts\/wp-includes\/js\/twemoji.js?ver=6.1.1"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0x1FAF1, 0x1F3FB, 0x200D, 0x1FAF2, 0x1F3FF],
+					[0x1FAF1, 0x1F3FB, 0x200B, 0x1FAF2, 0x1F3FF]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/dist/block-library/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="https://mayeenulislam.github.io/tuts/wp-includes/css/classic-themes.css?ver=1" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="flat-fonts-css" href="//fonts.googleapis.com/css?family=Yesteryear%7CRoboto:400,700%7CRoboto+Slab%7CRoboto+Condensed" media="all">
+<link rel="stylesheet" id="flat-theme-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/css/flat.min.css?ver=1.7.11" media="all">
+<link rel="stylesheet" id="flat-style-css" href="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/style.css?ver=6.1.1" media="all">
+<link rel="stylesheet" id="flat-bengali-css" href="https://mayeenulislam.github.io/tuts/wp-content/plugins/flat-bengali/flat-bengali.css?ver=1.0.1" media="all">
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery.js?ver=3.6.1" id="jquery-core-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/jquery/jquery-migrate.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/themes/flat/assets/js/flat.min.js?ver=1.7.11" id="flat-js-js"></script>
+<!--[if lt IE 9]>
+<script src='https://tuts.local/wp-content/themes/flat/assets/js/html5shiv.min.js?ver=3.7.2' id='html5shiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://mayeenulislam.github.io/tuts/wp-json/">
+<link rel="alternate" type="application/json" href="https://mayeenulislam.github.io/tuts/wp-json/wp/v2/posts/656">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mayeenulislam.github.io/tuts/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mayeenulislam.github.io/tuts/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://mayeenulislam.github.io/tuts/?p=656">
+<link rel="alternate" type="application/json+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fwordpress-taxonomy-meta-complete-guide%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://mayeenulislam.github.io/tuts/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fmayeenulislam.github.io%2Ftuts%2Fwordpress-taxonomy-meta-complete-guide%2F#038;format=xml">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3526212672565487",
+          enable_page_level_ads: true
+     });</script><link type="image/x-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/tuts-nano.png" rel="shortcut icon">
+<style type="text/css"></style>
+<style type="text/css">#masthead .site-title {font-family:Yesteryear}body {font-family:Roboto }h1,h2,h3,h4,h5,h6 {font-family:Roboto Slab}#masthead .site-description, .hentry .entry-meta {font-family:Roboto Condensed}</style>
+<style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<style type="text/css" id="custom-background-css">body.custom-background { background-color: #d1d1d1; }</style>
+	<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-32x32.png" sizes="32x32">
+<link rel="icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-180x180.png">
+<meta name="msapplication-TileImage" content="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/cropped-tuts-nano-270x270.png">
+		<style type="text/css" id="wp-custom-css">.wp-block-group.has-background {
+    padding: 1.25em 2.375em;
+}
+
+pre.wp-block-preformatted {
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
+}
+
+#masthead .site-title.display-title {
+	padding-left: 15px;
+	padding-right: 15px;
+}</style>
+			</head>
+
+<body class="post-template-default single single-post postid-656 single-format-standard custom-background" itemscope itemtype="http://schema.org/WebPage">
+<div id="page">
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div id="secondary" class="col-lg-3">
+								<header id="masthead" class="site-header" role="banner">
+										<div class="hgroup">
+						<h1 class="site-title display-title"><a href="https://mayeenulislam.github.io/tuts/" title="Tuts by Mayeenul Islam" rel="home"><span itemprop="name">Tuts by Mayeenul Islam</span></a></h1>
+<h2 itemprop="description" class="site-description">Technology Tutorials by Mayeenul Islam</h2>					</div>
+					<button type="button" class="btn btn-link hidden-lg toggle-sidebar" data-toggle="offcanvas" aria-label="Sidebar"><i class="fa fa-gear"></i></button>
+					<button type="button" class="btn btn-link hidden-lg toggle-navigation" aria-label="Navigation Menu"><i class="fa fa-bars"></i></button>
+					<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+						<ul id="menu-top-menu" class="nav-menu">
+<li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-282"><a href="https://mayeenulislam.github.io/tuts/">নীড়পাতা</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://mayeenulislam.github.io/tuts/contributing-bangla-wikipedia/">বাংলা উইকিপিডিয়ায় লিখুন</a></li>
+</ul>					</nav>
+									</header>
+				
+				<div class="sidebar-offcanvas">
+					<div id="main-sidebar" class="widget-area" role="complementary">
+											<aside id="search-2" class="widget widget_search">
+	<form method="get" id="searchform" action="https://tuts.local/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+	</form>
+					</aside>
+					<aside id="nav_menu-2" class="widget widget_nav_menu">
+						<h3 class="widget-title">ধরণভিত্তিক টিউটোরিয়াল</h3>
+<div class="menu-category-menu-container"><ul id="menu-category-menu" class="menu">
+<li id="menu-item-550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-550"><a href="https://mayeenulislam.github.io/tuts/category/nano-basix/">ন্যানো বেসিX</a></li>
+<li id="menu-item-551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-551"><a href="https://mayeenulislam.github.io/tuts/category/photoshop-tuts/">ফটোশপ টিউটোরিয়াল</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-532">
+<a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/">ওয়েব ডিযাইন টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-533" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-533"><a href="https://mayeenulislam.github.io/tuts/category/web-design-tuts/css-tuts/">সিএসএস টিউটোরিয়াল</a></li>
+</ul>
+</li>
+<li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-534">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/">ওয়েব ডেভলপমেন্ট টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-539" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-539"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/php-tuts/">পিএইচপি টিউটোরিয়াল</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-535">
+<a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/">ওয়ার্ডপ্রেস টিউটোরিয়াল</a>
+	<ul class="sub-menu">
+		<li id="menu-item-537" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-537"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/theme-tuts/">থিম টিউটোরিয়াল</a></li>
+		<li id="menu-item-538" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-538"><a href="https://mayeenulislam.github.io/tuts/category/web-development-tuts/wordpress-tuts/plugin-tuts/">প্লাগইন টিউটোরিয়াল</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-540" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-540"><a href="https://mayeenulislam.github.io/tuts/category/git-tuts/">গিট টিউটোরিয়াল</a></li>
+<li id="menu-item-530" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-530"><a href="https://mayeenulislam.github.io/tuts/category/other-tuts/">অন্যান্য টিউটোরিয়াল</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-541">
+<a href="https://mayeenulislam.github.io/tuts/category/tuts-level/">জ্ঞান-স্তরভিত্তিক টিউটোরিয়াল</a>
+<ul class="sub-menu">
+	<li id="menu-item-543" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-543"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/primary-level-tuts/">প্রাথমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-544"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/mid-level-tuts/">মাধ্যমিক স্তরের টিউটোরিয়াল</a></li>
+	<li id="menu-item-542" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-542"><a href="https://mayeenulislam.github.io/tuts/category/tuts-level/top-level-tuts/">উচ্চস্তরের টিউটোরিয়াল</a></li>
+</ul>
+</li>
+</ul></div>					</aside>
+					<aside id="prisna-google-website-translator-2" class="widget widget_prisna-google-website-translator">
+						<h3 class="widget-title">Translate the Site</h3>
+
+<style type="text/css"><!--
+
+.prisna-gwt-align-left {
+	text-align: left !important;
+}
+.prisna-gwt-align-right {
+	text-align: right !important;
+}
+
+
+
+body {
+	top: 0 !important;
+}
+.goog-te-banner-frame {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+--></style>
+
+
+
+<div id="google_translate_element" class="prisna-gwt-align-left"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+function initializeGoogleTranslateElement() {
+	new google.translate.TranslateElement({
+		pageLanguage: "bn"
+	}, "google_translate_element");
+}
+/*]]>*/
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=initializeGoogleTranslateElement"></script>					</aside>
+											</div>
+				</div>
+			</div>
+
+						<div id="primary" class="content-area col-lg-9" itemprop="mainContentOfPage">
+							<div id="content" class="site-content" role="main" itemscope itemtype="http://schema.org/Article">
+			<article id="post-656" class="post-656 post type-post status-publish format-standard has-post-thumbnail hentry category-wordpress-tuts category-web-development-tuts category-tuts-level category-theme-tuts category-plugin-tuts category-mid-level-tuts">
+	<header class="entry-header">
+		<h1 class="entry-title" itemprop="name">ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটা ব্যবহার &#8211; সম্পূর্ণ গাইড</h1>
+							<div class="entry-meta">
+<span class="entry-date"><a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/" rel="bookmark"><time class="entry-date published" datetime="2015-09-05T13:45:54+06:00" itemprop="datepublished">সেপ্টেম্বর 5, 2015</time></a></span> by <span class="author vcard"><a class="url fn n" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author" itemprop="url">মঈনুল ইসলাম</a></span><span class="sep">&middot;</span><span class="comments-link"><a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comments" itemprop="discussionUrl">5 Comments</a></span>
+</div>
+			</header>
+				<div class="entry-thumbnail"><img width="1200" height="450" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="ওয়ার্ডপ্রেসে ট্যাক্সোনমি মেটার ব্যবহার - tuts nano" decoding="async" itemprop="thumbnailUrl" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano.jpg 1200w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano-300x113.jpg 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano-1024x384.jpg 1024w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-cover-tuts-nano-768x288.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px"></div>
+	
+	
+	<div class="entry-content" itemprop="articleBody">
+				
+<p class="has-background" style="background-color:#c2ecdb">&#x26a0;&#xfe0f; <strong>লক্ষ করুন:</strong> অদ্য ৯ ডিসেম্বর ২০১৫ তারিখে <a rel="noreferrer noopener" href="https://wordpress.org/news/2015/12/clifford/" target="_blank">ওয়ার্ডপ্রেস ৪.৪.০</a> রিলিযের সাথে ওয়ার্ডপ্রেসের ট্যাক্সোনমি টার্মের মেটা ডাটা রাখার জন্য নতুন একটি টেবিল <code>termmeta</code> এবং প্রয়োজনীয় কোড সক্রীয় করা হয়েছে। সুতরাং টার্ম মেটা যোগ করা এখন আরো সহজ। আপনার দরকার <a rel="noreferrer noopener" href="https://developer.wordpress.org/reference/functions/add_term_meta/" target="_blank"><code>add_term_meta()</code></a>, <a rel="noreferrer noopener" href="https://developer.wordpress.org/reference/functions/update_term_meta/" target="_blank"><code>update_term_meta()</code></a>, <a rel="noreferrer noopener" href="https://developer.wordpress.org/reference/functions/get_term_meta/" target="_blank"><code>get_term_meta()</code></a> ইত্যাদি ফাংশন। তবে এপর্যন্ত টার্মে, মেটা বক্স যোগ করা হয়নি, তাই ফিল্ড যোগ করার ব্যাপারটি আপনি এই টিউটোরিয়াল থেকে দেখে সহায়তা নিতে পারেন। অবশ্য আপনি যদি ওয়ার্ডপ্রেসের ৪.৪.০-এর চেয়ে পুরোন সংস্করণ নিয়ে কাজ করে থাকেন, তাহলে এই টিউটোরিয়ালটি আপনার কাজে লাগবে।</p>
+
+
+
+<p>ওয়ার্ডপ্রেস ৪.৩ ছাড়পত্র পেয়েছে ১৯ আগস্ট ২০১৫, এবং এরই সাথে ট্যাক্সোনমিতে একটা নতুন দিগন্তও সূচিত হয়েছে। ট্যাক্সোনমি টার্মগুলো এখন যেকোনো ট্যাক্সোনমি থেকেই আসুক না কেন, <a rel="noopener" href="https://make.wordpress.org/core/2015/06/09/eliminating-shared-taxonomy-terms-in-wordpress-4-3/" target="_blank">তারা এখন একক^</a>, অর্থাৎ একটার সাথে আরেকটা মিলবে না। কাজ শুরু করার আগে আসুন পরিষ্কার হয়ে নেয়া যাক, ট্যাক্সোনমি আর টার্ম দ্বারা কী বোঝানো হচ্ছে।</p>
+
+
+
+<h3>পরিচিতি</h3>
+
+
+
+<p>ওয়ার্ডপ্রেসে পূর্বনির্ধারিত ট্যাক্সোনমির মধ্যে বহুল পরিচিত হলো <code>Categories</code>, <code>Tags</code> ইত্যাদি। হ্যা, ঠিকই শুনছেন, ক্যাটাগরি, ট্যাগ &#8211; এগুলো আসলে একেকটা ট্যাক্সোনমি। এর মধ্যে Categories-এ পূর্বনির্ধারিত থাকে <code>Uncategorized</code> নামক একটা ক্যাটাগরি। আমরা যারা ক্যাটাগরি আর ট্যাগ ব্যবহার করতে অভ্যস্থ, আমরা জানি, ক্যাটাগরিতে একটার অধীনে (under) আরেকটাকে সেট করা যায়, কিন্তু ট্যাগ প্রতিটাই আলাদা আলাদা। এই যে, Categories এবং Tags, এরা হলো ট্যাক্সোনমি, আর Categories-এর ভিতরে ঐ যে Uncategorized, সেটা হলো ট্যাক্সোনমি টার্ম।</p>
+
+
+
+<p>এই পূর্বনির্ধারিত ট্যাক্সোনমি আর টার্মের বাইরে ইচ্ছেমতো ট্যাক্সোনমি আর টার্ম তৈরি করা যায়। ধরা যাক, আমরা ছাত্রদের তথ্য নিয়ে কাজ করছি, এবং তাঁদের শ্রেণীর তথ্য সংরক্ষণ করার জন্য একটা নিজস্ব ট্যাক্সোনমি (Custom Taxonomy) বানিয়ে নিলাম: <code>Classes</code>। এবারে এই ক্লাসেস ট্যাক্সোনমির ভিতরে আমরা ইনসার্ট করলাম <code>I</code>, <code>II</code>, <code>III</code>, <code>IV</code>, <code>V</code> ইত্যাদি শ্রেণীর নাম, অর্থাৎ রোমান সংখ্যায় আমরা শ্রেণীগুলোর নাম লিখেছি: ওয়ান, টু, &#8230;। &#8230;তাহলে Classes হলো আমাদের ট্যাক্সোনমি, আর I, II, III, &#8230; এগুলো হলো আমাদের টার্ম।</p>
+
+
+
+<h3>কেন দরকার?</h3>
+
+
+
+<p>আমরা যারা ওয়ার্ডপ্রেসের পোস্টে অতিরিক্ত তথ্য যোগ করতে চাই, আমরা জানি Post Meta&#8217;র গুরুত্ব সেখানে কতটা। পোস্ট মেটা দিয়ে হেন কাজ নেই যে, করা যায় না। আর যারা ডাটাবেয ঘাঁটতে জানি, তারা জানি যে, পোস্টের সাথের এই অতিরিক্ত তথ্য (Meta data) জমা রাখার জন্য ওয়ার্ডপ্রেসে একটা আলাদা টেবিলও আছে, নাম <code>postmeta</code>। এবং খুব সহজে সেখানকার তথ্য নিয়ে খেলার জন্য রয়েছে বেশ কয়েকটা সহজ ফাংশন: <code>add_post_meta()</code>, <code>update_post_meta()</code>, <code>get_post_meta()</code>, <code>delete_post_meta()</code> ইত্যাদি। এই ফাংশনগুলো ব্যবহার করে, ধরা যাক, আপনার প্রতিটা পোস্টকে আলাদা আলাদা রঙে রাঙাতে চাচ্ছেন, তো পোস্টের মেটা ডাটাতে একটা করে রঙের কোড পাঠিয়ে দিলেই কাজটা আপনার হয়ে যাচ্ছে। &#8230;পোস্ট মেটার ব্যবহার খুব সহজ। 🙂</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/01-raw-custom-taxonomy-add-fields.png"><img decoding="async" width="169" height="300" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/01-raw-custom-taxonomy-add-fields-169x300.png" alt="পূর্বনির্ধারিত ট্যাক্সোনমি ইনসার্ট করার ফর্ম" class="wp-image-660" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/01-raw-custom-taxonomy-add-fields-169x300.png 169w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/08/01-raw-custom-taxonomy-add-fields.png 378w" sizes="(max-width: 169px) 100vw, 169px"></a><figcaption class="wp-element-caption">পূর্বনির্ধারিত ট্যাক্সোনমি ইনসার্ট করার ফর্ম</figcaption></figure>
+</div>
+
+
+<p>এবারে ধরা যাক, আপনার স্কুলের ক্লাসগুলোর প্রত্যেকটাকে একটা করে ফুলের ছবি দিয়েও সূচিত করা হয়। কিন্তু ওয়ার্ডপ্রেসের ট্যাক্সোনমি ইনসার্শন প্যানেলে যে ফিল্ডগুলো আছে, তা দিয়ে তো ফুলের ছবি ইনসার্ট করা সম্ভব নয়। কারণ সেখানে আপনি টার্মের নামটা, স্লাগ (প্রীটি পার্মালিংকে ইউআরএল-এ যেটা দেখা যায়), শীর্ষ শিরোনাম (যদি এটা অন্য কোনোটার অধীনে সেট করার বিষয় থাকে), আর কিছু বিবরণ। কিন্তু রঙের কথা কোথায় যোগ করবেন?</p>
+
+
+
+<p>তখনই মনে পড়ে পোস্টের অতিরিক্ত তথ্য যোগ করার পদ্ধতির &#8211; মেটা ডাটা। কিন্তু দুঃখের বিষয় হচ্ছে, ট্যাক্সোনমিতে মেটা ডাটা যোগ করার কোনো ব্যবস্থা ওয়ার্ডপ্রেসে নেই। সেজন্য এর আলাদা কোনো টেবিলও নেই। কিন্তু এর যে দরকার আছে, সে নিয়ে বিস্তর আলোচনা চলছে বহুদিন ধরে। ওয়ার্ডপ্রেস বহুল ব্যবহৃত একটা সিএমএস, পৃথিবীব্যাপী কোটি কোটি ব্যবহারকারী এটি ব্যবহার করছেন, তাই এতে হুট করে কোনো পরিবর্তন আনা যাবে না। দরকার বহু আলোচনা, গবেষণা, এবং পরীক্ষা-নিরীক্ষা। যদি সবকিছু সন্তোষজনক হয়, তবেই সেটা প্রয়োগ করা হয়। তাই, এটা যে কবে হবে, বা আদৌ হবে কিনা, সেটা আমরা জানি না।</p>
+
+
+
+<p>কিন্তু ততদিন কি আমরা বসে থাকবো? আমরা কি আমাদের প্রয়োজনগুলো পূরণ করবো না? আমাদের ক্লাসগুলোর সাথে ফুলের ছবি কি আমরা দিতে পারবো না?</p>
+
+
+
+<p>অবশ্যই পারবো, ইনশাল্লাহ।</p>
+
+
+
+<h3>কিভাবে?</h3>
+
+
+
+<p>প্রথমেই সিদ্ধান্ত নিই যে, আমরা কি পোস্ট মেটার মতো করে আলাদা একটি টেবিল বানিয়ে নিব ট্যাক্সোনমি মেটার জন্যও? সত্যি বলতে কি এ&#8217;নিয়ে বিস্তর বিতর্ক আছে। অনেকের মতেই ওয়ার্ডপ্রেস ডাটাবেয স্কেমাতে থাকাটা যৌক্তিক, নিরাপদ, এবং দ্রুত। তাই আমরা নতুন টেবিল তৈরি না করে কিভাবে সেটা করা সম্ভব, তা-ই এখানে দেখাবো।</p>
+
+
+
+<span id="more-656"></span>
+
+
+
+<p> আমরা আসলে ওয়ার্ডপ্রেসের অত্যন্ত গুরুত্বপূর্ণ একটা টেবিল: <code>options</code> টেবিলটিতে আমাদের এই তথ্যগুলো রাখবো।</p>
+
+
+
+<h3>বিদ্যমান সেবাসমূহ</h3>
+
+
+
+<p>ট্যাক্সোনমি মেটা যোগ করার জন্য ইতোমধ্যেই রয়েছে <a href="https://www.google.com/search?q=taxonomy+meta" target="_blank" rel="noopener">প্রচুর রিসোর্স^</a>, বিভিন্ন প্লাগইন রয়েছে, রয়েছে অনেক থিম/প্লাগইন এক্সটেনশন লাইব্রেরী:</p>
+
+
+
+<ul>
+<li>
+<a href="https://wordpress.org/plugins/taxonomy-metadata/" target="_blank" rel="noopener">Taxonomy Metadata^</a> &#8211; WordPress Plugins</li>
+
+
+
+<li>
+<a href="https://wordpress.org/plugins/taxonomy-meta/" target="_blank" rel="noopener">Taxonomy Meta^</a> &#8211; WordPress Plugins</li>
+
+
+
+<li>
+<a href="https://wordpress.org/plugins/wp-category-meta/" target="_blank" rel="noopener">Category Meta Plugin^</a> &#8211; WordPress Plugins</li>
+
+
+
+<li>
+<a href="https://wordpress.org/plugins/wp-custom-category-meta/" target="_blank" rel="noopener">WP Custom Category Meta^</a> &#8211; WordPress Plugins</li>
+
+
+
+<li>
+<a href="https://github.com/bainternet/Tax-Meta-Class" target="_blank" rel="noopener">Tax Meta Class^</a> by Bainternet</li>
+
+
+
+<li>&#8230;</li>
+</ul>
+
+
+
+<p>এর মধ্যে Tax Meta Class আমরা থিমে এক্সটেনশন লাইব্রেরি হিসেবে ব্যবহার করতে পারি। কিন্তু এই ক্লাস ব্যবহার করতে গিয়ে আমরা কিছু সমস্যার সম্মুখিন হয়েছি, যার কারণে আমরা মৌলিক বিষয়টা জেনে নেয়াটাই উচিত মনে করছি।</p>
+
+
+
+<h3>মৌলিক প্রক্রিয়া</h3>
+
+
+
+<p>বেসিকটা জানা থাকা উচিত, যাতে বিদ্যমান রিসোর্সে প্রয়োজনীয় পরিবর্তন যদি কিছু লাগে, তাও কোথায় কিভাবে করতে হবে আমরা জেনে-বুঝে করতে পারবো। আর যদি নিজে থেকেও কিছু তৈরি করতে চাই, মৌলিক ধারণাটা পূঁজি করে নিজের মতো কিছু একটা তৈরিও করে নিতে পারবো।</p>
+
+
+
+<p>আমরা আমাদের পরীক্ষা-নিরীক্ষার জন্য ওয়ার্ডপ্রেসের সাম্প্রতিক সংস্করণ 4.3 এবং TwentyFifteen থিমটা ব্যবহার করে দেখাচ্ছি:</p>
+
+
+
+<h4>প্রথম ধাপ: HTML ফিল্ডগুলো তৈরি করে নেয়া</h4>
+
+
+
+<p>ট্যাক্সোনমি ইনসার্ট করার ফর্মেই প্রথমে আমাদেরকে আমাদের ফর্ম ফিল্ডগুলো যোগ করে নিতে হবে, যাতে করে আমরা তথ্য এন্ট্রি করতে পারি।</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=category-meta-field-add-form.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>এই কোডগুলো আমাদের থিমের <code>functions.php</code>-তে বসিয়ে নিলে আমরা Posts-এর <strong>Categories</strong> পাতায় Category যোগ করার ফর্মের নিচে নতুন একটা টেক্সট ফিল্ড দেখতে পাবো (যদি প্লাগইনে এমনটা করতে চাই, তাহলে কোডগুলো প্লাগইনের ফাইলে বসাতে হবে)। আমরা শুধুমাত্র একটা HTML ফর্ম ফিল্ড যোগ করেছি, এটা এখনও কাজ করার উপযোগী হয়নি।</p>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb"><strong>জেনে রাখি:</strong> আমরা <a href="https://core.trac.wordpress.org/browser/tags/4.3/src/wp-admin/edit-tags.php#L549" target="_blank" rel="noopener">{$taxonomy}_add_form_fields হুকটা^</a>&nbsp;(<a href="https://developer.wordpress.org/reference/hooks/taxonomy_add_form_fields/" target="_blank" rel="noopener">ডেভলপার গাইড^</a>) ব্যবহার করছি। এই হুকটি ওয়ার্ডপ্রেসে 3.0.0 সংস্করণ থেকে আমাদের জন্য সক্রীয় আছে। হুকটি <code>$taxonomy</code> নামক একটি প্যারামিটার গ্রহণ করে।&nbsp;আমরা যেহেতু Category ট্যাক্সোনমিতে কাজটা করতে চাচ্ছি, তাই আমরা লিখেছি <code>category_add_form_fields</code>।</p>
+
+
+
+<p>এবারে ক্যাটাগরি যোগ করার সময় অতিরিক্ত ফিল্ড দেয়ার ব্যবস্থা করলাম ঠিকই, কিন্তু সেই ক্যাটাগরিটা এডিট করতে গেলে সেখানে কিন্তু এই ফিল্ডটা দেখাবে না। তাই এপর্যায়ে আমরা এডিট পাতায় এই ফিল্ডটা যোগ করে নিব:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=category-meta-field-edit-form.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>এবারে টার্মটা এডিট মোডে খুললেও এই ফিল্ডটা আমরা দেখতে পাবো।</p>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb"><strong>জেনে রাখি:</strong> আমরা <a href="https://core.trac.wordpress.org/browser/tags/4.3/src/wp-admin/edit-tag-form.php#L185" target="_blank" rel="noopener">{$taxonomy}_edit_form_fields হুকটা^</a>&nbsp;(<a href="https://developer.wordpress.org/reference/hooks/taxonomy_edit_form_fields/" target="_blank" rel="noopener">ডেভলপার গাইড^</a>) ব্যবহার করছি। এই হুকটি ওয়ার্ডপ্রেসে 3.0.0 সংস্করণ থেকে আমাদের জন্য সক্রীয় আছে। হুকটি <code>$tags</code> এবং <code>$taxonomy</code> নামক দুটো&nbsp;প্যারামিটার গ্রহণ করে। এবং আমরা যেহেতু Category ট্যাক্সোনমিতে কাজটা করতে চাচ্ছি, তাই আমরা লিখেছি <code>category_edit_form_fields</code>।</p>
+
+
+
+<p>সুতরাং আমাদের ফর্মগুলো প্রস্তুত, আমরা এখন এগুলোতে তথ্য দিয়ে সংরক্ষণ বোতাম চাপলেই তথ্যগুলো পাবো। সুতরাং এপর্যায়ে কাজ হচ্ছে, তথ্যগুলো ধরা, এবং ডাটাবেযে সংরক্ষণ করা।</p>
+
+
+
+<h4>দ্বিতীয় ধাপ: তথ্য সংরক্ষণ করা</h4>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=category-meta-field-save-data.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>এই ধাপটা গুরুত্বপূর্ণ এবং বুঝে নেয়ার বিষয়: ১২ নং লাইনে আমরা বলছি, যদি ট্যাক্সোনমিটা &#8216;Category&#8217; হয়, তবে কাজটা করো, এটা আসলে জরুরি না। যদি একাধিক ট্যাক্সোনমি নিয়ে কাজ করেন, তখন এটা কাজে লাগে। যদি না করেন, তাহলে এই কন্ডিশনাল স্টেটমেন্টটি বাদ দিয়েও কাজ করবে। ১৬ নং লাইনে এসে আমরা যাচাই করে দেখছি, এই ফিল্ডটিতে তথ্য ঢুকেছে কিনা, যদি ঢুকে, তাহলে আমরা একটা অ্যারেতে একটা কী (key) দিয়ে সেই তথ্যটা নিয়ে নিচ্ছি। এবং ১৯ নং লাইনে এসে, আমরা সত্যিকার অর্থে <code>options</code> টেবিলে তথ্যটা নিজস্ব একটা কী দিয়ে সংরক্ষণ করছি। &#8230;তো সেই কী-টা কেমন? আমরা দিয়েছি <code>tax_meta{$term_id}</code>, এর মানে হচ্ছে, সে যখন <code>options</code> টেবিলে তথ্যটা রাখবে, তখন এর option_key হবে <code>tax_meta13</code> বা এরকম কোনো একটা নাম।</p>
+
+
+
+<p class="has-background" style="background-color:#c2ecdb"><strong>জেনে রাখি:</strong> আমরা <a href="https://core.trac.wordpress.org/browser/tags/4.3/src/wp-includes/taxonomy.php#L3613" target="_blank" rel="noopener">edit_term^</a>&nbsp;(<a href="https://developer.wordpress.org/reference/hooks/edit_term/" target="_blank" rel="noopener">ডেভলপার গাইড^</a>)&nbsp;এবং <a href="https://core.trac.wordpress.org/browser/tags/4.3/src/wp-includes/taxonomy.php#L3031" target="_blank" rel="noopener">create_term^</a>&nbsp;(<a href="https://developer.wordpress.org/reference/hooks/create_term/" target="_blank" rel="noopener">ডেভলপার গাইড^</a>) হুকদুটো&nbsp;ব্যবহার করছি, দুটোই ওয়ার্ডপ্রেসের 2.3.0 সংস্করণ থেকে আমাদের জন্য&nbsp;সক্রীয় আছে। এই দুটো হুকের বৈশিষ্ট্য হচ্ছে, এদুটোই, টার্মটা তৈরি হয়ে যাওয়ার পরপরই, কিন্তু, টার্ম ক্যাশ পরিষ্কার করার আগে, কাজে নামে। আমরা মনে করছি, আমাদের ফিল্ডের তথ্যগুলো এইসময়টায় সংরক্ষণের জন্য দিলে উপযুক্ত হবে।</p>
+
+
+
+<p>এবারে যদি আমরা একটা ডিফল্ট ক্যাটাগরি টার্ম <code>Uncategorized</code> এডিট করে আমাদের তৈরি করা Extra Input Field-এ কিছু লিখে সংরক্ষণ করি, তাহলে তা ডাটাবেযের <code>options</code> টেবিলে সংরক্ষিত হয়ে যাবে। আমরা <code>options</code> টেবিল খুলে সর্বশেষ সংরক্ষিত এন্ট্রিটা দেখলে এভাবে দেখতে পাবো:</p>
+
+
+
+<figure class="wp-block-image alignnone"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/tax-meta-term-saved-in-options-table.jpg"><img decoding="async" width="867" height="128" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/tax-meta-term-saved-in-options-table.jpg" alt="ট্যাক্সোনমি মেটা ডাটা options টেবিলে সংরক্ষিত" class="wp-image-698" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/tax-meta-term-saved-in-options-table.jpg 867w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/tax-meta-term-saved-in-options-table-300x44.jpg 300w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/tax-meta-term-saved-in-options-table-768x113.jpg 768w" sizes="(max-width: 867px) 100vw, 867px"></a><figcaption class="wp-element-caption">ট্যাক্সোনমি মেটা ডাটা options টেবিলে সংরক্ষিত</figcaption></figure>
+
+
+
+<p>লক্ষ করুন, Uncategorized টার্মটির টার্ম আইডি হচ্ছে <code>1</code>, তাই আমাদের দেয়া কী-টার সাথে সেটা যোগ হয়ে আমাদের টার্ম মেটা যোগ হয়েছে (<code>tax_meta1</code>)। আমি ভ্যালু হিসেবে দিয়েছিলাম &#8220;data I stored&#8221;, ডান দিকে <code>option_value</code> অংশে আমাদেরই দেয়া কী (<code>extra_input</code>) নিয়ে কিন্তু সেই ভ্যালুটা PHP Serialized Data হিসেবে সংরক্ষিত হয়েছে।</p>
+
+
+
+<h4>তৃতীয় ধাপ: গোছগাছ</h4>
+
+
+
+<p>আমরা তো নিশ্চিত যে, আমাদের দেয়া তথ্যটা ডাটাবেযে সংরক্ষিত হয়েছে, এবং সবকিছু ঠিকঠাক কাজ করছে। এবারে যদি আমরা <code>Uncategorized</code> আবারো এডিট করতে যাই, আশ্চর্য হয়ে দেখবো, আমাদের দেয়া তথ্যটা আর ঐ ফিল্ডে দেখা যাচ্ছে না। আসুন সেটা সমাধান করা যাক। আগের কোডটাই এভাবে একটু বদলে নিই:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=category-meta-field-edit-form-furnished.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+<div class="wp-block-image">
+<figure class="alignright"><a href="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-extra-field-added.png"><img decoding="async" width="401" height="145" src="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-extra-field-added.png" alt="ট্যাক্সোনমি মেটা হিসেবে অতিরিক্ত ফিল্ড যোগ" class="wp-image-710" srcset="https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-extra-field-added.png 401w, https://mayeenulislam.github.io/tuts/wp-content/uploads/2015/09/taxonomy-meta-extra-field-added-300x108.png 300w" sizes="(max-width: 401px) 100vw, 401px"></a><figcaption class="wp-element-caption">ট্যাক্সোনমি মেটা হিসেবে অতিরিক্ত ফিল্ড যোগ</figcaption></figure>
+</div>
+
+
+<p>পরিবর্তনটা&nbsp;দেখা যাবে লাইন নং ৭&nbsp;এবং ১৬-তে। আমরা লাইন নং ৭-এ <code>options</code> টেবিল থেকে সেই ফিল্ডটা তুলে আনছি (কী কী তথ্য উঠে আসছে, বুঝতে হলে লাইন নং ৮টা আনকমেন্ট করে নিতে পারেন)। তারপর সেই ফিল্ড-এ তথ্য আমাদের কী (<code>extra_input</code>) ধরে ১৬ নং লাইনে value ফিল্ডে দেখাচ্ছি। ব্যস, কাজ শেষ। আমরা সফলভাবে ট্যাক্সোনমিতে মেটা ফিল্ড যোগ করতে পেরেছি, এবং সেখান থেকে তথ্য নিয়ে ডাটবেযে যোগও করতে পেরেছি। আবার ডাটাবেয থেকে তথ্য বের করে এনে দেখতেও পেরেছি।</p>
+
+
+
+<p>সবটুকু কোড একত্রে দেখতে যেমনটা হবে:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=functions.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<h4>কাস্টম ট্যাক্সোনমির ক্ষেত্রে মেটা ফিল্ড?</h4>
+
+
+
+<p>আমরা তো এতক্ষণ ডিফল্ট ট্যাক্সোনমি Category-তে মেটা ফিল্ড যোগ করে দেখছিলাম, কিভাবে সেটা করতে হয়, কিন্তু আমরা তো স্কুলের Classes-এ বিভিন্ন ফুলের ছবি যোগ করতে চাইছিলাম। এবারে দেখা যাক সেটা কিভাবে করতে হয়:</p>
+
+
+
+<p>আমরা নতুন ট্যাক্সোনমি তৈরি করার সময় ওয়ার্ডপ্রেসের দেয়া <a href="https://codex.wordpress.org/Function_Reference/register_taxonomy" target="_blank" rel="noopener"><code>register_taxonomy()</code>^</a> ফাংশনটা ব্যবহার করে থাকি। সুতরাং আমাদের এপর্যন্ত যতগুলো হুক আমরা ব্যবহার করেছি, সেগুলোতে <code>{$taxonomy}</code> অংশে আমরা সেই প্রথম প্যারামিটারটা ব্যবহার করলেই আমাদের মেটা ফিল্ডগুলো সেই ট্যাক্সোনমিতে দেখা যাবে। অর্থাৎ যদি ট্যাক্সোনমির নাম হয় <code>student_classes</code>:</p>
+
+
+
+<pre class="wp-block-preformatted">register_taxonomy( 'student_classes', array( 'post' ) );</pre>
+
+
+
+<p>তাহলে হুক করার সময়ে লিখতে&nbsp;হবে এভাবে:</p>
+
+
+
+<pre class="wp-block-preformatted">add_action( 'student_classes_add_form_fields', 'function_name_here' );</pre>
+
+
+
+<h4>যদি একাধিক ট্যাক্সোনমিতে একই ফিল্ডের দরকার পড়ে?</h4>
+
+
+
+<p>এমনকি হতে পারে না যে, এমন একটা ফিল্ড আমাদের লাগবে, যা আমাদের একাধিক ট্যাক্সোনমিতেই লাগবে, তখন আসলে ব্যাপারটা পানির মতো সহজ: সবটুকু কাজ এভাবেই করতে হবে, শুধু হুকটা প্রতিটার জন্য একেকবার করে করে নিলেই হয়ে যাবে:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=hooks-at-a-glance.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>খুব সহজ, তাই না? 🙂</p>
+
+
+
+<h3>সীমাবদ্ধতা</h3>
+
+
+
+<p>এটা ঠিক সীমাবদ্ধতা বলা যাবে না, তবে সাবধানতার স্বার্থে উল্লেখ করা: মনে রাখতে হবে, এধরণের টুইকিং বা পরিবর্তনগুলো সাধারণত ওয়ার্ডপ্রেসের থিম ডিভলপমেন্টের সাথে জড়িত নয়, এগুলো প্লাগইন টেরিটরির আলোচ্য বিষয়। যদি থিমে এধরণের কাজ করেন, তাহলে মনে রাখতে হবে যে, থিম পরিবর্তনের সাথে সাথে এই ফাংশনালিটিগুলো হারিয়ে যাবে। কিন্তু প্লাগইন দিয়ে করলে, থিম বদলে নিলেও তা আগের মতোই কাজ করবে।</p>
+
+
+
+<p>এবারে সত্যিকারের একটা সীমাবদ্ধতার কথা জানা যাক: যেহেতু আমরা <code>options</code> টেবিল ব্যবহার করছি, সেহেতু <code>options</code> টেবিল কিভাবে কাজ করে তা জানা খুব দরকার। <code>options</code> টেবিলে <code>option_name</code>-এর অধীনে একক তথ্য যেমন রাখা যায়, তেমনি array-ও রাখা যায়। অ্যারের তথ্য ডাটাবেযে রাখার ক্ষেত্রে তা দু&#8217;ভাবে রাখা যায়:&nbsp;<code>json_encode()</code> করে কিংবা <code>serialize()&nbsp;</code>করে, এক্ষেত্রে ওয়ার্ডপ্রেস ব্যবহার করে serialization পদ্ধতি। সিরিয়ালাইযেশন ব্যাপারটা কেমন, দেখা যাক: যদি আমাদের কাছে একটা অ্যারে থাকে, আর আমরা তাকে সিরিয়ালাইয করি, তাহলে:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=how-serialize-works.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>ফলাফল হবে এরকম:</p>
+
+
+
+<pre class="wp-block-preformatted">a:2:{s:11:"extra_input";s:13:"data I stored";s:8:"file_url";s:61:"http://localhost/project/wp-content/uploads/2015/09/image.jpg";}</pre>
+
+
+
+<p>দেখাই যাচ্ছে, সিরিয়ালাইয্‌ড তথ্যে সব তথ্যই সংক্ষেপে রাখা হয়, যেমন: array-কে লেখা হচ্ছে <code>a</code>, string-কে লেখা হচ্ছে <code>s</code>; এছাড়াও অ্যারে কিংবা স্ট্রিং-এর দৈর্ঘ্যও (length) জমা করে রাখে সে। যেমন: <code>extra_input</code> কী-র স্ট্রিং-এর দৈর্ঘ্য <code>১১</code>, আবার তাতে রক্ষিত তথ্যের স্ট্রিংটার দৈর্ঘ্য <code>১৩</code> ক্যারেক্টার;&nbsp;&#8230;এবং এখানেই আসল সমস্যার সূচনা।&nbsp;আমরা একটা প্রকল্পে&nbsp;<em>Bainternet</em>-এর Tax Meta Class ব্যবহার করছিলাম, তখন এই সমস্যাটির কারণে মহা ঝামেলায় পড়েছিলাম, যদিও অবশ্য পরে সমস্যাটার সমাধান আমরা করতে পেরেছিলাম একটা তৃতীয় পক্ষের কোডের মাধ্যমে।</p>
+
+
+
+<p>সমস্যাটা কী?</p>
+
+
+
+<p>ঐ ক্লাসটা দিয়ে কোনো ছবি আপলোড করে সংরক্ষণ করা হলে, সে ঠিক আমাদের সিরিয়ালাইয্‌ড তথ্যটার মতো একটা স্ট্রিং ডাটাবেযে সংরক্ষণ করতো। আমরা যখন লোকাল সার্ভার থেকে ডেভলপমেন্ট শেষ করে প্রকল্পটা সার্ভারে তুললাম, তখন আমরা ডাটাবেযের সবগুলো লোকাল পাথ বদলে সার্ভারের পাথ বানিয়ে নিতাম, অর্থাৎ <code>http://localhost/project/</code> বদলে সেখানে লিখতাম <code>http://project.com/</code> কিংবা হয়তো <code>http://dev.project.com/</code> ইত্যাদি। খুব সুন্দর! কিন্তু, এভাবে করার কারণে কিন্তু ঐ স্ট্রিংটার ক্যারেক্টারের সংখ্যা (character count) বদলাতো না। যেমন: আমাদের উদাহরণে, file_url-এ রাখা URL-টার দৈর্ঘ্য হচ্ছে <code>৬১</code>, যদি আমি এই স্ট্রিংটাকে এভাবে বদলে নেই,&nbsp;<code>http://project.com/wp-content/uploads/2015/09/image.jpg</code>, তাহলে তা হয়ে যায় <code>৫৫</code>, আর যদি dev দিয়ে করি তাহলে হয় <code>৫৯</code>। <strong>যখনই সিরিয়ালাইয্‌ড স্ট্রিং-এ স্ট্রিং কাউন্ট বদলে যায়, তখন পুরো সিরিয়ালাইয স্ট্রিং-এ থাকা কোনো তথ্যই আর ওয়ার্ডপ্রেস [কিংবা পিএইচপি] পড়তে পারে না</strong>। (ঘটনার লগ এবং সমাধান কৌশল পাওয়া যাবে &#8220;<a href="#more-to-read">বাড়তি পঠন অংশে</a>&#8220;)</p>
+
+
+
+<p>তাই আমাদের পর্যবেক্ষণে যেটা বেরিয়ে আসে, তা হলো: যেখানেই প্রজেক্টের ইউআরএল সংরক্ষণ করার দরকার পড়বে, সেখানে ইউআরএল স্ট্রিং সরাসরি সংরক্ষণ না করে, সম্ভব হলে তার কোনো আইডি সংরক্ষণ করা উচিত।</p>
+
+
+
+<h4>সমাধান</h4>
+
+
+
+<p>যেভাবে সমাধান করলাম আমরা: আমরা ওয়ার্ডপ্রেসের মিডিয়া লাইব্রেরি ব্যবহার করে ছবি যোগ করে নিচ্ছিলাম একটা ফিল্ডে। তো আমরা তখন আর সরাসরি ছবির ইউআরএল ডাটাবেযে না পাঠিয়ে অ্যাটাচমেন্টটার আইডি পাঠিয়ে দিলাম ডাটাবেযে, ফলে যখন ছবিটা দেখানো দরকার, আমরা আইডি থেকে আবার ছবিটা পুণরুদ্ধার করে নিতে পারি।</p>
+
+
+
+<p>আমরা টেক্সট ফিল্ড থেকে যেহেতু&nbsp;ছবিটার absolute URL পাচ্ছিলাম, আমরা <a href="https://pippinsplugins.com/retrieve-attachment-id-from-image-url/" target="_blank" rel="noopener">পিপিন-এর এই কোডটা^</a> তখন কাজে লাগিয়ে ছবিটার ইউআরএল থেকে তার আইডিটা বের করে নিলাম, এবং সংরক্ষণের সময় ইউআরএলটা না পাঠিয়ে সেই আইডিটা পাঠালাম:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=saving-image-in-options-table.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<p>ফলে যেটা হলো, আমাদের <code>options</code> টেবিলে <code>image_id</code> কী&#8217;র অধীনে ফাইলের ইউআরএল না গিয়ে তার অ্যাটাচমেন্ট আইডিটা গেল। এটা এজন্য করছি, যাতে ইউআরএল বদলে গিয়ে ক্যারেক্টারের সংখ্যায় উলটপালট হয়ে পুরো ফিল্ডটাই ঝামেলা না পাকায়।</p>
+
+
+
+<h3>সংরক্ষিত তথ্য দেখানো</h3>
+
+
+
+<p>যা সংরক্ষণ করলাম, তা ডাটাবেয থেকে বের করে দেখানোটা খুব দরকার। সেটা আমরা edit পাতায় করেওছি। কিন্তু কাজের সুবিধার্থে আমরা কয়েকটা ফাংশন বানিয়ে নিলাম, যাতে আমরা খুব সহজে তথ্যগুলো বের করে দেখাতে পারি: প্রথম ফাংশনটা দিয়ে যেকোনো রকমের তথ্য বের করে দেখানো যাবে, আর দ্বিতীয় ফাংশন দিয়ে আমরা যেভাবে ছবির ইউআরএল না নিয়ে আইডি সংরক্ষণ করছিলাম, সেখান থেকে ছবিটার ইউআরএল বের করা যাবে:</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-embed-handler wp-block-embed-embed-handler"><div class="wp-block-embed__wrapper">
+<div class="oembed-gist">
+<script src="https://gist.github.com/mayeenulislam/de3af92c59497867950b.js?file=necessary-functions.php"></script><noscript>View the code on <a href="https://gist.github.com/mayeenulislam/de3af92c59497867950b">Gist</a>.</noscript>
+</div>
+</div></figure>
+
+
+
+<h4>ব্যবহারবিধি</h4>
+
+
+
+<ul>
+<li>
+<code>nano_get_tax_meta( 1 );</code> &#8211;&nbsp;<code>1</code> নং টার্মের জন্য রাখা সকল মেটা ফিল্ড বের করে দিবে, array আকারে।&nbsp;(দ্বিতীয় প্যারামিটার ঐচ্ছিক)</li>
+
+
+
+<li>
+<code>nano_get_tax_meta( 1, 'extra_input' );</code> &#8211; <code>1</code> নং টার্মের জন্য রাখা সকল মেটা ফিল্ড থেকে শুধুমাত্র <code>'extra_input'</code> কী&#8217;র তথ্যগুলো বের করে দিবে। (দ্বিতীয় প্যারামিটার ঐচ্ছিক)</li>
+
+
+
+<li>
+<code>nano_get_tax_meta_img_src( 1, 'extra_input', 'thumbnail' );</code> &#8211; <code>1</code> নং টার্মের জন্য&nbsp;রাখা <code>'extra_input'</code> ফিল্ডটা যদি কোনো ছবির আইডি (attachment ID) হয়, তাহলে এটি সেটার thumbnail আকারের ছবিটির URL বের করে দিবে। তৃতীয় প্যারামিটারের সম্ভাব্য মানগুলো হলো: <code>'thumbnail'</code>, <code>'medium'</code>, <code>'large'</code>, <code>'full'</code>, কিংবা নিজস্ব তৈরি করে নেয়া যেকোনো ইমেজ সাইয।&nbsp; (তৃতীয় প্যারামিটার ঐচ্ছিক, পূর্বনির্ধারিত মান: <code>thumbnail</code>)</li>
+
+
+
+<li>
+<code>nano_delete_tax_meta( 1 );</code> &#8211; <code>1</code> নং টার্মের জন্যে&nbsp;রাখা সকল তথ্য মুছে ফেলবে। (দ্বিতীয় প্যারামিটার ঐচ্ছিক)</li>
+
+
+
+<li>
+<code>nano_delete_tax_meta( 1, 'extra_input' );</code> &#8211; <code>1</code> নং টার্মের জন্য রাখা সকল তথ্য থেকে শুধুমাত্র <code>'extra_input'</code> কী-তে রাখা তথ্যগুলো মুছে ফেলবে। (দ্বিতীয় প্যারামিটার ঐচ্ছিক)</li>
+
+
+
+<li>
+<code>nano_update_tax_meta( 1, 'extra_input', 'Some value' );</code> &#8211; <code>1</code> নং টার্মের জন্য রাখা মেটা তথ্যের <code>'extra_input'</code> কী&#8217;র জন্য রাখা তথ্যকে <code>'Some value'</code> লেখাটি দিয়ে আপডেট করে দিবে। (তিনটি প্যারামিটারই দেয়া বাধ্যতামূলক)</li>
+</ul>
+
+
+
+<h3>উপসংহার</h3>
+
+
+
+<p>তো, আর দেরি কেন? নেমে পড়ুন কাজে। আর এই তথ্যগুলো নিয়ে বানিয়ে ফেলুন নিজের পছন্দমতো ট্যাক্সোনমি মেটা। হয়তো আপনি খুব সহজে একটা কার্যকরী মেটা ক্লাসও বানিয়ে ফেলতে পারেন পিএইচপি দিয়ে। এগুলো কাজে লাগিয়ে আপনি কী বানালেন, আমাদের সাথে শেয়ার করতে ভুলবেন না কিন্তু। আর ওপেন সোর্স করে দিলে আপনার কাজ আরো অনেকে ব্যবহার করে উপকৃতও হবেন কিন্তু। তো, স্বাগতম! 😉</p>
+
+
+
+<p><strong>-মঈনুল ইসলাম</strong><br>&#x1f517; <a rel="noreferrer noopener" href="https://mayeenulislam.github.io/" target="_blank">mayeenulislam.github.io</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h3 id="more-to-read">বাড়তি পঠন</h3>
+
+
+
+<ul>
+<li>
+<a href="http://wordpress.stackexchange.com/q/184850/22728" target="_blank" rel="noopener">Tax Meta Class ব্যবহার করে পড়া সমস্যার লগ ও সমাধান-যাত্রা^</a> &#8211; WordPress StackExchange</li>
+
+
+
+<li>
+<a href="http://wordpress.stackexchange.com/q/183475/22728" target="_blank" rel="noopener">ওয়ার্ডপ্রেস কেন <code>json_encode()</code> ব্যবহার না করে <code>serialize()</code> ব্যবহার করে^</a> &#8211; WordPress StackExchange</li>
+</ul>
+
+
+
+<h3 id="update-20150909">হালনাগাদ</h3>
+
+
+
+<p>Bainternet এই পোস্টে মন্তব্য করেন যে, যে পদ্ধতিতে আমরা ডাটাবেযে সার্চ-রিপ্লেস করছিলাম, ওয়ার্ডপ্রেসে তা করা ঠিক নয়। তাই তিনি তাঁর তৈরি ক্লাসের তথ্য সংরক্ষণ-পদ্ধতিকে ত্রুটি (bug) বলতে নারাজ। আমরা সেটা মেনে নিয়েছি, এবং এই প্রকাশনার তথ্যগুলো এমনভাবে বদলে নেয়া হয়েছে যে, <em>আমাদের কাজের ধারায় আমরা সমস্যার সম্মুখিন হয়েছিলাম</em>। আমরা যেহেতু মৌলিক জ্ঞান নিয়ে আলোচনা করেছি, তাই তা আমাদের আলোচনার সাথে সাংঘর্ষিকও নয়। Bainternet-কে ধন্যবাদ তাঁর বক্তব্যের জন্য। (<strong>Translation:</strong> Bainternet commented on this post that, search-and-replace site URL in database, is a big <em>no-no</em> in WordPress. So as we said earlier that, it&#8217;s a bug of his class, he doesn&#8217;t think so. And we admit it too, and made changes to this article in the way that, <em>we faced issues because we went through a process</em>. As we discussed the basics of Taxonomy Meta, it&#8217;s not contradictory to our main motive. Thanks to Bainternet for his concern.)</p>
+							</div>
+		</article>
+			<div class="author-info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<div class="author-avatar" itemprop="image">
+		<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" class="avatar avatar-80 photo" height="80" width="80">	</div>
+	<div class="author-description">
+		<h4>About <span itemprop="name">মঈনুল ইসলাম</span>
+</h4>
+		<p>
+						<span itemprop="description">নটর ডেম অ্যালামনাই, UI/UX ডিজাইনার এবং পিএইচপি ডেভলপার, ওয়ার্ডপ্রেসিয়ান, অনুবাদক, ট্রেকার, এবং উইকিমিডিয়ান। ধর্ম, ধর্মতত্ত্ব, অতিপ্রাকৃত জ্ঞান, মনস্তত্ত্ব, সমাজ-সংস্কৃতি, ভাষা, বস্তুবাদী বিজ্ঞান, নোয়েটিক্স, এবং যুক্তির সমন্বয়ে সত্যের সন্ধানী। ব্যক্তিগত ব্লগ <a href="https://nishachor.com/" title="নিশাচর - অমনিশায় লুকানো যত রহস্য আমার চাই">nishachor.com</a>-এ লেখালেখি করেন।</span>
+			<a itemprop="url" class="author-link" href="https://mayeenulislam.github.io/tuts/author/admin/" rel="author">
+				View all posts by মঈনুল ইসলাম <span class="meta-nav">&rarr;</span>			</a>
+		</p>
+	</div>
+</div>
+	
+	<nav class="navigation post-navigation" aria-label="প্রকাশনাসমূহ">
+		<h2 class="screen-reader-text">পোস্ট ন্যাভিগেশন</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://mayeenulislam.github.io/tuts/csv-bengali-import-php-mysql/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">PHP-MySQL দিয়ে CSV ফাইল থেকে বাংলা তথ্য আপলোড</span></a></div>
+<div class="nav-next"><a href="https://mayeenulislam.github.io/tuts/column-design-css3/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">CSS3 ব্যবহার করে কলাম তৈরি</span></a></div>
+</div>
+	</nav>
+
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			<span itemprop="interactionCount">5</span> comments		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-770" class="comment even thread-even depth-1">
+			<article id="div-comment-770" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/dc4d0f0561009cc18c8d1cdfc760b2f1?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/dc4d0f0561009cc18c8d1cdfc760b2f1?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://onetarek.com/" rel="external nofollow ugc" class="url">oneTarekJahidul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-770"><time datetime="2015-09-06T18:58:22+06:00">সেপ্টেম্বর 6, 2015; 6:58 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>অনেক আগে থেকে আমি এই  ট্যাক্সোনমি মেটা ব্যবহার করি ভিন্নভাবে , আমি ফিল্ডগুলো সিরিয়ালাইয্‌ড করে ট্যাক্সোনমির টার্ম এর Description ফিল্ড এ সেভ করে রাখি , এতে একটা সমস্যাও হয় , কিছু কিছু থিম ট্যাক্সোনমির টার্ম লিংক এর ওপর মাউস রাখলে description ফিল্ড এর লেখা লিংক টাইটেল আকারে দেখায়</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-770" data-commentid="770" data-postid="656" data-belowelement="div-comment-770" data-respondelement="respond" data-replyto="oneTarekJahidul Islam-এর প্রত্যুত্তর" aria-label="oneTarekJahidul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+		<li id="comment-771" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-771" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/1cdd42c841a307d7460954942e71877e?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/1cdd42c841a307d7460954942e71877e?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://www.bainternet.info/" rel="external nofollow ugc" class="url">Bainternet</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-771"><time datetime="2015-09-09T12:29:31+06:00">সেপ্টেম্বর 9, 2015; 12:29 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>In your post you say that Tax Meta Class has a bug, which is not really a bug. Its the way WordPress stores arrays in the database (as serialized data) using the Options API or the Meta Data API.</p>
+<p>In fact the way you save the data in this post is using that same API so your readers are mislead.</p>
+<p>There is no bug (well not with the saving functions anyway).</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-771" data-commentid="771" data-postid="656" data-belowelement="div-comment-771" data-respondelement="respond" data-replyto="Bainternet-এর প্রত্যুত্তর" aria-label="Bainternet-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-772" class="comment byuser comment-author-admin bypostauthor even depth-2 parent">
+			<article id="div-comment-772" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-772"><time datetime="2015-09-09T15:48:01+06:00">সেপ্টেম্বর 9, 2015; 3:48 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>@Bainternet thank you very much for commenting here, and notified that, it&#8217;s not a bug of Tax Meta Class, but it&#8217;s the process I&#8217;s dealing the things with.</p>
+<p>But let me clear some facts:</p>
+<ol>
+<li>I actually tried to show the basics behind Taxonomy Meta. (That google translator is still in alpha mode, and wrongly translates my intention)</li>
+<li>Instead of storing file path, I stored attachment ID</li>
+</ol>
+<p>BTW thanks for the comment again. I&#8217;ll update my post accordingly so that it won&#8217;t say it a bug. 🙂</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-772" data-commentid="772" data-postid="656" data-belowelement="div-comment-772" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-773" class="comment odd alt depth-3 parent">
+			<article id="div-comment-773" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/1cdd42c841a307d7460954942e71877e?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/1cdd42c841a307d7460954942e71877e?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://www.bainternet.info/" rel="external nofollow ugc" class="url">Bainternet</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-773"><time datetime="2015-09-09T16:22:51+06:00">সেপ্টেম্বর 9, 2015; 4:22 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>No problems, and fyi the TAX meta class stores both id and url as an array.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-773" data-commentid="773" data-postid="656" data-belowelement="div-comment-773" data-respondelement="respond" data-replyto="Bainternet-এর প্রত্যুত্তর" aria-label="Bainternet-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-774" class="comment byuser comment-author-admin bypostauthor even depth-4">
+			<article id="div-comment-774" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=80&#038;d=mm&#038;r=g" srcset="https://secure.gravatar.com/avatar/fee8e31e1543e0fd98fe80cf719f879f?s=160&#038;d=mm&#038;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" decoding="async">						<b class="fn"><a href="http://nishachor.com/" rel="external nofollow ugc" class="url">Mayeenul Islam</a></b> <span class="says">বলেছেন:</span>					</div>
+<!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#comment-774"><time datetime="2015-09-09T16:42:38+06:00">সেপ্টেম্বর 9, 2015; 4:42 অপরাহ্ন এ</time></a>					</div>
+<!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Yes, I&#8217;ve seen that.<br>
+And the problem occured when the URL portion was changed.</p>
+				</div>
+<!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#comment-774" data-commentid="774" data-postid="656" data-belowelement="div-comment-774" data-respondelement="respond" data-replyto="Mayeenul Islam-এর প্রত্যুত্তর" aria-label="Mayeenul Islam-এর প্রত্যুত্তর">জবাব</a></div>			</article><!-- .comment-body -->
+		</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+</ol>
+<!-- .children -->
+</li>
+<!-- #comment-## -->
+		</ol>
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">মন্তব্য করুন <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://mayeenulislam.github.io/tuts/wordpress-taxonomy-meta-complete-guide/#respond" style="display:none;">জবাব বাতিল</a></small>
+</h3>
+<form action="https://tuts.local/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">আপনার ই-মেইল এ্যাড্রেস প্রকাশিত হবে না।</span> <span class="required-field-message"><span class="required">*</span> চিহ্নিত বিষয়গুলো আবশ্যক।</span></p>
+<p class="comment-form-comment"><label for="comment">মন্তব্য <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">নাম <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">ইমেইল <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url">ওয়েবসাইট</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">পরবর্তিতে ব্যবহারের জন্য আপনার নাম, ইমেইল ঠিকানা এবং ওয়েব ঠিকানা এই ব্রাউজারে সংরক্ষণ করুন।</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="মন্তব্য প্রকাশ করুন"> <input type="hidden" name="comment_post_ID" value="656" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+	
+</div>
+
+			</div>
+											<footer class="site-info" itemscope itemtype="http://schema.org/WPFooter">
+										<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>.
+					Theme: Flat 1.7.11 by <a rel="nofollow" href="https://themeisle.com/themes/flat/" title="Flat WordPress Theme">Themeisle</a>.				</footer>
+														</div>
+					</div>
+	</div>
+</div>
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39984706-1', 'auto');
+      ga('send', 'pageview');</script>
+<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script src="https://mayeenulislam.github.io/tuts/wp-includes/js/comment-reply.js?ver=6.1.1" id="comment-reply-js"></script>
+<script src="https://mayeenulislam.github.io/tuts/wp-content/plugins/oembed-gist/js/script.min.js?ver=4.9.1" id="oembed-gist-js"></script>
+</body>
+</html>
